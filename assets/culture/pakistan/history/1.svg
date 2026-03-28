@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 山脉 -->
+  <polygon fill="#F5F5F5" points="0,200 80,80 140,150 200,60 280,120 280,200"/>
+  <polygon fill="#E8E8E8" points="60,100 100,140 140,100"/>
+  <polygon fill="#D3D3D3" points="160,90 200,130 240,100"/>
+  <!-- 清真寺 -->
+  <ellipse fill="#F5F5F5" cx="140" cy="110" rx="50" ry="30"/>
+  <path fill="#E8E8E8" d="M90,110 Q140,60 190,110"/>
+  <!-- 尖塔月牙 -->
+  <path fill="#4169E1" d="M140,65 L136,55 L144,60 L140,50 L148,60 L140,65"/>
+  <!-- 宣礼塔 -->
+  <rect fill="#F5F5F5" x="60" y="80" width="15" height="90"/>
+  <ellipse fill="#F5F5F5" cx="67" cy="75" rx="10" ry="12"/>
+  <rect fill="#F5F5F5" x="205" y="80" width="15" height="90"/>
+  <ellipse fill="#F5F5F5" cx="212" cy="75" rx="10" ry="12"/>
+  <!-- 门 -->
+  <path fill="#4169E1" d="M125,170 L125,130 Q140,115 155,130 L155,170 Z"/>
+  <!-- 地面 -->
+  <rect fill="#228B22" y="170" width="280" height="30"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">费萨尔清真寺</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#8B4513"/>
+      <stop offset="100%" style="stop-color="#A0522D"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 阿莫克盘 -->
+  <ellipse cx="70" cy="60" rx="40" ry="25" fill="#228B22"/>
+  <!-- 椰子容器 -->
+  <ellipse cx="70" cy="55" rx="30" ry="18" fill="#F5DEB3"/>
+  <!-- 鱼肉 -->
+  <ellipse cx="70" cy="55" rx="22" ry="12" fill="#FFFAF0"/>
+  <!-- 香料点缀 -->
+  <circle cx="60" cy="52" r="3" fill="#FF6347"/>
+  <circle cx="75" cy="55" r="3" fill="#FF6347"/>
+  <circle cx="65" cy="58" r="2" fill="#228B22"/>
+  <circle cx="78" cy="52" r="2" fill="#228B22"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">阿莫克</text>
+</svg>

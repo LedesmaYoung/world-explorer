@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0"/>
+      <stop offset="100%" style="stop-color:#42A5F5"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <circle cx="70" cy="45" r="22" fill="#FFD54F"/>
+  <g fill="#F44336">
+    <polygon points="70,28 73,38 83,38 75,44 78,54 70,48 62,54 65,44 57,38 67,38"/>
+  </g>
+  <g fill="#FFF" opacity="0.8">
+    <circle cx="50" cy="55" r="5"/>
+    <circle cx="90" cy="55" r="5"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">独立日</text>
+</svg>

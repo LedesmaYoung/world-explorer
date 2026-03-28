@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg38" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF8E1"/>
+      <stop offset="100%" style="stop-color:#FFECB3"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg38)" width="140" height="110"/>
+  <!-- 碗 -->
+  <ellipse fill="#8D6E63" cx="70" cy="70" rx="40" ry="15"/>
+  <ellipse fill="#A1887F" cx="70" cy="67" rx="35" ry="12"/>
+  <!-- 咖喱汤 -->
+  <ellipse fill="#FF8A65" cx="70" cy="65" rx="30" ry="10"/>
+  <!-- 配料 -->
+  <ellipse fill="#FFFFFF" cx="55" cy="63" rx="8" ry="4"/>
+  <ellipse fill="#FFFFFF" cx="80" cy="64" rx="7" ry="3"/>
+  <circle fill="#8D6E63" cx="70" cy="62" r="3"/>
+  <circle fill="#4CAF50" cx="65" cy="66" r="2"/>
+  <circle fill="#4CAF50" cx="75" cy="65" r="2"/>
+  <!-- 薄饼 -->
+  <ellipse fill="#D7CCC8" cx="30" cy="80" rx="15" ry="5"/>
+  <ellipse fill="#D7CCC8" cx="110" cy="80" rx="15" ry="5"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">咖喱汤</text>
+</svg>

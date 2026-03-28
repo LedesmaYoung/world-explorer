@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 雪山背景 -->
+  <polygon fill="#F5F5F5" points="0,200 60,120 120,160 180,90 240,140 280,110 280,200"/>
+  <!-- 彩粉装饰 -->
+  <ellipse fill="#DC143C" cx="60" cy="140" rx="20" ry="10"/>
+  <ellipse fill="#FFD700" cx="120" cy="145" rx="20" ry="10"/>
+  <ellipse fill="#4169E1" cx="180" cy="140" rx="20" ry="10"/>
+  <ellipse fill="#228B22" cx="220" cy="145" rx="20" ry="10"/>
+  <!-- 人们撒彩粉 -->
+  <ellipse fill="#DEB887" cx="80" cy="120" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M72,130 L88,130 L90,170 L70,170 Z"/>
+  <ellipse fill="#DEB887" cx="180" cy="115" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M172,125 L188,125 L190,165 L170,165 Z"/>
+  <!-- 彩粉飞扬 -->
+  <circle fill="#DC143C" opacity="0.6" cx="100" cy="100" r="5"/>
+  <circle fill="#FFD700" opacity="0.6" cx="130" cy="90" r="5"/>
+  <circle fill="#4169E1" opacity="0.6" cx="160" cy="95" r="5"/>
+  <circle fill="#228B22" opacity="0.6" cx="190" cy="100" r="5"/>
+  <circle fill="#FF69B4" opacity="0.6" cx="140" cy="80" r="4"/>
+  <!-- 太阳 -->
+  <circle fill="#FFD700" cx="230" cy="40" r="20"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">洒红节</text>
+</svg>

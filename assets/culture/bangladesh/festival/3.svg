@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E91E63"/>
+      <stop offset="100%" style="stop-color:#F48FB1"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg16)" width="140" height="110"/>
+  <!-- 色彩粉末 -->
+  <circle fill="#4FC3F7" cx="35" cy="45" r="12" opacity="0.8"/>
+  <circle fill="#FFEB3B" cx="70" cy="40" r="15" opacity="0.8"/>
+  <circle fill="#4CAF50" cx="105" cy="45" r="12" opacity="0.8"/>
+  <circle fill="#FF9800" cx="50" cy="65" r="10" opacity="0.7"/>
+  <circle fill="#9C27B0" cx="90" cy="60" r="12" opacity="0.7"/>
+  <!-- 人物 -->
+  <circle fill="#5D4037" cx="70" cy="75" r="8"/>
+  <rect fill="#5D4037" x="62" y="83" width="16" height="12" rx="2"/>
+  <!-- 彩带 -->
+  <path fill="none" stroke="#FFEB3B" stroke-width="2" d="M20,60 Q45,40 70,60"/>
+  <path fill="none" stroke="#4FC3F7" stroke-width="2" d="M70,60 Q95,40 120,60"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">杜尔迦节</text>
+</svg>

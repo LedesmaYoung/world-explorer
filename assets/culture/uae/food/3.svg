@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFAF0"/>
+      <stop offset="100%" style="stop-color:#FFE4B5"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 咖啡壶 -->
+  <ellipse cx="70" cy="55" rx="15" ry="20" fill="#8B4513"/>
+  <path d="M55 50 Q50 45 45 50 L55 55" fill="#A0522D"/>
+  <rect x="62" y="35" width="16" height="8" fill="#8B4513"/>
+  <!-- 咖啡杯 -->
+  <ellipse cx="40" cy="70" rx="10" ry="5" fill="#FFF"/>
+  <ellipse cx="100" cy="70" rx="10" ry="5" fill="#FFF"/>
+  <!-- 蒸汽 -->
+  <path d="M65 30 Q70 25 65 20" stroke="#999" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M75 30 Q80 25 75 20" stroke="#999" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <text x="70" y="100" text-anchor="middle" fill="#8B4513" font-size="10">阿拉伯咖啡</text>
+</svg>

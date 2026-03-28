@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#1a1a2e" width="280" height="200"/>
+  <!-- 月亮 -->
+  <circle fill="#FFD700" opacity="0.9" cx="220" cy="50" r="30"/>
+  <!-- 清真寺 -->
+  <ellipse fill="#F5F5F5" cx="140" cy="100" rx="50" ry="30"/>
+  <path fill="#E8E8E8" d="M90,100 Q140,50 190,100"/>
+  <!-- 尖塔 -->
+  <path fill="#4169E1" d="M140,55 L136,45 L144,50 L140,40 L148,50 L140,55"/>
+  <!-- 宣礼塔 -->
+  <rect fill="#F5F5F5" x="60" y="100" width="15" height="70"/>
+  <ellipse fill="#F5F5F5" cx="67" cy="95" rx="10" ry="12"/>
+  <rect fill="#F5F5F5" x="205" y="100" width="15" height="70"/>
+  <ellipse fill="#F5F5F5" cx="212" cy="95" rx="10" ry="12"/>
+  <!-- 装饰灯 -->
+  <ellipse fill="#FFD700" opacity="0.5" cx="140" cy="130" rx="40" ry="20"/>
+  <!-- 人们祈祷 -->
+  <ellipse fill="#DEB887" cx="100" cy="150" rx="6" ry="8"/>
+  <path fill="#4169E1" d="M94,158 L106,158 L108,180 L92,180 Z"/>
+  <ellipse fill="#DEB887" cx="140" cy="155" rx="6" ry="8"/>
+  <path fill="#4169E1" d="M134,163 L146,163 L148,185 L132,185 Z"/>
+  <ellipse fill="#DEB887" cx="180" cy="150" rx="6" ry="8"/>
+  <path fill="#4169E1" d="M174,158 L186,158 L188,180 L172,180 Z"/>
+  <!-- 星星 -->
+  <circle fill="#FFD700" cx="40" cy="40" r="2"/>
+  <circle fill="#FFD700" cx="100" cy="30" r="1.5"/>
+  <circle fill="#FFD700" cx="180" cy="35" r="2"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">开斋节</text>
+</svg>

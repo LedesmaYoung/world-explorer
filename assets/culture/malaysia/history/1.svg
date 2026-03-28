@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#228B22" points="0,200 50,130 100,170 150,100 200,150 250,120 280,140 280,200"/>
+  <!-- 双子塔 -->
+  <rect fill="#C0C0C0" x="90" y="40" width="35" height="140"/>
+  <rect fill="#A9A9A9" x="95" y="45" width="25" height="130"/>
+  <rect fill="#C0C0C0" x="155" y="40" width="35" height="140"/>
+  <rect fill="#A9A9A9" x="160" y="45" width="25" height="130"/>
+  <!-- 连接桥 -->
+  <rect fill="#D3D3D3" x="115" y="90" width="50" height="10"/>
+  <rect fill="#E8E8E8" x="120" y="93" width="40" height="4"/>
+  <!-- 塔顶 -->
+  <polygon fill="#FFD700" points="107,40 95,55 119,55"/>
+  <polygon fill="#FFD700" points="172,40 160,55 184,55"/>
+  <!-- 窗户 -->
+  <rect fill="#4169E1" x="100" y="55" width="5" height="8"/>
+  <rect fill="#4169E1" x="110" y="55" width="5" height="8"/>
+  <rect fill="#4169E1" x="165" y="55" width="5" height="8"/>
+  <rect fill="#4169E1" x="175" y="55" width="5" height="8"/>
+  <!-- 标题 -->
+  <rect fill="rgba(169,169,169,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">双子塔</text>
+</svg>

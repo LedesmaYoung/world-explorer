@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 雪山 -->
+  <polygon fill="#F5F5F5" points="0,200 50,120 100,160 160,80 220,140 270,100 280,120 280,200"/>
+  <!-- 虎穴寺 -->
+  <polygon fill="#F5F5DC" points="140,60 90,100 190,100"/>
+  <rect fill="#E8E8D0" x="100" y="100" width="80" height="50"/>
+  <!-- 金顶 -->
+  <polygon fill="#FFD700" points="140,60 120,70 160,70"/>
+  <!-- 窗户 -->
+  <rect fill="#DC143C" x="115" y="110" width="15" height="20"/>
+  <rect fill="#DC143C" x="150" y="110" width="15" height="20"/>
+  <!-- 悬崖 -->
+  <polygon fill="#696969" points="80,150 200,150 220,200 60,200"/>
+  <!-- 云雾 -->
+  <ellipse fill="white" opacity="0.6" cx="140" cy="160" rx="60" ry="20"/>
+  <!-- 标题 -->
+  <rect fill="rgba(245,245,220,0.9)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="#8B4513" font-size="12" font-family="sans-serif">虎穴寺</text>
+</svg>

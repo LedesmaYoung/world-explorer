@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#FF4500"/>
+      <stop offset="100%" style="stop-color="#DC143C"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 柬埔寨新年 -->
+  <circle cx="70" cy="45" r="25" fill="#FFD700"/>
+  <!-- 装饰 -->
+  <circle cx="70" cy="45" r="18" fill="#FF4500"/>
+  <!-- 花纹 -->
+  <circle cx="70" cy="40" r="5" fill="#FFD700"/>
+  <circle cx="65" cy="50" r="3" fill="#FFD700"/>
+  <circle cx="75" cy="50" r="3" fill="#FFD700"/>
+  <!-- 水泼效果 -->
+  <ellipse cx="30" cy="75" rx="8" ry="4" fill="#87CEEB" opacity="0.7"/>
+  <ellipse cx="110" cy="70" rx="8" ry="4" fill="#87CEEB" opacity="0.7"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">新年</text>
+</svg>

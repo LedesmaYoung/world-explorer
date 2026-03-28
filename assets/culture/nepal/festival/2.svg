@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg27" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF5722"/>
+      <stop offset="100%" style="stop-color:#FFAB91"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg27)" width="140" height="110"/>
+  <!-- 神像 -->
+  <ellipse fill="#FFD700" cx="70" cy="40" r="15"/>
+  <rect fill="#FFD700" x="55" y="55" width="30" height="25"/>
+  <polygon fill="#FFD700" points="55,80 70,90 85,80"/>
+  <!-- 装饰花环 -->
+  <ellipse fill="#FF4081" cx="55" cy="45" rx="5" ry="3"/>
+  <ellipse fill="#FF4081" cx="85" cy="45" rx="5" ry="3"/>
+  <!-- 供品 -->
+  <circle fill="#FFEB3B" cx="40" cy="80" r="6"/>
+  <circle fill="#FFEB3B" cx="100" cy="80" r="6"/>
+  <ellipse fill="#E91E63" cx="55" cy="85" rx="8" ry="4"/>
+  <ellipse fill="#E91E63" cx="85" cy="85" rx="8" ry="4"/>
+  <!-- 光芒 -->
+  <circle fill="#FFEB3B" cx="70" cy="40" r="25" opacity="0.2"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">德赛节</text>
+</svg>

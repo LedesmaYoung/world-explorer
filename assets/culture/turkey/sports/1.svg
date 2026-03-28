@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 油摔跤场地 -->
+  <ellipse fill="#D2B48C" cx="140" cy="130" r="90"/>
+  <ellipse fill="#C4A77D" cx="140" cy="125" r="80"/>
+  <!-- 摔跤手（涂油） -->
+  <ellipse fill="#DAA520" cx="110" cy="100" rx="15" ry="20"/>
+  <ellipse fill="#CD853F" cx="108" cy="98" rx="12" ry="17"/>
+  <!-- 皮裤 -->
+  <rect fill="#8B4513" x="95" y="115" width="30" height="50" rx="5"/>
+  <rect fill="#A0522D" x="100" y="120" width="20" height="40"/>
+  <ellipse fill="#DAA520" cx="170" cy="105" rx="15" ry="20"/>
+  <ellipse fill="#CD853F" cx="172" cy="103" rx="12" ry="17"/>
+  <rect fill="#8B4513" x="155" y="120" width="30" height="50" rx="5"/>
+  <rect fill="#A0522D" x="160" y="125" width="20" height="40"/>
+  <!-- 油光效果 -->
+  <ellipse fill="#FFD700" opacity="0.3" cx="110" cy="95" rx="10" ry="8"/>
+  <ellipse fill="#FFD700" opacity="0.3" cx="170" cy="100" rx="10" ry="8"/>
+  <!-- 观众 -->
+  <ellipse fill="#DEB887" cx="60" cy="180" rx="5" ry="6"/>
+  <ellipse fill="#DEB887" cx="220" cy="180" rx="5" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,69,19,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">油摔跤</text>
+</svg>

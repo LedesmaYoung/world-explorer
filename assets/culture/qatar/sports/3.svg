@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 赛马 -->
+  <ellipse cx="70" cy="55" rx="30" ry="12" fill="#8B4513"/>
+  <ellipse cx="95" cy="47" rx="10" ry="8" fill="#A0522D"/>
+  <polygon fill="#8B4513" points="40,50 35,65 45,65"/>
+  <polygon fill="#8B4513" points="55,50 50,65 60,65"/>
+  <polygon fill="#8B4513" points="80,50 75,65 85,65"/>
+  <polygon fill="#8B4513" points="95,50 90,65 100,65"/>
+  <!-- 骑手 -->
+  <circle cx="75" cy="37" r="6" fill="#FFDAB9"/>
+  <rect x="72" y="43" width="6" height="8" fill="#FF6347"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10">赛马</text>
+</svg>

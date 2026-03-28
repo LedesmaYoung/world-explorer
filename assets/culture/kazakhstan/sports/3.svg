@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E88E5"/>
+      <stop offset="100%" style="stop-color:#64B5F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <circle cx="70" cy="45" r="15" fill="#FFF"/>
+  <path d="M60,45 L70,30 L80,45" fill="none" stroke="#1E88E5" stroke-width="3"/>
+  <g fill="#FFD700">
+    <circle cx="70" cy="60" r="5"/>
+    <ellipse cx="70" cy="68" rx="8" ry="3"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">摔跤比赛</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#228B22" points="0,200 60,140 120,180 180,120 240,160 280,130 280,200"/>
+  <!-- 吴哥窟主塔 -->
+  <polygon fill="#808080" points="140,30 100,80 180,80"/>
+  <rect fill="#696969" x="105" y="80" width="70" height="60"/>
+  <!-- 装饰 -->
+  <rect fill="#505050" x="125" y="90" width="30" height="40"/>
+  <!-- 侧塔 -->
+  <polygon fill="#808080" points="60,60 45,100 75,100"/>
+  <rect fill="#696969" x="50" y="100" width="25" height="50"/>
+  <polygon fill="#808080" points="220,60 205,100 235,100"/>
+  <rect fill="#696969" x="210" y="100" width="25" height="50"/>
+  <!-- 回廊 -->
+  <rect fill="#5A5A5A" x="30" y="130" width="220" height="50"/>
+  <rect fill="#4A4A4A" x="40" y="140" width="200" height="30"/>
+  <!-- 窗户 -->
+  <rect fill="#3A3A3A" x="60" y="145" width="15" height="20"/>
+  <rect fill="#3A3A3A" x="100" y="145" width="15" height="20"/>
+  <rect fill="#3A3A3A" x="140" y="145" width="15" height="20"/>
+  <rect fill="#3A3A3A" x="180" y="145" width="15" height="20"/>
+  <rect fill="#3A3A3A" x="220" y="145" width="15" height="20"/>
+  <!-- 标题 -->
+  <rect fill="rgba(128,128,128,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">吴哥窟</text>
+</svg>

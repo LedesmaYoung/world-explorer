@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#1a1a2e" width="280" height="200"/>
+  <!-- 月亮 -->
+  <circle fill="#FFD700" cx="220" cy="50" r="35"/>
+  <circle fill="#1a1a2e" cx="235" cy="45" r="30"/>
+  <!-- 韩服人物 -->
+  <ellipse fill="#FFE4C4" cx="80" cy="90" rx="10" ry="12"/>
+  <path fill="#E91E63" d="M70,102 L90,102 L95,170 L65,170 Z"/>
+  <path fill="#FFD700" d="M75,102 L80,170 L68,170 L65,108 Z"/>
+  <ellipse fill="#FFE4C4" cx="200" cy="95" rx="10" ry="12"/>
+  <path fill="#4CAF50" d="M190,107 L210,107 L215,175 L185,175 Z"/>
+  <path fill="#FFD700" d="M195,107 L200,175 L188,175 L185,112 Z"/>
+  <!-- 松饼(半月形) -->
+  <ellipse fill="#F5F5DC" cx="120" cy="145" rx="25" ry="15"/>
+  <path fill="#E8E8D0" d="M95,145 Q120,125 145,145"/>
+  <ellipse fill="#F5F5DC" cx="160" cy="150" rx="20" ry="12"/>
+  <path fill="#E8E8D0" d="M140,150 Q160,133 180,150"/>
+  <!-- 桌子 -->
+  <rect fill="#8B4513" x="90" y="155" width="100" height="8"/>
+  <!-- 星星 -->
+  <circle fill="#FFD700" cx="40" cy="40" r="2"/>
+  <circle fill="#FFD700" cx="100" cy="30" r="1.5"/>
+  <circle fill="#FFD700" cx="150" cy="45" r="2"/>
+  <!-- 标题 -->
+  <rect fill="rgba(233,30,99,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="45" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">中秋节</text>
+</svg>

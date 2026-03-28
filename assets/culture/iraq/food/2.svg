@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF8DC"/>
+      <stop offset="100%" style="stop-color:#F5DEB3"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 烤鱼 -->
+  <ellipse cx="70" cy="55" rx="40" ry="18" fill="#D2691E"/>
+  <ellipse cx="70" cy="50" rx="35" ry="15" fill="#DEB887"/>
+  <!-- 鱼形 -->
+  <ellipse cx="70" cy="50" rx="25" ry="12" fill="#8B4513"/>
+  <polygon fill="#8B4513" points="45,50 35,42 35,58"/>
+  <circle cx="85" cy="47" r="3" fill="#FFF"/>
+  <!-- 配菜 -->
+  <ellipse cx="70" cy="75" rx="25" ry="6" fill="#90EE90"/>
+  <text x="70" y="100" text-anchor="middle" fill="#8B4513" font-size="10">烤鱼</text>
+</svg>

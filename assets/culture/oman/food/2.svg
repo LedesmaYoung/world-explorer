@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE4C4"/>
+      <stop offset="100%" style="stop-color:#F5DEB3"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 沙瓦玛 -->
+  <rect x="45" y="35" width="50" height="45" fill="#D2691E" rx="5"/>
+  <rect x="50" y="40" width="40" height="35" fill="#FFF"/>
+  <rect x="55" y="45" width="30" height="8" fill="#8B4513"/>
+  <rect x="55" y="55" width="30" height="6" fill="#90EE90"/>
+  <rect x="55" y="63" width="30" height="6" fill="#FF6347"/>
+  <ellipse cx="70" cy="80" rx="30" ry="5" fill="#DEB887"/>
+  <text x="70" y="100" text-anchor="middle" fill="#8B4513" font-size="10">沙瓦玛</text>
+</svg>

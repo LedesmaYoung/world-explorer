@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg35" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E7D32"/>
+      <stop offset="100%" style="stop-color:#81C784"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg35)" width="140" height="110"/>
+  <!-- 射箭场 -->
+  <rect fill="#8D6E63" x="20" y="70" width="100" height="20"/>
+  <!-- 靶子 -->
+  <circle fill="#FFFFFF" cx="110" cy="50" r="15"/>
+  <circle fill="#D32F2F" cx="110" cy="50" r="10"/>
+  <circle fill="#FFFFFF" cx="110" cy="50" r="5"/>
+  <circle fill="#FFEB3B" cx="110" cy="50" r="2"/>
+  <!-- 弓 -->
+  <path fill="none" stroke="#8D6E63" stroke-width="3" d="M30,30 Q20,50 30,70"/>
+  <!-- 弦 -->
+  <line x1="30" y1="30" x2="30" y2="70" stroke="#D32F2F" stroke-width="1"/>
+  <!-- 箭 -->
+  <rect fill="#8D6E63" x="32" y="48" width="40" height="2"/>
+  <polygon fill="#37474F" points="72,49 80,50 72,51"/>
+  <!-- 箭羽 -->
+  <polygon fill="#D32F2F" points="32,48 38,45 38,51"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">射箭</text>
+</svg>

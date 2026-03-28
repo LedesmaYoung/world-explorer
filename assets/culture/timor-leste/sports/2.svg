@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00695C"/>
+      <stop offset="100%" style="stop-color:#26A69A"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <circle cx="70" cy="50" r="20" fill="#FFF"/>
+  <path d="M70,30 L70,70 M50,50 L90,50" stroke="#00695C" stroke-width="3"/>
+  <g fill="#FFD700">
+    <circle cx="70" cy="50" r="5"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">足球</text>
+</svg>

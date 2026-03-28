@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#1E3A5F"/>
+      <stop offset="100%" style="stop-color="#2E5A8F"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 蒲甘佛塔群 -->
+  <rect x="20" y="55" width="30" height="35" fill="#D2691E"/>
+  <polygon points="20,55 35,40 50,55" fill="#B8860B"/>
+  <rect x="55" y="45" width="35" height="45" fill="#D2691E"/>
+  <polygon points="55,45 72,25 90,45" fill="#B8860B"/>
+  <rect x="95" y="55" width="25" height="35" fill="#D2691E"/>
+  <polygon points="95,55 107,40 120,55" fill="#B8860B"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">蒲甘</text>
+</svg>

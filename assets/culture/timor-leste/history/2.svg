@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B71C1C"/>
+      <stop offset="100%" style="stop-color:#EF5350"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <path d="M50,70 L70,30 L90,70" fill="#FFD700"/>
+  <g fill="#B71C1C">
+    <rect x="62" y="45" width="16" height="18" rx="2"/>
+    <circle cx="70" cy="42" r="6"/>
+  </g>
+  <g fill="#FFF" opacity="0.9">
+    <circle cx="55" cy="60" r="4"/>
+    <circle cx="85" cy="60" r="4"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">独立历史</text>
+</svg>

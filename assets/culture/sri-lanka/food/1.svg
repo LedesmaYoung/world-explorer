@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 香蕉叶 -->
+  <ellipse fill="#228B22" cx="140" cy="130" rx="110" ry="50"/>
+  <ellipse fill="#32CD32" cx="140" cy="125" rx="100" ry="45"/>
+  <!-- 米饭 -->
+  <ellipse fill="#FFFACD" cx="140" cy="115" rx="50" ry="25"/>
+  <!-- 咖喱 -->
+  <ellipse fill="#D2691E" cx="100" cy="110" rx="20" ry="10"/>
+  <ellipse fill="#CD853F" cx="98" cy="108" rx="15" ry="8"/>
+  <!-- 蔬菜咖喱 -->
+  <ellipse fill="#FFD700" cx="180" cy="110" rx="20" ry="10"/>
+  <ellipse fill="#FFA500" cx="178" cy="108" rx="15" ry="8"/>
+  <!-- 酱汁 -->
+  <ellipse fill="#DC143C" cx="120" cy="125" rx="15" ry="8"/>
+  <ellipse fill="#228B22" cx="160" cy="125" rx="15" ry="8"/>
+  <!-- 木豆 -->
+  <ellipse fill="#DAA520" cx="140" cy="100" rx="12" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(34,139,34,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">米饭咖喱</text>
+</svg>

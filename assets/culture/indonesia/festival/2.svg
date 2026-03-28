@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4500"/>
+      <stop offset="100%" style="stop-color:#DC143C"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 巴厘舞者 -->
+  <circle cx="70" cy="30" r="12" fill="#F5DEB3"/>
+  <!-- 头饰 -->
+  <polygon points="55,25 70,10 85,25" fill="#FFD700"/>
+  <circle cx="70" cy="15" r="5" fill="#FFD700"/>
+  <!-- 服装 -->
+  <rect x="55" y="42" width="30" height="35" fill="#DC143C"/>
+  <!-- 金色装饰 -->
+  <rect x="55" y="42" width="30" height="5" fill="#FFD700"/>
+  <rect x="55" y="55" width="30" height="3" fill="#FFD700"/>
+  <!-- 手臂 -->
+  <line x1="55" y1="50" x2="35" y2="70" stroke="#F5DEB3" stroke-width="4"/>
+  <line x1="85" y1="50" x2="105" y2="70" stroke="#F5DEB3" stroke-width="4"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">巴厘舞</text>
+</svg>

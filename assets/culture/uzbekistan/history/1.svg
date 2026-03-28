@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#D2B48C" points="0,200 50,150 100,180 160,130 220,170 280,140 280,200"/>
+  <!-- 雷吉斯坦广场 -->
+  <!-- 左经学院 -->
+  <polygon fill="#4169E1" points="50,80 30,120 70,120"/>
+  <rect fill="#1E90FF" x="35" y="120" width="30" height="50"/>
+  <!-- 中经学院 -->
+  <polygon fill="#DC143C" points="140,60 100,110 180,110"/>
+  <rect fill="#B22222" x="105" y="110" width="70" height="60"/>
+  <!-- 门 -->
+  <path fill="#8B4513" d="M120,170 L120,130 Q140,110 160,130 L160,170 Z"/>
+  <!-- 右经学院 -->
+  <polygon fill="#228B22" points="230,80 210,120 250,120"/>
+  <rect fill="#1E824C" x="215" y="120" width="30" height="50"/>
+  <!-- 装饰拱门 -->
+  <path fill="#FFD700" d="M130,95 Q140,85 150,95"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">雷吉斯坦</text>
+</svg>

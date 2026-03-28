@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg26" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFECB3"/>
+      <stop offset="100%" style="stop-color:#FFE082"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg26)" width="140" height="110"/>
+  <!-- 蒸笼 -->
+  <ellipse fill="#8D6E63" cx="70" cy="70" rx="35" ry="15"/>
+  <ellipse fill="#A1887F" cx="70" cy="67" rx="30" ry="12"/>
+  <!-- 饺子 -->
+  <ellipse fill="#F5F5F5" cx="50" cy="65" rx="12" ry="8"/>
+  <ellipse fill="#EEEEEE" cx="70" cy="63" rx="12" ry="8"/>
+  <ellipse fill="#F5F5F5" cx="90" cy="65" rx="12" ry="8"/>
+  <!-- 褶皱 -->
+  <path fill="none" stroke="#BDBDBD" stroke-width="1" d="M45,62 L50,68 L55,62"/>
+  <path fill="none" stroke="#BDBDBD" stroke-width="1" d="M65,60 L70,66 L75,60"/>
+  <path fill="none" stroke="#BDBDBD" stroke-width="1" d="M85,62 L90,68 L95,62"/>
+  <!-- 蘸酱 -->
+  <ellipse fill="#D32F2F" cx="70" cy="85" rx="15" ry="6"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">饺子</text>
+</svg>

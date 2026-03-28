@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 板球场 -->
+  <ellipse fill="#228B22" cx="140" cy="130" rx="100" ry="50"/>
+  <rect fill="#D2691E" x="90" y="110" width="100" height="40"/>
+  <!-- 球门柱 -->
+  <rect fill="#F5F5DC" x="95" y="90" width="4" height="60"/>
+  <rect fill="#F5F5DC" x="105" y="90" width="4" height="60"/>
+  <rect fill="#F5F5DC" x="175" y="90" width="4" height="60"/>
+  <rect fill="#F5F5DC" x="185" y="90" width="4" height="60"/>
+  <!-- 球员 -->
+  <ellipse fill="#DEB887" cx="140" cy="95" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M132,105 L148,105 L150,145 L130,145 Z"/>
+  <!-- 球棒 -->
+  <rect fill="#8B4513" x="150" y="90" width="4" height="40" rx="1"/>
+  <!-- 板球 -->
+  <circle fill="#DC143C" cx="165" cy="120" r="6"/>
+  <line x1="160" y1="116" x2="170" y2="116" stroke="white" stroke-width="1"/>
+  <line x1="160" y1="124" x2="170" y2="124" stroke="white" stroke-width="1"/>
+  <!-- 守门员 -->
+  <ellipse fill="#DEB887" cx="90" cy="120" rx="6" ry="8"/>
+  <path fill="#DC143C" d="M84,128 L96,128 L98,160 L82,160 Z"/>
+  <!-- 标题 -->
+  <rect fill="rgba(34,139,34,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">板球</text>
+</svg>

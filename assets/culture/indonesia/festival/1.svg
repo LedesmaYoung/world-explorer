@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#1a1a2e" width="280" height="200"/>
+  <!-- 舞者剪影 -->
+  <ellipse fill="#DC143C" cx="140" cy="80" rx="15" ry="18"/>
+  <!-- 头饰 -->
+  <path fill="#FFD700" d="M125,62 Q140,40 155,62 Q147,55 140,58 Q133,55 125,62"/>
+  <!-- 身体 -->
+  <path fill="#DC143C" d="M125,98 L155,98 L170,180 L110,180 Z"/>
+  <!-- 手臂姿势 -->
+  <path fill="#DC143C" d="M125,105 Q90,100 70,120 Q80,130 95,125"/>
+  <path fill="#DC143C" d="M155,105 Q190,100 210,120 Q200,130 185,125"/>
+  <!-- 金色装饰 -->
+  <ellipse fill="#FFD700" cx="140" cy="110" rx="20" ry="8"/>
+  <!-- 灯光效果 -->
+  <circle fill="#FFD700" opacity="0.4" cx="70" cy="120" r="15"/>
+  <circle fill="#FFD700" opacity="0.4" cx="210" cy="120" r="15"/>
+  <!-- 星星 -->
+  <circle fill="#FFD700" cx="40" cy="40" r="2"/>
+  <circle fill="#FFD700" cx="240" cy="35" r="2"/>
+  <circle fill="#FFD700" cx="100" cy="25" r="1.5"/>
+  <circle fill="#FFD700" cx="180" cy="30" r="1.5"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="175" width="90" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">巴厘岛舞蹈</text>
+</svg>

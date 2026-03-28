@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2691E"/>
+      <stop offset="100%" style="stop-color:#A0522D"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 尼兹瓦古堡 -->
+  <rect x="40" y="40" width="60" height="40" fill="#DEB887"/>
+  <polygon fill="#C4A67A" points="40,40 70,20 100,40"/>
+  <!-- 塔楼 -->
+  <rect x="55" y="25" width="30" height="20" fill="#8B4513"/>
+  <polygon fill="#A0522D" points="55,25 70,15 85,25"/>
+  <!-- 门 -->
+  <rect x="60" y="55" width="20" height="25" fill="#5D3A1A"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10">尼兹瓦古堡</text>
+</svg>

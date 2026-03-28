@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="sky3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D47A1"/>
+      <stop offset="100%" style="color:#64B5F6"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky3)" width="140" height="110"/>
+  <!-- 拉合尔堡 -->
+  <rect fill="#E8D4A8" x="25" y="45" width="90" height="45"/>
+  <polygon fill="#D4C4A0" points="25,45 70,20 115,45"/>
+  <!-- 拱门 -->
+  <path fill="#C62828" d="M55,60 Q70,45 85,60 L85,90 L55,90 Z"/>
+  <!-- 装饰 -->
+  <rect fill="#FFD700" x="60" y="70" width="20" height="20"/>
+  <!-- 城垛 -->
+  <rect fill="#D4C4A0" x="25" y="38" width="10" height="12"/>
+  <rect fill="#D4C4A0" x="45" y="38" width="10" height="12"/>
+  <rect fill="#D4C4A0" x="85" y="38" width="10" height="12"/>
+  <rect fill="#D4C4A0" x="105" y="38" width="10" height="12"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">拉合尔堡</text>
+</svg>

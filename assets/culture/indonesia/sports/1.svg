@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 球场 -->
+  <rect fill="#228B22" x="30" y="90" width="220" height="90"/>
+  <line x1="140" y1="90" x2="140" y2="180" stroke="white" stroke-width="2"/>
+  <circle fill="none" stroke="white" stroke-width="2" cx="140" cy="135" r="25"/>
+  <!-- 球网 -->
+  <rect fill="#F5F5DC" x="135" y="80" width="10" height="110"/>
+  <line x1="30" y1="90" x2="250" y2="90" stroke="#4A4A4A" stroke-width="3"/>
+  <!-- 球员 -->
+  <ellipse fill="#DEB887" cx="90" cy="120" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M82,130 L98,130 L100,170 L80,170 Z"/>
+  <!-- 踢球腿 -->
+  <line x1="90" y1="160" x2="75" y2="175" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <!-- 藤球 -->
+  <ellipse fill="#FFD700" cx="75" cy="150" rx="10" ry="8"/>
+  <ellipse fill="#DAA520" cx="73" cy="148" rx="7" ry="5"/>
+  <!-- 球员2 -->
+  <ellipse fill="#DEB887" cx="190" cy="125" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M182,135 L198,135 L200,175 L180,175 Z"/>
+  <!-- 标题 -->
+  <rect fill="rgba(34,139,34,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">藤球</text>
+</svg>

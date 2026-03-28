@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 大盘 -->
+  <ellipse fill="#CD7F32" cx="140" cy="140" rx="90" ry="40"/>
+  <ellipse fill="#DAA520" cx="140" cy="135" rx="80" ry="35"/>
+  <!-- 米饭 -->
+  <ellipse fill="#FFFACD" cx="140" cy="125" rx="60" ry="25"/>
+  <!-- 烤肉串 -->
+  <rect fill="#8B4513" x="80" y="110" width="5" height="50" rx="1"/>
+  <ellipse fill="#8B0000" cx="82" y="120" rx="10" ry="8"/>
+  <ellipse fill="#8B0000" cx="82" y="135" rx="10" ry="8"/>
+  <ellipse fill="#8B0000" cx="82" y="150" rx="10" ry="8"/>
+  <rect fill="#8B4513" x="195" y="110" width="5" height="50" rx="1"/>
+  <ellipse fill="#D2691E" cx="197" y="120" rx="10" ry="8"/>
+  <ellipse fill="#D2691E" cx="197" y="135" rx="10" ry="8"/>
+  <ellipse fill="#D2691E" cx="197" y="150" rx="10" ry="8"/>
+  <!-- 配菜 -->
+  <ellipse fill="#228B22" cx="120" cy="110" rx="15" ry="8"/>
+  <ellipse fill="#FFD700" cx="160" cy="115" rx="12" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,0,0,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">烤肉串</text>
+</svg>

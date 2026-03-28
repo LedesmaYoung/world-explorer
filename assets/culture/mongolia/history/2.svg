@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#DC143C"/>
+      <stop offset="100%" style="stop-color="#B22222"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 蒙古帝国版图 -->
+  <ellipse cx="70" cy="55" rx="55" ry="35" fill="#FFD700" opacity="0.8"/>
+  <text x="70" y="50" text-anchor="middle" fill="#8B0000" font-size="16" font-weight="bold">蒙古</text>
+  <text x="70" y="70" text-anchor="middle" fill="#8B0000" font-size="16" font-weight="bold">帝国</text>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10">横跨欧亚</text>
+</svg>

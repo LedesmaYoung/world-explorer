@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="100%" style="stop-color:#F7931E"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 碗 -->
+  <ellipse cx="70" cy="65" rx="40" ry="20" fill="#2F4F4F"/>
+  <ellipse cx="70" cy="60" rx="35" ry="15" fill="#FFA54F"/>
+  <!-- 面条 -->
+  <path d="M45 55 Q55 65 45 75" stroke="#FFF5E6" stroke-width="3" fill="none"/>
+  <path d="M55 52 Q65 62 55 72" stroke="#FFF5E6" stroke-width="3" fill="none"/>
+  <path d="M70 50 Q80 60 70 70" stroke="#FFF5E6" stroke-width="3" fill="none"/>
+  <path d="M85 52 Q95 62 85 72" stroke="#FFF5E6" stroke-width="3" fill="none"/>
+  <!-- 虾 -->
+  <ellipse cx="85" cy="58" rx="8" ry="5" fill="#FF6B6B"/>
+  <!-- 青柠 -->
+  <circle cx="55" cy="55" r="6" fill="#32CD32"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">冬阴功面</text>
+</svg>

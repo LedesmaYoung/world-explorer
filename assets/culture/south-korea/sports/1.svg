@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 箭靶 -->
+  <circle fill="#DC143C" cx="200" cy="100" r="50"/>
+  <circle fill="#FFFFFF" cx="200" cy="100" r="40"/>
+  <circle fill="#DC143C" cx="200" cy="100" r="30"/>
+  <circle fill="#FFFFFF" cx="200" cy="100" r="20"/>
+  <circle fill="#FFD700" cx="200" cy="100" r="10"/>
+  <!-- 弓箭手 -->
+  <ellipse fill="#FFE4C4" cx="80" cy="80" rx="12" ry="14"/>
+  <!-- 韩服 -->
+  <path fill="#2196F3" d="M68,94 L92,94 L100,170 L60,170 Z"/>
+  <!-- 弓 -->
+  <path fill="none" stroke="#8B4513" stroke-width="4" d="M50,60 Q80,100 50,140"/>
+  <!-- 箭 -->
+  <line x1="55" y1="100" x2="180" y2="100" stroke="#8B4513" stroke-width="3"/>
+  <polygon fill="#FFD700" points="180,100 170,95 170,105"/>
+  <!-- 弓弦 -->
+  <line x1="50" y1="60" x2="55" y2="100" stroke="#D32F2F" stroke-width="2"/>
+  <line x1="50" y1="140" x2="55" y2="100" stroke="#D32F2F" stroke-width="2"/>
+  <!-- 标题 -->
+  <rect fill="rgba(33,150,243,0.85)" x="10" y="165" width="50" height="25" rx="4"/>
+  <text x="35" y="182" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">射箭</text>
+</svg>

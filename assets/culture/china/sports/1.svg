@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <!-- 背景 -->
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 球桌 -->
+  <rect fill="#1565C0" x="40" y="100" width="200" height="80" rx="5"/>
+  <line x1="140" y1="100" x2="140" y2="180" stroke="white" stroke-width="3"/>
+  <rect fill="#0D47A1" x="40" y="100" width="200" height="8"/>
+  <!-- 球网 -->
+  <rect fill="#E0E0E0" x="135" y="90" width="10" height="20"/>
+  <line x1="40" y1="90" x2="240" y2="90" stroke="#BDBDBD" stroke-width="2"/>
+  <!-- 球拍1 -->
+  <ellipse fill="#D32F2F" cx="80" cy="130" rx="25" ry="20" transform="rotate(-30,80,130)"/>
+  <rect fill="#8D6E63" x="95" y="145" width="8" height="35" rx="2" transform="rotate(-30,99,162)"/>
+  <!-- 球拍2 -->
+  <ellipse fill="#1976D2" cx="200" cy="130" rx="25" ry="20" transform="rotate(30,200,130)"/>
+  <rect fill="#8D6E63" x="177" y="145" width="8" height="35" rx="2" transform="rotate(30,181,162)"/>
+  <!-- 乒乓球 -->
+  <circle fill="#FFD54F" cx="140" cy="75" r="8"/>
+  <ellipse fill="#FFECB3" cx="138" cy="73" rx="3" ry="2"/>
+  <!-- 得分牌 -->
+  <rect fill="#263238" x="110" y="20" width="60" height="35" rx="5"/>
+  <text x="125" y="43" fill="#4CAF50" font-size="18" font-family="monospace">11</text>
+  <text x="155" y="43" fill="#F44336" font-size="18" font-family="monospace">9</text>
+  <!-- 标题 -->
+  <rect fill="rgba(21,101,192,0.8)" x="10" y="165" width="60" height="25" rx="4"/>
+  <text x="40" y="182" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">乒乓球</text>
+</svg>

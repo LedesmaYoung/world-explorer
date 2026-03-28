@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="sky4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0"/>
+      <stop offset="100%" style="stop-color:#90CAF9"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky4)" width="140" height="110"/>
+  <!-- 清真寺主体 -->
+  <rect fill="#FFFFFF" x="30" y="50" width="80" height="40"/>
+  <!-- 大圆顶 -->
+  <ellipse fill="#E0E0E0" cx="70" cy="50" rx="25" ry="20"/>
+  <!-- 小圆顶 -->
+  <ellipse fill="#E0E0E0" cx="35" cy="55" rx="12" ry="10"/>
+  <ellipse fill="#E0E0E0" cx="105" cy="55" rx="12" ry="10"/>
+  <!-- 宣礼塔 -->
+  <rect fill="#FFFFFF" x="15" y="35" width="8" height="55"/>
+  <ellipse fill="#E0E0E0" cx="19" cy="35" rx="4" ry="6"/>
+  <rect fill="#FFFFFF" x="117" y="35" width="8" height="55"/>
+  <ellipse fill="#E0E0E0" cx="121" cy="35" rx="4" ry="6"/>
+  <!-- 拱门 -->
+  <path fill="#1565C0" d="M60,65 Q70,55 80,65 L80,90 L60,90 Z"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">费萨尔清真寺</text>
+</svg>

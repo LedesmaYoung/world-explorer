@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 山脉 -->
+  <polygon fill="#F5F5F5" points="0,200 50,100 100,150 150,70 200,130 250,90 280,120 280,200"/>
+  <!-- 波斯波利斯柱子 -->
+  <rect fill="#DAA520" x="70" y="80" width="20" height="100"/>
+  <rect fill="#DAA520" x="130" y="80" width="20" height="100"/>
+  <rect fill="#DAA520" x="190" y="80" width="20" height="100"/>
+  <!-- 柱头 -->
+  <ellipse fill="#FFD700" cx="80" cy="80" rx="15" ry="10"/>
+  <ellipse fill="#FFD700" cx="140" cy="80" rx="15" ry="10"/>
+  <ellipse fill="#FFD700" cx="200" cy="80" rx="15" ry="10"/>
+  <!-- 台基 -->
+  <rect fill="#CD853F" x="50" y="180" width="180" height="20"/>
+  <rect fill="#D2B48C" x="60" y="175" width="160" height="8"/>
+  <!-- 标题 -->
+  <rect fill="rgba(218,165,32,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">波斯波利斯</text>
+</svg>

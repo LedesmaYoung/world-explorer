@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C62828"/>
+      <stop offset="100%" style="stop-color:#EF5350"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <ellipse cx="70" cy="55" rx="28" ry="18" fill="#FFF"/>
+  <path d="M50,55 Q60,45 70,55 Q80,65 90,55" fill="none" stroke="#C62828" stroke-width="3"/>
+  <circle cx="70" cy="45" r="8" fill="#FFF"/>
+  <g fill="#C62828">
+    <circle cx="65" cy="43" r="2"/>
+    <circle cx="75" cy="43" r="2"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">地毯节</text>
+</svg>

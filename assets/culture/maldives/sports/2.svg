@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg41" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0288D1"/>
+      <stop offset="100%" style="stop-color:#4FC3F7"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg41)" width="140" height="110"/>
+  <!-- 海洋 -->
+  <rect fill="#00ACC1" x="0" y="60" width="140" height="50"/>
+  <!-- 冲浪板 -->
+  <ellipse fill="#FF9800" cx="70" cy="55" rx="10" ry="25"/>
+  <ellipse fill="#FFB74D" cx="70" cy="55" rx="7" ry="20"/>
+  <!-- 浪花 -->
+  <path fill="#FFFFFF" d="M30,65 Q40,55 50,65 Q60,75 70,65 Q80,55 90,65 Q100,75 110,65" opacity="0.8"/>
+  <path fill="#E0F7FA" d="M20,70 Q35,60 50,70 Q65,80 80,70 Q95,60 110,70 Q125,80 140,70" opacity="0.6"/>
+  <!-- 冲浪者 -->
+  <circle fill="#5D4037" cx="70" cy="40" r="6"/>
+  <rect fill="#5D4037" x="65" y="46" width="10" height="12" rx="2"/>
+  <!-- 手臂 -->
+  <rect fill="#5D4037" x="55" y="48" width="12" height="3" rx="1" transform="rotate(-30,61,49)"/>
+  <rect fill="#5D4037" x="73" y="48" width="12" height="3" rx="1" transform="rotate(30,79,49)"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">冲浪</text>
+</svg>

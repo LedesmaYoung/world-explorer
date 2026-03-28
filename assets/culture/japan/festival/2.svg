@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4169E1"/>
+      <stop offset="100%" style="stop-color:#6495ED"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 星空背景 -->
+  <circle cx="20" cy="20" r="1" fill="#FFF"/>
+  <circle cx="40" cy="15" r="1" fill="#FFF"/>
+  <circle cx="100" cy="25" r="1" fill="#FFF"/>
+  <circle cx="120" cy="15" r="1" fill="#FFF"/>
+  <!-- 七夕装饰 -->
+  <line x1="10" y1="30" x2="130" y2="30" stroke="#FFD700" stroke-width="2"/>
+  <!-- 短册（许愿纸条） -->
+  <rect x="25" y="35" width="15" height="30" fill="#FF69B4" rx="1"/>
+  <rect x="50" y="35" width="15" height="30" fill="#98FB98" rx="1"/>
+  <rect x="75" y="35" width="15" height="30" fill="#87CEEB" rx="1"/>
+  <rect x="100" y="35" width="15" height="30" fill="#FFB6C1" rx="1"/>
+  <!-- 文字 -->
+  <text x="70" y="95" text-anchor="middle" fill="#FFF" font-size="12">七夕</text>
+</svg>

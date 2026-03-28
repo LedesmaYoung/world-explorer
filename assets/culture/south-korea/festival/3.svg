@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#87CEEB"/>
+      <stop offset="100%" style="stop-color:#00BFFF"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 风筝 -->
+  <polygon points="70,20 95,50 70,80 45,50" fill="#FF4500" stroke="#8B4513" stroke-width="2"/>
+  <line x1="70" y1="20" x2="70" y2="80" stroke="#8B4513" stroke-width="1"/>
+  <line x1="45" y1="50" x2="95" y2="50" stroke="#8B4513" stroke-width="1"/>
+  <!-- 风筝线 -->
+  <path d="M70 80 Q80 95 100 105" stroke="#8B4513" stroke-width="1" fill="none"/>
+  <text x="70" y="102" text-anchor="middle" fill="#FFF" font-size="10">风筝</text>
+</svg>

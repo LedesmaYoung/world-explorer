@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 花园 -->
+  <rect fill="#90EE90" y="140" width="280" height="60"/>
+  <!-- 跳火堆的人 -->
+  <ellipse fill="#FF4500" cx="140" cy="130" r="25"/>
+  <ellipse fill="#FF6347" cx="140" cy="125" r="18"/>
+  <!-- 火焰 -->
+  <path fill="#FFD700" d="M130,100 Q140,80 150,100 Q145,90 140,95 Q135,90 130,100"/>
+  <path fill="#FFA500" d="M135,95 Q140,75 145,95"/>
+  <!-- 跳跃的人 -->
+  <ellipse fill="#DEB887" cx="100" cy="115" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M92,125 L108,125 L110,160 L90,160 Z"/>
+  <line x1="95" y1="155" x2="85" y2="170" stroke="#DEB887" stroke-width="5"/>
+  <line x1="105" y1="155" x2="115" y2="170" stroke="#DEB887" stroke-width="5"/>
+  <ellipse fill="#DEB887" cx="180" cy="110" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M172,120 L188,120 L190,155 L170,155 Z"/>
+  <!-- 花朵 -->
+  <circle fill="#FF69B4" cx="60" cy="160" r="8"/>
+  <circle fill="#FFB7C5" cx="60" cy="160" r="4"/>
+  <circle fill="#FF69B4" cx="220" cy="160" r="8"/>
+  <circle fill="#FFB7C5" cx="220" cy="160" r="4"/>
+  <!-- 太阳 -->
+  <circle fill="#FFD700" cx="230" cy="40" r="20"/>
+  <!-- 标题 -->
+  <rect fill="rgba(255,69,0,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">跳火节</text>
+</svg>

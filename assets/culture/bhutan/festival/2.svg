@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg33" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800"/>
+      <stop offset="100%" style="stop-color:#FFCC80"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg33)" width="140" height="110"/>
+  <!-- 面具 -->
+  <ellipse fill="#FFD700" cx="70" cy="50" rx="25" ry="30"/>
+  <!-- 眼睛 -->
+  <ellipse fill="#FFFFFF" cx="60" cy="45" rx="8" ry="10"/>
+  <ellipse fill="#FFFFFF" cx="80" cy="45" rx="8" ry="10"/>
+  <circle fill="#000000" cx="60" cy="45" r="4"/>
+  <circle fill="#000000" cx="80" cy="45" r="4"/>
+  <!-- 眉毛 -->
+  <path fill="none" stroke="#D32F2F" stroke-width="3" d="M50,35 Q60,30 70,35"/>
+  <path fill="none" stroke="#D32F2F" stroke-width="3" d="M70,35 Q80,30 90,35"/>
+  <!-- 嘴 -->
+  <path fill="#D32F2F" d="M55,65 Q70,75 85,65"/>
+  <!-- 装饰 -->
+  <circle fill="#D32F2F" cx="55" cy="60" r="3"/>
+  <circle fill="#D32F2F" cx="85" cy="60" r="3"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">策秋节</text>
+</svg>

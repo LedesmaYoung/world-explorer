@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8E7" width="280" height="200"/>
+  <!-- 铜碗 -->
+  <ellipse fill="#CD7F32" cx="140" cy="140" rx="80" ry="35"/>
+  <ellipse fill="#DAA520" cx="140" cy="135" rx="70" ry="30"/>
+  <!-- 米饭 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="130" rx="60" ry="25"/>
+  <!-- 配菜 -->
+  <ellipse fill="#228B22" cx="100" cy="125" rx="15" ry="8"/>
+  <ellipse fill="#DC143C" cx="130" cy="120" rx="12" ry="6"/>
+  <ellipse fill="#FFD700" cx="160" cy="125" rx="15" ry="8"/>
+  <ellipse fill="#8B4513" cx="180" cy="130" rx="10" ry="5"/>
+  <!-- 筷子 -->
+  <rect fill="#8B4513" x="230" y="90" width="4" height="80" rx="2" transform="rotate(10,232,130)"/>
+  <rect fill="#8B4513" x="242" y="90" width="4" height="80" rx="2" transform="rotate(-10,244,130)"/>
+  <!-- 汤勺 -->
+  <ellipse fill="#C0C0C0" cx="50" cy="155" rx="15" ry="8"/>
+  <rect fill="#C0C0C0" x="45" y="160" width="10" height="25" rx="3"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,69,19,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">铜碗饭</text>
+</svg>

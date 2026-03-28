@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 大盘 -->
+  <ellipse fill="#CD7F32" cx="140" cy="130" rx="90" ry="40"/>
+  <ellipse fill="#DAA520" cx="140" cy="125" rx="80" ry="35"/>
+  <!-- 烤全羊 -->
+  <ellipse fill="#D2B48C" cx="140" cy="115" rx="60" ry="30"/>
+  <ellipse fill="#DEB887" cx="140" cy="110" rx="50" ry="25"/>
+  <!-- 羊腿 -->
+  <ellipse fill="#D2B48C" cx="90" cy="125" rx="18" ry="12"/>
+  <ellipse fill="#D2B48C" cx="190" cy="125" rx="18" ry="12"/>
+  <!-- 羊头 -->
+  <ellipse fill="#DEB887" cx="200" cy="105" rx="15" ry="12"/>
+  <!-- 装饰蔬菜 -->
+  <ellipse fill="#228B22" cx="80" cy="135" rx="12" ry="8"/>
+  <ellipse fill="#FF6347" cx="200" cy="135" rx="12" ry="8"/>
+  <!-- 蒸汽 -->
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M100,80 Q105,65 100,50"/>
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M140,75 Q145,60 140,45"/>
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M180,80 Q185,65 180,50"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,69,19,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">烤全羊</text>
+</svg>

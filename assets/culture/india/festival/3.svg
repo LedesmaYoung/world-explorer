@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4FC3F7"/>
+      <stop offset="100%" style="stop-color:#B3E5FC"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg4)" width="140" height="110"/>
+  <!-- 色彩粉末 -->
+  <circle fill="#FF5722" cx="30" cy="40" r="12" opacity="0.8"/>
+  <circle fill="#9C27B0" cx="70" cy="35" r="15" opacity="0.8"/>
+  <circle fill="#4CAF50" cx="110" cy="40" r="12" opacity="0.8"/>
+  <circle fill="#FFEB3B" cx="50" cy="60" r="10" opacity="0.7"/>
+  <circle fill="#E91E63" cx="90" cy="55" r="13" opacity="0.7"/>
+  <!-- 人物剪影 -->
+  <circle fill="#37474F" cx="70" cy="75" r="10"/>
+  <rect fill="#37474F" x="60" y="85" width="20" height="15" rx="3"/>
+  <!-- 彩带 -->
+  <path fill="none" stroke="#FF9800" stroke-width="2" d="M20,50 Q40,30 60,50"/>
+  <path fill="none" stroke="#9C27B0" stroke-width="2" d="M80,50 Q100,30 120,50"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">洒红节</text>
+</svg>

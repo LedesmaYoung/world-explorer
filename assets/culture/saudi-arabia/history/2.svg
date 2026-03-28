@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE4B5"/>
+      <stop offset="100%" style="stop-color:#DEB887"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 沙漠 -->
+  <ellipse cx="70" cy="85" rx="60" ry="15" fill="#D2691E" opacity="0.3"/>
+  <!-- 古城遗迹 -->
+  <rect x="30" y="45" width="25" height="35" fill="#8B4513"/>
+  <rect x="85" y="50" width="30" height="30" fill="#A0522D"/>
+  <polygon fill="#D2691E" points="30,45 42,30 55,45"/>
+  <polygon fill="#CD853F" points="85,50 100,35 115,50"/>
+  <!-- 门洞 -->
+  <rect fill="#5D3A1A" x="38" y="60" width="10" height="20" rx="5" ry="5"/>
+  <!-- 太阳 -->
+  <circle cx="120" cy="25" r="12" fill="#FFD700"/>
+  <text x="70" y="100" text-anchor="middle" fill="#5D3A1A" font-size="10">古代商道</text>
+</svg>

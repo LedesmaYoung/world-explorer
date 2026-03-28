@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#FFF9E6">
+  <title>小小环球旅行家</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css?v=2026032423">
+  <link rel="stylesheet" href="css/traveler.css?v=20260324">
+  <link rel="stylesheet" href="css/transitions.css?v=20260324">
+  <link rel="stylesheet" href="css/games.css?v=2026032424">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- ===== 旅行家选择页面 ===== -->
+    <div id="traveler-select-page" class="traveler-select-page">
+      <div class="traveler-select-content">
+        <!-- 标题 -->
+        <div class="traveler-select-header">
+          <div class="traveler-select-icon">🌍</div>
+          <h1 class="traveler-select-title">小小环球旅行家</h1>
+          <p class="traveler-select-subtitle">选择你的旅行家开始冒险吧！</p>
+        </div>
+        
+        <!-- 旅行家列表 -->
+        <div id="traveler-list" class="traveler-list">
+          <!-- 动态生成旅行家卡片 -->
+        </div>
+        
+        <!-- 创建新旅行家按钮 -->
+        <button id="create-traveler-btn" class="create-traveler-btn">
+          <span class="create-btn-icon">➕</span>
+          <span class="create-btn-text">创建新旅行家</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- ===== 旅行家创建页面 ===== -->
+    <div id="traveler-create-page" class="traveler-create-page" style="display: none;">
+      <div class="traveler-create-content">
+        <!-- 返回按钮 -->
+        <button id="create-back-btn" class="create-back-btn">← 返回</button>
+        
+        <!-- 标题 -->
+        <div class="traveler-create-header">
+          <div class="create-header-icon">✈️</div>
+          <h2 class="create-header-title">创建旅行家</h2>
+          <p class="create-header-subtitle">给你的旅行家起个名字吧！</p>
+        </div>
+        
+        <!-- 头像选择 -->
+        <div class="avatar-select-section">
+          <p class="section-label">选择头像</p>
+          <div id="avatar-grid" class="avatar-grid">
+            <!-- 动态生成头像选项 -->
+          </div>
+        </div>
+        
+        <!-- 名字输入 -->
+        <div class="name-input-section">
+          <p class="section-label">输入名字</p>
+          <input type="text" id="traveler-name-input" class="traveler-name-input" 
+                 placeholder="我的旅行家名字..." maxlength="8" autocomplete="off">
+          <p class="name-hint">最多8个字符</p>
+        </div>
+        
+        <!-- 创建按钮 -->
+        <button id="confirm-create-btn" class="confirm-create-btn" disabled>
+          <span>🚀</span> 开始冒险！
+        </button>
+      </div>
+    </div>
+    
+    <!-- ===== 删除确认弹窗 ===== -->
+    <div id="delete-confirm-modal" class="delete-confirm-modal" style="display: none;">
+      <div class="delete-confirm-content">
+        <div class="delete-confirm-icon">⚠️</div>
+        <h3 class="delete-confirm-title">确定要删除吗？</h3>
+        <p class="delete-confirm-text">删除后，<span id="delete-traveler-name"></span> 的所有进度都将消失！</p>
+        <div class="delete-confirm-buttons">
+          <button id="delete-cancel-btn" class="delete-cancel-btn">取消</button>
+          <button id="delete-confirm-btn" class="delete-confirm-btn">确定删除</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ===== 首页 - 世界地图 ===== -->
+    <div id="home-page" class="home-page">
+      <!-- 头部 -->
+      <header class="header">
+        <h1 class="header-title">
+          <span class="title-icon">🌍</span>
+          <span class="title-text">小小环球旅行家</span>
+          <button class="voice-btn" onclick="VoiceManager.speak(VoiceManager.templates.welcome())">🔊</button>
+        </h1>
+        <div class="header-controls">
+          <button id="sound-btn" class="header-btn active" title="音效开关">🔊</button>
+        </div>
+      </header>
+      
+      <!-- 世界地图容器 -->
+      <div class="world-map-container">
+        <!-- 装饰性云朵 -->
+        <div class="cloud cloud-1">☁️</div>
+        <div class="cloud cloud-2">☁️</div>
+        
+        <!-- 世界地图 -->
+        <div class="world-map">
+          <!-- 卡通世界地图 SVG - 以亚洲为中心的太平洋视角 -->
+          <svg class="world-map-svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet">
+            <!-- 欧洲 - 左上方 -->
+            <path class="map-block clickable europe-block" data-continent="europe"
+              d="M100,50 L160,40 L220,55 L250,85 L255,120 L235,145 L205,155 L170,160 L135,155 L105,160 L80,140 L75,105 L90,70 L100,50 Z"/>
+            <text class="map-label" x="165" y="100">🏰</text>
+            <text class="map-label-text" x="165" y="125">欧洲</text>
+            <text class="map-label-count" x="165" y="140" id="europe-count">0/30</text>
+            
+            <!-- 非洲 - 左下方 -->
+            <path class="map-block clickable africa-block" data-continent="africa"
+              d="M120,180 L175,175 L230,190 L270,230 L280,290 L275,355 L250,410 L205,445 L155,455 L105,445 L65,405 L55,345 L65,285 L55,230 L85,195 L120,180 Z"/>
+            <text class="map-label" x="170" y="315">🦁</text>
+            <text class="map-label-text" x="170" y="340">非洲</text>
+            <text class="map-label-count" x="170" y="355" id="africa-count">0/20</text>
+            
+            <!-- 亚洲 - 正中央（最大洲） -->
+            <path class="map-block clickable asia-block" data-continent="asia"
+              d="M380,45 L490,30 L580,45 L665,75 L720,115 L745,165 L730,215 L690,245 L635,260 L575,250 L515,240 L455,250 L400,240 L350,210 L330,165 L345,115 L380,60 L380,45 Z"/>
+            <text class="map-label" x="530" y="140">🐼</text>
+            <text class="map-label-text" x="530" y="165">亚洲</text>
+            <text class="map-label-count" x="530" y="180" id="asia-count">0/30</text>
+            
+            <!-- 大洋洲 - 亚洲正下方 -->
+            <path class="map-block clickable oceania-block" data-continent="oceania"
+              d="M450,305 L540,295 L620,315 L660,365 L650,430 L600,470 L530,480 L465,465 L430,415 L440,355 L450,305 Z"/>
+            <text class="map-label" x="545" y="385">🦘</text>
+            <text class="map-label-text" x="545" y="410">大洋洲</text>
+            <text class="map-label-count" x="545" y="425" id="oceania-count">0/5</text>
+            
+            <!-- 北美洲 - 右上方 -->
+            <path class="map-block clickable north-america-block" data-continent="north-america"
+              d="M840,40 L925,25 L975,55 L995,100 L980,150 L945,170 L965,215 L930,255 L880,270 L825,265 L795,285 L760,265 L750,225 L775,180 L755,135 L780,90 L840,40 Z"/>
+            <text class="map-label" x="875" y="145">🦅</text>
+            <text class="map-label-text" x="875" y="170">北美洲</text>
+            <text class="map-label-count" x="875" y="185" id="north-america-count">0/10</text>
+            
+            <!-- 南美洲 - 右下方 -->
+            <path class="map-block clickable south-america-block" data-continent="south-america"
+              d="M865,300 L920,310 L960,360 L970,430 L955,505 L915,560 L860,585 L800,575 L780,520 L810,460 L785,395 L800,335 L865,300 Z"/>
+            <text class="map-label" x="875" y="440">🦜</text>
+            <text class="map-label-text" x="875" y="465">南美洲</text>
+            <text class="map-label-count" x="875" y="480" id="south-america-count">0/12</text>
+          </svg>
+          
+          <!-- 装饰性元素 -->
+          <div class="map-decoration plane">✈️</div>
+          <div class="map-decoration ship">🚢</div>
+          <div class="map-decoration whale">🐋</div>
+          <div class="map-decoration dolphin">🐬</div>
+        </div>
+        
+        <!-- 提示文字 -->
+        <div class="map-hint">
+          <span class="hint-icon">👆</span>
+          <span class="hint-text">点击大洲开始探险吧！</span>
+        </div>
+      </div>
+      
+      <!-- 底部状态栏 -->
+      <footer class="footer">
+        <div id="passport-btn" class="footer-item">
+          <span class="footer-icon">🎒</span>
+          <span class="footer-text">我的护照（<span id="collected-count" class="footer-count">0</span>/107）</span>
+        </div>
+        <div id="badge-btn" class="footer-item">
+          <span class="footer-icon">🏆</span>
+          <span class="footer-text">我的勋章（<span id="badge-count" class="footer-count">0</span>/<span id="badge-total">28</span>）</span>
+        </div>
+        <div id="gallery-btn" class="footer-item" onclick="showGallery()">
+          <span class="footer-icon">🖼️</span>
+          <span class="footer-text">我的画廊</span>
+        </div>
+        <div id="game-center-btn" class="footer-item" onclick="openGameCenter()">
+          <span class="footer-icon">🎮</span>
+          <span class="footer-text">游戏中心</span>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- ===== 护照页面 ===== -->
+    <div id="passport-page" class="passport-page">
+      <header class="passport-header">
+        <button class="back-btn">←</button>
+        <h2 class="passport-title">🎒 我的护照</h2>
+      </header>
+      
+      <div id="passport-summary" class="passport-summary">
+        已收集：<span>0</span>/107 个国家
+      </div>
+      
+      <div id="passport-list" class="passport-list">
+        <!-- 各洲收集情况动态生成 -->
+      </div>
+    </div>
+    
+    <!-- ===== 勋章页面 ===== -->
+    <div id="badge-page" class="badge-page">
+      <header class="badge-header">
+        <button class="back-btn">←</button>
+        <h2 class="badge-title">🏆 我的勋章</h2>
+      </header>
+      
+      <div id="badge-grid" class="badge-grid">
+        <!-- 勋章动态生成 -->
+      </div>
+    </div>
+    
+    <!-- ===== 护照本页面 ===== -->
+    <div id="passport-book-page" class="passport-book-page">
+      <header class="passport-book-header">
+        <button class="back-btn" onclick="closePassportBook()">←</button>
+        <h2 class="passport-book-title">🎒 我的护照本</h2>
+      </header>
+      
+      <!-- 统计区 -->
+      <div class="passport-stats">
+        <div class="stat-item">
+          <div class="stat-icon">🔴</div>
+          <div class="stat-value" id="entry-stamp-count">0</div>
+          <div class="stat-label">入境章</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🔵</div>
+          <div class="stat-value" id="exit-stamp-count">0</div>
+          <div class="stat-label">出境章</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🌟</div>
+          <div class="stat-value" id="special-stamp-count">0</div>
+          <div class="stat-label">纪念章</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🎨</div>
+          <div class="stat-value" id="creative-stamp-count">0</div>
+          <div class="stat-label">创作章</div>
+        </div>
+      </div>
+      
+      <!-- 印章卡片网格 -->
+      <div id="passport-stamps-grid" class="passport-stamps-grid">
+        <!-- 国家印章卡片动态生成 -->
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- ===== 大洲国家列表弹窗 ===== -->
+  <div id="continent-modal" class="continent-modal">
+    <div class="continent-modal-content">
+      <header class="continent-header">
+        <button class="back-btn" onclick="closeContinentModal()">←</button>
+        <h2 id="continent-title" class="continent-title">🌏 亚洲</h2>
+      </header>
+      
+      <div id="continent-progress" class="continent-progress">
+        已收集：<span>0/12</span> 个国家
+      </div>
+      
+      <div id="country-grid" class="country-grid">
+        <!-- 国家卡片动态生成 -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 国旗详情弹窗 ===== -->
+  <div id="flag-modal" class="flag-modal">
+    <div class="flag-modal-content">
+      <!-- 关闭按钮 -->
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      
+      <!-- 顶部：国旗和基本信息 -->
+      <div class="modal-header">
+        <div id="modal-flag" class="modal-flag">🇨🇳</div>
+        <div class="modal-title-area">
+          <div id="modal-name" class="modal-name">中国，China</div>
+          <div id="modal-fullname" class="modal-fullname">中华人民共和国</div>
+        </div>
+      </div>
+      
+      <!-- 详细信息 -->
+      <div class="modal-details">
+        <div class="modal-detail-item">
+          <span class="detail-label">🏛️ 首都</span>
+          <span id="modal-capital" class="detail-value">北京</span>
+        </div>
+        <div class="modal-detail-item">
+          <span class="detail-label">📐 面积</span>
+          <span id="modal-area" class="detail-value">960万平方公里</span>
+        </div>
+        <div class="modal-detail-item">
+          <span class="detail-label">👥 人口</span>
+          <span id="modal-population" class="detail-value">14.1亿</span>
+        </div>
+        <div class="modal-detail-item">
+          <span class="detail-label">💰 货币</span>
+          <span id="modal-currency" class="detail-value">人民币</span>
+        </div>
+        <div class="modal-detail-item">
+          <span class="detail-label">🗣️ 语言</span>
+          <span id="modal-language" class="detail-value">汉语</span>
+        </div>
+      </div>
+      
+      <!-- 代表图标 -->
+      <div id="modal-icon" class="modal-icon">🐼</div>
+      
+      <!-- 文化探索板块 -->
+      <div id="culture-sections" class="culture-sections">
+        <!-- 动态生成文化板块 -->
+      </div>
+      
+      <!-- 印章状态显示 -->
+      <div id="stamp-status" class="stamp-status"></div>
+      
+      <!-- 获取护照按钮 -->
+      <button id="get-passport-btn" class="get-passport-btn">🎮 获取护照印章</button>
+      
+      <!-- 已收集状态 -->
+      <div id="modal-collected" class="modal-collected" style="display: none;">✓ 已收集到护照</div>
+    </div>
+  </div>
+  
+  <!-- ===== 颜色辨识游戏弹窗 ===== -->
+  <div id="game-modal" class="game-modal">
+    <div class="game-modal-content">
+      <!-- 游戏标题 -->
+      <div class="game-header">
+        <div class="game-title">🎨 找出气球颜色</div>
+        <div id="game-flag-hint" class="game-subtitle">找出国旗上的颜色！</div>
+      </div>
+      
+      <!-- 国旗展示 -->
+      <div class="game-flag-display">
+        <div id="game-flag-large" class="game-flag-large">🇨🇳</div>
+      </div>
+      
+      <!-- 目标颜色指示器 -->
+      <div class="color-target">
+        <div id="target-color-circle" class="target-color-circle"></div>
+        <div id="target-color-hint" class="target-hint">找红色气球 🎈</div>
+      </div>
+      
+      <!-- 颜色气球容器 -->
+      <div id="balloons-container" class="balloons-container">
+        <!-- 气球动态生成 -->
+      </div>
+      
+      <!-- 进度显示 -->
+      <div id="game-progress" class="game-progress">
+        <!-- 进度点动态生成 -->
+      </div>
+      
+      <!-- 关闭按钮 -->
+      <button class="game-close-btn" onclick="closeGameModal()">✕ 返回</button>
+    </div>
+  </div>
+  
+  <!-- ===== 点击国旗游戏弹窗 ===== -->
+  <div id="tap-game-modal" class="tap-game-modal">
+    <div class="tap-game-content">
+      <div class="tap-game-header">
+        <h2 id="tap-game-title">找出国旗</h2>
+        <p id="tap-game-hint">点击正确的国旗</p>
+        <div id="tap-game-score" class="tap-game-score" style="display: none;"></div>
+      </div>
+      
+      <div id="tap-flags-container" class="tap-flags-container">
+        <!-- 国旗选项动态生成 -->
+      </div>
+      
+      <button id="tap-skip-btn" class="tap-skip-btn" onclick="TapGame.close(); if (!TapGame.isChallengeMode && TapGame.callback) TapGame.callback(false);">✕ 返回</button>
+    </div>
+    
+    <!-- 天梯挑战结果弹窗 -->
+    <div id="tap-challenge-modal" class="tap-challenge-modal">
+      <div class="tap-challenge-content">
+        <div class="challenge-result-header">
+          <h2>🏆 挑战结束！</h2>
+        </div>
+        
+        <div class="challenge-result-score">
+          <div class="result-score-item">
+            <div class="score-label">答对题数</div>
+            <div id="tap-challenge-score" class="score-value">0</div>
+          </div>
+          <div class="result-score-item">
+            <div class="score-label">排行榜名次</div>
+            <div id="tap-challenge-rank" class="score-value rank">-</div>
+          </div>
+        </div>
+        
+        <div class="challenge-leaderboard">
+          <h3>🏆 天梯排行榜</h3>
+          <div id="tap-leaderboard" class="tap-leaderboard">
+            <!-- 排行榜动态生成 -->
+          </div>
+        </div>
+        
+        <div class="challenge-actions">
+          <button class="challenge-continue-btn" onclick="TapGame.continueChallenge()">继续挑战 🔄</button>
+          <button class="challenge-back-btn" onclick="TapGame.backToHome()">返回主页 ↩️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 拼图游戏弹窗 ===== -->
+  <div id="puzzle-game-modal" class="puzzle-game-modal">
+    <div class="puzzle-game-content">
+      <div class="puzzle-game-header">
+        <h2 id="puzzle-game-title">拼出国旗</h2>
+        
+        <!-- 挑战模式信息 -->
+        <div id="puzzle-challenge-info" class="puzzle-challenge-info" style="display: none;">
+          <div id="puzzle-level" class="puzzle-level">第 1 关</div>
+          <div id="puzzle-hearts" class="puzzle-hearts">❤️❤️❤️</div>
+        </div>
+      </div>
+      
+      <p id="puzzle-hint" class="puzzle-hint">把下面的碎片拖到正确的位置</p>
+      
+      <div class="puzzle-main-area">
+        <!-- 参考图 -->
+        <div id="puzzle-reference" class="puzzle-reference">
+          <!-- 参考国旗显示 -->
+        </div>
+        
+        <!-- 拼图网格 -->
+        <div id="puzzle-grid" class="puzzle-grid">
+          <!-- 拼图格子动态生成 -->
+        </div>
+      </div>
+      
+      <!-- 碎片区域 -->
+      <div id="puzzle-pieces" class="puzzle-pieces">
+        <!-- 碎片动态生成 -->
+      </div>
+      
+      <button id="puzzle-skip-btn" class="puzzle-skip-btn" onclick="PuzzleGame.close(); if (!PuzzleGame.isChallengeMode && PuzzleGame.callback) PuzzleGame.callback(false);">✕ 返回</button>
+    </div>
+    
+    <!-- 拼图挑战结果弹窗 -->
+    <div id="puzzle-challenge-modal" class="puzzle-challenge-modal">
+      <div class="puzzle-challenge-content">
+        <div class="challenge-result-header">
+          <h2>🧩 挑战结束！</h2>
+        </div>
+        
+        <div class="challenge-result-score">
+          <div class="result-score-item">
+            <div class="score-label">通过关卡</div>
+            <div id="puzzle-challenge-score" class="score-value">0</div>
+          </div>
+          <div class="result-score-item">
+            <div class="score-label">排行榜名次</div>
+            <div id="puzzle-challenge-rank" class="score-value rank">-</div>
+          </div>
+        </div>
+        
+        <div class="challenge-leaderboard">
+          <h3>🏆 拼图排行榜</h3>
+          <div id="puzzle-leaderboard" class="puzzle-leaderboard">
+            <!-- 排行榜动态生成 -->
+          </div>
+        </div>
+        
+        <div class="challenge-actions">
+          <button class="challenge-continue-btn" onclick="PuzzleGame.continueChallenge()">继续挑战 🔄</button>
+          <button class="challenge-back-btn" onclick="PuzzleGame.backToHome()">返回主页 ↩️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 翻牌配对难度选择弹窗 ===== -->
+  <div id="match-difficulty-modal" class="match-difficulty-modal">
+    <div class="match-difficulty-content">
+      <div class="match-difficulty-header">
+        <h2>🃏 选择难度</h2>
+        <p class="match-difficulty-subtitle">翻牌配对挑战</p>
+      </div>
+      
+      <div id="match-difficulty-grid" class="match-difficulty-grid">
+        <!-- 难度选项动态生成 -->
+      </div>
+      
+      <button class="match-difficulty-close" onclick="MatchGame.closeDifficultySelect()">✕ 取消</button>
+    </div>
+  </div>
+  
+  <!-- ===== 翻牌配对游戏弹窗 ===== -->
+  <div id="match-game-modal" class="match-game-modal">
+    <div class="match-game-content">
+      <div class="match-game-header">
+        <h2 id="match-game-title">翻牌配对</h2>
+      </div>
+      
+      <!-- 玩家栏 -->
+      <div id="match-players-bar" class="match-players-bar">
+        <!-- 玩家信息动态生成 -->
+      </div>
+      
+      <!-- 卡片网格 -->
+      <div id="match-grid" class="match-grid">
+        <!-- 卡片动态生成 -->
+      </div>
+      
+      <button class="match-skip-btn" onclick="MatchGame.close(); MatchGame.callback(false);">✕ 返回</button>
+    </div>
+    
+    <!-- 结果弹窗 -->
+    <div id="match-result-modal" class="match-result-modal">
+      <div class="match-result-content">
+        <h2 id="match-result-title">🎉 游戏结束！</h2>
+        <div id="match-result-scores" class="match-result-scores">
+          <!-- 得分动态生成 -->
+        </div>
+        <button class="match-confirm-btn" onclick="MatchGame.confirmResult()">获得纪念章 🌟</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 涂色创作游戏弹窗 ===== -->
+  <div id="coloring-game-modal" class="coloring-game-modal">
+    <div class="coloring-game-content">
+      <div class="coloring-game-header">
+        <h2 id="coloring-game-title">给国旗涂色</h2>
+      </div>
+      
+      <!-- 画布区域 -->
+      <div class="coloring-canvas-container">
+        <canvas id="coloring-canvas" width="200" height="140"></canvas>
+      </div>
+      
+      <!-- 工具栏 -->
+      <div id="coloring-tools" class="coloring-tools">
+        <!-- 画笔/橡皮擦切换 -->
+        <div class="tool-group">
+          <button id="brush-btn" class="tool-btn active" onclick="ColoringGame.setEraser(false)" title="画笔">🖌️</button>
+          <button id="eraser-btn" class="tool-btn" onclick="ColoringGame.setEraser(true)" title="橡皮擦">🧽</button>
+        </div>
+        
+        <!-- 画笔粗细 -->
+        <div class="tool-group brush-sizes">
+          <button class="brush-size-btn" onclick="ColoringGame.setBrushSize(0)" title="细">
+            <span class="brush-dot small"></span>
+          </button>
+          <button class="brush-size-btn active" onclick="ColoringGame.setBrushSize(1)" title="中">
+            <span class="brush-dot medium"></span>
+          </button>
+          <button class="brush-size-btn" onclick="ColoringGame.setBrushSize(2)" title="大">
+            <span class="brush-dot large"></span>
+          </button>
+          <button class="brush-size-btn" onclick="ColoringGame.setBrushSize(3)" title="特大">
+            <span class="brush-dot xlarge"></span>
+          </button>
+        </div>
+        
+        <!-- 撤销/清空 -->
+        <div class="tool-group">
+          <button class="tool-btn" onclick="ColoringGame.undo()" title="撤销">↩️</button>
+          <button class="tool-btn" onclick="ColoringGame.clearCanvas()" title="清空">🗑️</button>
+        </div>
+      </div>
+      
+      <!-- 调色盘 -->
+      <div id="coloring-palette" class="coloring-palette">
+        <!-- 颜色按钮动态生成 -->
+      </div>
+      
+      <div class="coloring-actions">
+        <button class="coloring-save-btn" onclick="ColoringGame.finish()">💾 保存到画廊</button>
+        <button class="coloring-skip-btn" onclick="ColoringGame.close(); ColoringGame.callback(false);">✕ 返回</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 我的画廊页面 ===== -->
+  <div id="gallery-page" class="gallery-page">
+    <div class="gallery-container">
+      <header class="gallery-header">
+        <button class="back-btn" onclick="showPage('home')">←</button>
+        <h1>🖼️ 我的画廊</h1>
+      </header>
+      
+      <div id="gallery-grid" class="gallery-grid">
+        <!-- 作品动态生成 -->
+      </div>
+      
+      <div id="gallery-empty" class="gallery-empty" style="display: none;">
+        <div class="empty-icon">🎨</div>
+        <p>还没有作品</p>
+        <p class="empty-hint">完成涂色游戏后，作品会保存在这里</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 游戏中心弹窗 ===== -->
+  <div id="game-center-modal" class="game-center-modal">
+    <div class="game-center-content">
+      <div class="game-center-header">
+        <h2>🎮 游戏中心</h2>
+        <button class="modal-close-btn" onclick="closeGameCenter()">✕</button>
+      </div>
+      <div id="game-center-grid" class="game-center-grid">
+        <!-- 游戏列表动态生成 -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 连连看难度选择弹窗 ===== -->
+  <div id="link-difficulty-modal" class="link-difficulty-modal">
+    <div class="link-difficulty-content">
+      <div class="link-difficulty-header">
+        <h2>🔗 国旗连连看</h2>
+        <p class="link-difficulty-subtitle">选择难度</p>
+      </div>
+      <div id="link-difficulty-grid" class="link-difficulty-grid">
+        <!-- 难度选项动态生成 -->
+      </div>
+      <button class="link-difficulty-close" onclick="LinkGame.closeDifficultySelect()">✕ 取消</button>
+    </div>
+  </div>
+  
+  <!-- ===== 连连看游戏弹窗 ===== -->
+  <div id="link-game-modal" class="link-game-modal">
+    <div class="link-game-content">
+      <div class="link-game-header">
+        <h2 id="link-game-title">🔗 国旗连连看</h2>
+        <div class="link-game-info">
+          <span id="link-pairs-left">剩余: 0对</span>
+          <span id="link-timer">⏱️ 00:00</span>
+        </div>
+      </div>
+      <div id="link-grid-container" class="link-grid-container">
+        <canvas id="link-canvas"></canvas>
+      </div>
+      <div class="link-game-actions">
+        <button id="link-hint-btn" class="link-hint-btn" onclick="LinkGame.useHint()">💡 提示</button>
+        <button id="link-shuffle-btn" class="link-shuffle-btn" onclick="LinkGame.shuffle()">🔀 重排</button>
+        <button class="link-skip-btn" onclick="LinkGame.close()">✕ 返回</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 印章获得弹窗 ===== -->
+  <div id="stamp-modal" class="stamp-modal">
+    <div class="stamp-modal-content">
+      <div class="stamp-celebration">🎉 恭喜你！</div>
+      <div class="stamp-title">获得了护照印章</div>
+      
+      <!-- 印章展示 -->
+      <div id="stamp-display" class="stamp-display">
+        <div id="stamp-icon-large" class="stamp-icon-large">🔴</div>
+        <div id="stamp-type-text" class="stamp-type">入境章</div>
+        <div id="stamp-country" class="stamp-country">中国</div>
+        <div id="stamp-date" class="stamp-date">2026.03.23</div>
+      </div>
+      
+      <!-- 护照预览 -->
+      <div class="stamp-passport-preview">
+        <div class="preview-title">📜 护照印章</div>
+        <div id="stamp-preview-grid" class="stamp-preview-grid">
+          <!-- 印章预览动态生成 -->
+        </div>
+      </div>
+      
+      <button id="stamp-close-btn" class="stamp-close-btn" onclick="closeStampModal()">太棒了！✨</button>
+      
+      <!-- 连续挑战按钮 -->
+      <button id="stamp-continue-btn" class="stamp-continue-btn" style="display: none;" onclick="continueToNextGame()">继续挑战 ➡️</button>
+      
+      <!-- 返回按钮 -->
+      <button id="stamp-back-btn" class="stamp-back-btn" style="display: none;" onclick="backToCountry()">返回国家 ↩️</button>
+    </div>
+  </div>
+  
+  <!-- 语音引导模块 -->
+  <script src="js/voice.js"></script>
+  
+  <!-- 游戏模块脚本 -->
+  <script src="js/game.js?v=2026032424"></script>
+  <script src="js/game-tap.js"></script>
+  <script src="js/game-puzzle.js"></script>
+  <script src="js/game-match.js"></script>
+  <script src="js/game-coloring.js"></script>
+  <script src="js/game-link.js"></script>
+  
+  <!-- 文化数据 -->
+  <script src="js/culture-data.js"></script>
+
+  <!-- 数据文件（必须在 Service Worker 注册前加载） -->
+  <script src="js/data.js"></script>
+
+  <!-- 脚本 -->
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Service Worker 注册 (PWA 离线支持) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        console.log('[PWA] ========== 开始注册 Service Worker ==========');
+
+        // 检查 URL 参数是否需要强制刷新
+        const urlParams = new URLSearchParams(window.location.search);
+        const forceCache = urlParams.get('force-cache');
+        const clearCache = urlParams.get('clear-cache');
+
+        // 如果请求清除缓存
+        if (clearCache === '1') {
+          console.log('[PWA] 🗑️ 检测到 clear-cache=1 参数，清除所有缓存...');
+          caches.keys().then(names => {
+            names.forEach(name => {
+              console.log(`[PWA] 删除缓存: ${name}`);
+              caches.delete(name);
+            });
+          });
+          navigator.serviceWorker.getRegistrations().then(registrations => {
+            registrations.forEach(reg => reg.unregister());
+          });
+          // 清除参数后重新加载
+          setTimeout(() => {
+            window.location.href = window.location.pathname;
+          }, 500);
+          return;
+        }
+
+        navigator.serviceWorker.register('./sw.js')
+          .then(function(registration) {
+            console.log('[PWA] ✅ Service Worker 注册成功:', registration.scope);
+            console.log('[PWA] 注册状态:', registration.active ? '已激活' : '未激活');
+
+            // 等待 Service Worker 激活后自动缓存所有资源
+            registration.addEventListener('controllerchange', function() {
+              console.log('[PWA] 🔄 Service Worker 已切换，开始缓存所有资源');
+              // 稍等一下再触发缓存，确保 SW 完全激活
+              setTimeout(precacheAllResources, 1000);
+            });
+
+            // 如果已经有控制器，直接开始缓存
+            if (navigator.serviceWorker.controller) {
+              console.log('[PWA] ✅ Service Worker 已就绪，2秒后开始缓存所有资源');
+              // 如果有 force-cache 参数，立即缓存
+              const delay = forceCache === '1' ? 500 : 2000;
+              setTimeout(precacheAllResources, delay);
+            } else {
+              console.log('[PWA] ⚠️ Service Worker Controller 未就绪，等待激活...');
+            }
+
+            // 检查更新
+            registration.addEventListener('updatefound', function() {
+              const newWorker = registration.installing;
+              console.log('[PWA] 🔔 发现新 Service Worker，状态:', newWorker.state);
+
+              newWorker.addEventListener('statechange', function() {
+                console.log('[PWA] Service Worker 状态变化:', newWorker.state);
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  console.log('[PWA] 🆕 新版本可用，刷新页面后生效');
+                }
+              });
+            });
+          })
+          .catch(function(error) {
+            console.error('[PWA] ❌ Service Worker 注册失败:', error);
+          });
+      });
+    } else {
+      console.warn('[PWA] ⚠️ 当前浏览器不支持 Service Worker');
+    }
+
+    // 主动缓存所有资源（通过遍历数据文件中引用的资源）
+    function precacheAllResources() {
+      console.log('[PWA] ========== 开始主动缓存所有资源 ==========');
+
+      // 防止重复触发
+      if (window.isCaching) {
+        console.warn('[PWA] ⚠️ 正在缓存中，跳过重复请求');
+        return;
+      }
+      window.isCaching = true;
+
+      // 收集所有需要缓存的资源 URL
+      const urlsToCache = [];
+      const seenUrls = new Set(); // 用于去重
+
+      // 检查数据是否加载
+      console.log('[PWA] 检查数据加载状态:');
+      console.log('[PWA]   COUNTRIES 已加载:', typeof COUNTRIES !== 'undefined');
+      console.log('[PWA]   CULTURE_DATA 已加载:', typeof CULTURE_DATA !== 'undefined');
+
+      // 1. 收集音频资源
+      if (typeof COUNTRIES !== 'undefined') {
+        COUNTRIES.forEach(country => {
+          if (country.audioZh && !seenUrls.has(country.audioZh)) {
+            urlsToCache.push(country.audioZh);
+            seenUrls.add(country.audioZh);
+          }
+          if (country.audioEn && !seenUrls.has(country.audioEn)) {
+            urlsToCache.push(country.audioEn);
+            seenUrls.add(country.audioEn);
+          }
+        });
+      } else {
+        console.error('[PWA] ❌ COUNTRIES 未定义，无法收集音频资源');
+      }
+
+      // 2. 收集文化图片资源
+      if (typeof CULTURE_DATA !== 'undefined') {
+        Object.values(CULTURE_DATA).forEach(countries => {
+          countries.forEach(country => {
+            ['festival', 'food', 'history', 'sports'].forEach(category => {
+              if (country[category]) {
+                country[category].forEach((_, index) => {
+                  const url = `assets/culture/${country.id}/${category}/${index + 1}.svg`;
+                  if (!seenUrls.has(url)) {
+                    urlsToCache.push(url);
+                    seenUrls.add(url);
+                  }
+                });
+              }
+            });
+          });
+        });
+      } else {
+        console.error('[PWA] ❌ CULTURE_DATA 未定义，无法收集文化图片资源');
+      }
+
+      console.log('[PWA] ========== 收集结果 ==========');
+      console.log('[PWA] 总共收集到', urlsToCache.length, '个资源需要缓存（已去重）');
+
+      // 如果没有收集到资源，说明数据未加载，延迟重试
+      if (urlsToCache.length === 0) {
+        console.warn('[PWA] ⚠️ 资源列表为空，数据可能未加载，2秒后重试');
+        window.isCaching = false;
+        setTimeout(precacheAllResources, 2000);
+        return;
+      }
+
+      // 检查 Service Worker 状态
+      console.log('[PWA] Service Worker 状态:');
+      console.log('[PWA]   controller 已存在:', !!navigator.serviceWorker.controller);
+      console.log('[PWA]   ready:', !!navigator.serviceWorker.ready);
+
+      // 批量缓存（每次 50 个，避免一次性请求过多）
+      const batchSize = 50;
+      let cachedCount = 0;
+      let failedCount = 0;
+      const timeouts = []; // 存储所有超时定时器
+      let completedBatches = new Set(); // 记录已完成的批次
+
+      // 完成缓存并清理
+      function finishCaching() {
+        console.log('[PWA] ========== 缓存完成 ==========');
+        console.log('[PWA] ✅ 总计成功缓存:', cachedCount);
+        console.log('[PWA] ❌ 失败:', failedCount);
+        console.log('[PWA] 总资源数:', urlsToCache.length);
+
+        // 清理所有超时定时器
+        timeouts.forEach(timeout => clearTimeout(timeout));
+        timeouts.length = 0;
+
+        showCacheCompleteMessage();
+        window.isCaching = false;
+      }
+
+      function cacheBatch(startIndex) {
+        const batchIndex = Math.floor(startIndex / batchSize);
+
+        // 检查批次是否已完成
+        if (completedBatches.has(batchIndex)) {
+          console.log(`[PWA] 批次 ${batchIndex + 1} 已处理，跳过`);
+          const nextIndex = startIndex + batchSize;
+          if (nextIndex < urlsToCache.length) {
+            cacheBatch(nextIndex);
+          } else {
+            finishCaching();
+          }
+          return;
+        }
+        completedBatches.add(batchIndex);
+
+        const batch = urlsToCache.slice(startIndex, startIndex + batchSize);
+        console.log(`[PWA] ========== 批次 ${batchIndex + 1} ==========`);
+        console.log('[PWA] 正在缓存', batch.length, '个资源，起始索引:', startIndex);
+
+        if (batch.length === 0) {
+          finishCaching();
+          return;
+        }
+
+        const channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+          if (event.data.success) {
+            cachedCount += batch.length;
+            console.log(`[PWA] ✅ 批次 ${batchIndex + 1} 成功，累计: ${cachedCount}/${urlsToCache.length}`);
+            updateCacheProgress(cachedCount, urlsToCache.length);
+            cacheBatch(startIndex + batchSize);
+          } else {
+            failedCount += batch.length;
+            console.error(`[PWA] ❌ 批次 ${batchIndex + 1} 失败:`, event.data.error);
+            // 继续缓存下一批
+            cacheBatch(startIndex + batchSize);
+          }
+        };
+
+        if (navigator.serviceWorker.controller) {
+          console.log('[PWA] 发送缓存请求给 Service Worker');
+          navigator.serviceWorker.controller.postMessage({
+            type: 'CACHE_URLS',
+            urls: batch
+          }, [channel.port2]);
+
+          // 设置超时
+          const timeoutId = setTimeout(() => {
+            console.warn(`[PWA] ⚠️ 批次 ${batchIndex + 1} 超时（10秒无响应）`);
+            failedCount += batch.length;
+            // 继续下一批
+            cacheBatch(startIndex + batchSize);
+          }, 10000);
+          timeouts.push(timeoutId);
+        } else {
+          console.error('[PWA] ❌ Service Worker 未就绪');
+          finishCaching();
+        }
+      }
+
+      // 开始缓存
+      console.log('[PWA] 开始缓存批次...');
+      cacheBatch(0);
+    }
+
+    // 更新缓存进度显示
+    function updateCacheProgress(current, total) {
+      // 可选：在页面显示缓存进度
+      const progress = Math.round((current / total) * 100);
+      console.log(`[PWA] 缓存进度: ${progress}%`);
+    }
+
+    // 显示缓存完成提示
+    function showCacheCompleteMessage() {
+      console.log('[PWA] ✅ 所有资源已缓存完成，可以离线使用了！');
+      // 在页面显示 Toast 提示
+      const toast = document.createElement('div');
+      toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(76, 175, 80, 0.95);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        z-index: 10000;
+        animation: slideDown 0.3s ease-out;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      `;
+      toast.textContent = '✅ 离线资源缓存完成！可以断网使用了';
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.animation = 'slideUp 0.3s ease-in';
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    // 添加调试按钮（仅开发环境）
+    window.addEventListener('load', function() {
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        const debugBtn = document.createElement('button');
+        debugBtn.textContent = '🔄 手动触发缓存';
+        debugBtn.style.cssText = `
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          padding: 10px 15px;
+          background: #2196F3;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          z-index: 10000;
+          font-size: 12px;
+        `;
+        debugBtn.onclick = function() {
+          console.log('[PWA] 🔘 手动触发缓存');
+          precacheAllResources();
+        };
+        document.body.appendChild(debugBtn);
+      }
+    });
+  </script>
+
+  <!-- 添加缓存提示动画样式 -->
+  <style>
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 1; transform: translateX(-50%) translateY(0); }
+      to { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+    }
+  </style>
+</body>
+</html>

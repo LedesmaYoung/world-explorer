@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB6C1"/>
+      <stop offset="100%" style="stop-color:#FF69B4"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 韩服人物 -->
+  <circle cx="70" cy="30" r="15" fill="#F5DEB3"/>
+  <rect x="55" y="45" width="30" height="35" fill="#FF1493"/>
+  <rect x="50" y="45" width="40" height="20" fill="#C71585"/>
+  <!-- 裙子 -->
+  <path d="M50 65 L45 100 L95 100 L90 65" fill="#FF69B4"/>
+  <!-- 发髻 -->
+  <ellipse cx="70" cy="18" rx="10" ry="5" fill="#000"/>
+  <text x="70" y="108" text-anchor="middle" fill="#FFF" font-size="10">韩服</text>
+</svg>

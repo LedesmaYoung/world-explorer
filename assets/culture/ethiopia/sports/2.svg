@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#078930"/>
+  <circle cx="50" cy="50" r="40" fill="#FCDD09" opacity="0.3"/>
+  <circle cx="350" cy="250" r="50" fill="#FCDD09" opacity="0.3"/>
+  <rect x="120" y="80" width="160" height="140" rx="10" fill="#DA121A" opacity="0.9"/>
+  <text x="200" y="140" font-family="Arial, sans-serif" font-size="40" text-anchor="middle" fill="#078930">🏅</text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#078930">National Sport</text>
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#DA121A">Ethiopia</text>
+</svg>

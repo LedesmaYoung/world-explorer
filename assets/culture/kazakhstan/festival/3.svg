@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D84315"/>
+      <stop offset="100%" style="stop-color:#FF8A65"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <path d="M50,70 Q70,30 90,70" fill="none" stroke="#FFD54F" stroke-width="4"/>
+  <path d="M55,65 Q70,40 85,65" fill="none" stroke="#FFF" stroke-width="2"/>
+  <circle cx="70" cy="45" r="8" fill="#FFD54F"/>
+  <g fill="#FFF">
+    <rect x="45" y="75" width="10" height="15" rx="2"/>
+    <rect x="85" y="75" width="10" height="15" rx="2"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">冬不拉音乐节</text>
+</svg>

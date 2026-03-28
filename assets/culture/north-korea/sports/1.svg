@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 跑道 -->
+  <ellipse fill="#D2691E" cx="140" cy="160" rx="120" ry="30" opacity="0.3"/>
+  <!-- 体操运动员 -->
+  <ellipse fill="#FFE4C4" cx="140" cy="70" rx="10" ry="12"/>
+  <path fill="#DC143C" d="M130,82 L150,82 L155,130 L125,130 Z"/>
+  <!-- 双臂伸开 -->
+  <line x1="100" y1="90" x2="180" y2="90" stroke="#FFE4C4" stroke-width="8" stroke-linecap="round"/>
+  <!-- 腿 -->
+  <line x1="135" y1="130" x2="125" y2="170" stroke="#FFE4C4" stroke-width="8" stroke-linecap="round"/>
+  <line x1="145" y1="130" x2="155" y2="170" stroke="#FFE4C4" stroke-width="8" stroke-linecap="round"/>
+  <!-- 彩带 -->
+  <path fill="none" stroke="#FF69B4" stroke-width="3" d="M180,90 Q200,70 190,50 Q210,40 230,60"/>
+  <path fill="none" stroke="#FFD700" stroke-width="3" d="M100,90 Q80,70 90,50 Q70,40 50,60"/>
+  <!-- 星星装饰 -->
+  <circle fill="#FFD700" cx="50" cy="40" r="3"/>
+  <circle fill="#FFD700" cx="230" cy="40" r="3"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="165" width="70" height="25" rx="4"/>
+  <text x="45" y="182" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">艺术体操</text>
+</svg>

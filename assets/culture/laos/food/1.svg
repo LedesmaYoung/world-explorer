@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 竹筒 -->
+  <ellipse fill="#8B4513" cx="140" cy="130" rx="50" ry="25"/>
+  <rect fill="#A0522D" x="90" y="80" width="100" height="50"/>
+  <!-- 竹节 -->
+  <rect fill="#6B4423" x="90" y="80" width="100" height="8"/>
+  <rect fill="#6B4423" x="90" y="120" width="100" height="8"/>
+  <!-- 竹叶 -->
+  <path fill="#228B22" d="M80,90 Q70,80 75,70 Q85,80 80,90"/>
+  <path fill="#228B22" d="M200,90 Q210,80 205,70 Q195,80 200,90"/>
+  <!-- 露出的糯米饭 -->
+  <ellipse fill="#FFFACD" cx="140" cy="85" rx="35" ry="15"/>
+  <!-- 配菜小碟 -->
+  <ellipse fill="#F5F5DC" cx="60" cy="160" rx="25" ry="10"/>
+  <ellipse fill="#DC143C" cx="60" cy="158" rx="18" ry="7"/>
+  <ellipse fill="#F5F5DC" cx="220" cy="160" rx="25" ry="10"/>
+  <ellipse fill="#228B22" cx="220" cy="158" rx="18" ry="7"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,69,19,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">竹筒饭</text>
+</svg>

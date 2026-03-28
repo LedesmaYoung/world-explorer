@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#32CD32"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 足球 -->
+  <circle cx="50" cy="50" r="25" fill="#FFF"/>
+  <path d="M35 35 L50 45 L35 55 L25 45 Z" fill="#000"/>
+  <path d="M65 35 L50 45 L65 55 L75 45 Z" fill="#000"/>
+  <path d="M42 55 L50 70 L58 55" fill="#000"/>
+  <!-- 球门 -->
+  <rect x="85" y="25" width="5" height="50" fill="#FFF"/>
+  <rect x="85" y="25" width="40" height="5" fill="#FFF"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10">足球</text>
+</svg>

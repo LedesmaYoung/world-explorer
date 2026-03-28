@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 摔跤场 -->
+  <circle fill="#D2691E" cx="140" cy="130" r="80"/>
+  <circle fill="#CD853F" cx="140" cy="125" r="70"/>
+  <circle fill="#D2B48C" cx="140" cy="120" r="60"/>
+  <!-- 摔跤手 -->
+  <ellipse fill="#DEB887" cx="110" cy="110" rx="12" ry="15"/>
+  <path fill="#4169E1" d="M98,125 L122,125 L125,165 L95,165 Z"/>
+  <ellipse fill="#DEB887" cx="170" cy="115" rx="12" ry="15"/>
+  <path fill="#DC143C" d="M158,130 L182,130 L185,170 L155,170 Z"/>
+  <!-- 摔跤动作 -->
+  <line x1="130" y1="115" x2="155" y2="125" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <line x1="125" y1="160" x2="145" y2="165" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <!-- 观众 -->
+  <ellipse fill="#DEB887" cx="60" cy="180" rx="5" ry="6"/>
+  <ellipse fill="#DEB887" cx="220" cy="180" rx="5" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(210,105,30,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">摔跤</text>
+</svg>

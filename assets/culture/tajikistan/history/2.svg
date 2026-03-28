@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C2185B"/>
+      <stop offset="100%" style="stop-color:#F06292"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <g fill="#FFD700">
+    <circle cx="70" cy="40" r="18"/>
+    <path d="M50,58 L90,58 L98,72 L42,72 Z"/>
+  </g>
+  <g fill="#C2185B">
+    <circle cx="64" cy="38" r="4"/>
+    <circle cx="76" cy="38" r="4"/>
+    <rect x="62" y="48" width="16" height="8" rx="2"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">萨曼王朝</text>
+</svg>

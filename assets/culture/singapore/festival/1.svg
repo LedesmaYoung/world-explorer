@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#1a1a2e" width="280" height="200"/>
+  <!-- 天空花园灯光 -->
+  <path fill="#4169E1" d="M140,40 L100,180 L180,180 Z"/>
+  <path fill="#1E90FF" d="M140,50 L110,170 L170,170 Z"/>
+  <!-- 观景台 -->
+  <ellipse fill="#C0C0C0" cx="140" cy="45" rx="30" ry="10"/>
+  <ellipse fill="#A9A9A9" cx="140" cy="42" rx="25" ry="8"/>
+  <!-- 灯光效果 -->
+  <circle fill="#FFD700" opacity="0.8" cx="120" cy="100" r="5"/>
+  <circle fill="#FF69B4" opacity="0.8" cx="140" cy="80" r="5"/>
+  <circle fill="#4ECDC4" opacity="0.8" cx="160" cy="100" r="5"/>
+  <circle fill="#FF6B6B" opacity="0.8" cx="130" cy="120" r="4"/>
+  <circle fill="#87CEEB" opacity="0.8" cx="150" cy="120" r="4"/>
+  <!-- 激光 -->
+  <line x1="140" y1="45" x2="50" y2="10" stroke="#FF69B4" stroke-width="2" opacity="0.7"/>
+  <line x1="140" y1="45" x2="230" y2="10" stroke="#4ECDC4" stroke-width="2" opacity="0.7"/>
+  <!-- 星星 -->
+  <circle fill="#FFD700" cx="30" cy="30" r="2"/>
+  <circle fill="#FFD700" cx="250" cy="25" r="2"/>
+  <circle fill="#FFD700" cx="80" cy="20" r="1.5"/>
+  <circle fill="#FFD700" cx="200" cy="30" r="1.5"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="175" width="90" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">滨海湾夜景</text>
+</svg>

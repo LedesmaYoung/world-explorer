@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 大锅 -->
+  <ellipse fill="#2F2F2F" cx="140" cy="150" rx="70" ry="30"/>
+  <rect fill="#1a1a1a" x="70" y="80" width="140" height="70"/>
+  <ellipse fill="#3D3D3D" cx="140" cy="75" rx="70" ry="25"/>
+  <!-- 抓饭 -->
+  <ellipse fill="#FFD700" cx="140" cy="80" rx="55" ry="20"/>
+  <ellipse fill="#FFFACD" cx="140" cy="78" rx="48" ry="17"/>
+  <!-- 胡萝卜 -->
+  <ellipse fill="#FF8C00" cx="110" cy="75" rx="20" ry="8"/>
+  <ellipse fill="#FFA500" cx="170" cy="75" rx="18" ry="7"/>
+  <!-- 羊肉 -->
+  <ellipse fill="#8B4513" cx="140" cy="70" rx="25" ry="10"/>
+  <ellipse fill="#A0522D" cx="138" cy="68" rx="20" ry="8"/>
+  <!-- 大蒜 -->
+  <ellipse fill="#F5F5DC" cx="100" cy="70" rx="8" ry="6"/>
+  <!-- 蒸汽 -->
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M100,50 Q105,35 100,20"/>
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M140,45 Q145,30 140,15"/>
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M180,50 Q185,35 180,20"/>
+  <!-- 标题 -->
+  <rect fill="rgba(255,215,0,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="#8B4513" font-size="12" font-family="sans-serif">抓饭</text>
+</svg>

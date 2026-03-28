@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="sky-id" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4169E1"/>
+      <stop offset="100%" style="stop-color:#87CEEB"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky-id)" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#228B22" points="0,200 40,150 100,180 160,130 220,170 280,140 280,200"/>
+  <!-- 婆罗浮屠 -->
+  <rect fill="#696969" x="60" y="120" width="160" height="60"/>
+  <rect fill="#808080" x="80" y="100" width="120" height="50"/>
+  <rect fill="#A9A9A9" x="100" y="80" width="80" height="40"/>
+  <rect fill="#C0C0C0" x="120" y="60" width="40" height="40"/>
+  <!-- 佛塔尖 -->
+  <polygon fill="#DAA520" points="140,60 130,75 150,75"/>
+  <!-- 小佛塔 -->
+  <polygon fill="#DAA520" points="90,100 85,110 95,110"/>
+  <polygon fill="#DAA520" points="190,100 185,110 195,110"/>
+  <!-- 阶梯 -->
+  <rect fill="#505050" x="130" y="130" width="20" height="50"/>
+  <!-- 装饰 -->
+  <circle fill="#FFD700" cx="100" cy="90" r="5"/>
+  <circle fill="#FFD700" cx="180" cy="90" r="5"/>
+  <!-- 标题 -->
+  <rect fill="rgba(105,105,105,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">婆罗浮屠</text>
+</svg>

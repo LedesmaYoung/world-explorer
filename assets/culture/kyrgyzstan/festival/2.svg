@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0288D1"/>
+      <stop offset="100%" style="stop-color:#4FC3F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <circle cx="70" cy="45" r="25" fill="#FFD54F"/>
+  <g fill="#F44336">
+    <polygon points="70,25 73,35 83,35 75,41 78,51 70,45 62,51 65,41 57,35 67,35"/>
+  </g>
+  <g fill="#FFF" opacity="0.8">
+    <circle cx="55" cy="55" r="5"/>
+    <circle cx="85" cy="55" r="5"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">纳乌鲁斯节</text>
+</svg>

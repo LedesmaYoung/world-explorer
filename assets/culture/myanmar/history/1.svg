@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#228B22" points="0,200 50,140 100,180 150,110 200,160 250,130 280,150 280,200"/>
+  <!-- 大金塔 -->
+  <polygon fill="#FFD700" points="140,20 100,60 180,60"/>
+  <rect fill="#DAA520" x="105" y="60" width="70" height="40"/>
+  <polygon fill="#FFD700" points="105,60 140,40 175,60"/>
+  <rect fill="#B8860B" x="95" y="100" width="90" height="30"/>
+  <rect fill="#8B7355" x="85" y="130" width="110" height="40"/>
+  <!-- 小塔 -->
+  <polygon fill="#FFD700" points="50,80 40,100 60,100"/>
+  <rect fill="#DAA520" x="42" y="100" width="16" height="30"/>
+  <polygon fill="#FFD700" points="230,80 220,100 240,100"/>
+  <rect fill="#DAA520" x="222" y="100" width="16" height="30"/>
+  <!-- 钻石顶 -->
+  <circle fill="#FFD700" cx="140" cy="20" r="5"/>
+  <circle fill="#FFF" cx="140" cy="18" r="2"/>
+  <!-- 标题 -->
+  <rect fill="rgba(218,165,32,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">大金塔</text>
+</svg>

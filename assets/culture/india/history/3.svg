@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E65100"/>
+      <stop offset="100%" style="stop-color:#FFB74D"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky2)" width="140" height="110"/>
+  <!-- 红堡 -->
+  <rect fill="#B71C1C" x="20" y="50" width="100" height="40"/>
+  <polygon fill="#D32F2F" points="20,50 70,25 120,50"/>
+  <rect fill="#FFD54F" x="55" y="60" width="30" height="30"/>
+  <circle fill="#B71C1C" cx="70" cy="70" r="8"/>
+  <!-- 城墙 -->
+  <rect fill="#C62828" x="10" y="85" width="120" height="15"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">红堡</text>
+</svg>

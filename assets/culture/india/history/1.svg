@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#228B22" points="0,200 50,150 100,180 150,120 200,160 250,140 280,160 280,200"/>
+  <!-- 泰姬陵主穹顶 -->
+  <ellipse fill="#F5F5F5" cx="140" cy="70" rx="40" ry="30"/>
+  <ellipse fill="#E8E8E8" cx="140" cy="65" rx="35" ry="25"/>
+  <!-- 尖塔 -->
+  <rect fill="#FFD700" x="138" y="35" width="4" height="15"/>
+  <ellipse fill="#FFD700" cx="140" cy="35" rx="5" ry="8"/>
+  <!-- 主体 -->
+  <rect fill="#F5F5F5" x="80" y="70" width="120" height="80"/>
+  <rect fill="#E8E8E8" x="90" y="80" width="100" height="60"/>
+  <!-- 拱门 -->
+  <path fill="#E0E0E0" d="M115,150 L115,100 Q140,80 165,100 L165,150 Z"/>
+  <!-- 小穹顶 -->
+  <ellipse fill="#F5F5F5" cx="70" cy="90" rx="15" ry="12"/>
+  <rect fill="#F5F5F5" x="60" y="100" width="20" height="50"/>
+  <ellipse fill="#F5F5F5" cx="210" cy="90" rx="15" ry="12"/>
+  <rect fill="#F5F5F5" x="200" y="100" width="20" height="50"/>
+  <!-- 宣礼塔 -->
+  <rect fill="#F5F5F5" x="35" y="60" width="15" height="90"/>
+  <ellipse fill="#F5F5F5" cx="42" cy="55" rx="10" ry="12"/>
+  <rect fill="#F5F5F5" x="230" y="60" width="15" height="90"/>
+  <ellipse fill="#F5F5F5" cx="237" cy="55" rx="10" ry="12"/>
+  <!-- 花园 -->
+  <rect fill="#90EE90" y="150" width="280" height="50"/>
+  <rect fill="#228B22" x="120" y="150" width="40" height="50"/>
+  <!-- 标题 -->
+  <rect fill="rgba(255,111,0,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">泰姬陵</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg15" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800"/>
+      <stop offset="100%" style="stop-color:#FFCC80"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg15)" width="140" height="110"/>
+  <!-- 孟加拉新年装饰 -->
+  <!-- 太阳 -->
+  <circle fill="#F44336" cx="70" cy="40" r="20"/>
+  <!-- 光芒 -->
+  <rect fill="#FF5722" x="68" y="15" width="4" height="10"/>
+  <rect fill="#FF5722" x="68" y="55" width="4" height="10"/>
+  <rect fill="#FF5722" x="45" y="38" width="10" height="4"/>
+  <rect fill="#FF5722" x="85" y="38" width="10" height="4"/>
+  <!-- 花纹装饰 -->
+  <circle fill="#E91E63" cx="30" cy="70" r="8"/>
+  <circle fill="#E91E63" cx="110" cy="70" r="8"/>
+  <circle fill="#FFEB3B" cx="50" cy="80" r="6"/>
+  <circle fill="#FFEB3B" cx="90" cy="80" r="6"/>
+  <!-- 面具 -->
+  <ellipse fill="#FFCC80" cx="70" cy="75" rx="15" ry="12"/>
+  <circle fill="#37474F" cx="65" cy="72" r="3"/>
+  <circle fill="#37474F" cx="75" cy="72" r="3"/>
+  <path fill="none" stroke="#D32F2F" stroke-width="2" d="M62,80 Q70,85 78,80"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">孟加拉新年</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 河流 -->
+  <path fill="#4169E1" d="M0,160 Q70,140 140,165 Q210,190 280,170 L280,200 L0,200 Z"/>
+  <!-- 椰子树 -->
+  <rect fill="#8B4513" x="50" y="70" width="10" height="100"/>
+  <ellipse fill="#228B22" cx="55" cy="65" rx="30" ry="15"/>
+  <ellipse fill="#32CD32" cx="40" cy="60" rx="20" ry="10"/>
+  <rect fill="#8B4513" x="220" y="80" width="10" height="90"/>
+  <ellipse fill="#228B22" cx="225" cy="75" rx="25" ry="12"/>
+  <!-- 茅草屋 -->
+  <polygon fill="#DAA520" points="130,80 90,130 170,130"/>
+  <rect fill="#A0522D" x="100" y="130" width="60" height="40"/>
+  <rect fill="#8B4513" x="120" y="145" width="20" height="25"/>
+  <!-- 稻田 -->
+  <rect fill="#90EE90" x="20" y="170" width="80" height="30"/>
+  <rect fill="#90EE90" x="180" y="170" width="80" height="30"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">河川田园</text>
+</svg>

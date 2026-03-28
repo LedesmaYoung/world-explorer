@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 草原 -->
+  <rect fill="#228B22" y="150" width="280" height="50"/>
+  <!-- 摔跤手 -->
+  <ellipse fill="#DEB887" cx="120" cy="80" rx="12" ry="15"/>
+  <path fill="#4169E1" d="M108,95 L132,95 L140,160 L100,160 Z"/>
+  <path fill="#DC143C" d="M115,95 L120,160 L105,160 L100,100 Z"/>
+  <ellipse fill="#DEB887" cx="160" cy="85" rx="12" ry="15"/>
+  <path fill="#228B22" d="M148,100 L172,100 L180,165 L140,165 Z"/>
+  <path fill="#FFD700" d="M155,100 L160,165 L145,165 L140,105 Z"/>
+  <!-- 帽子 -->
+  <ellipse fill="#FFD700" cx="120" cy="65" rx="15" ry="8"/>
+  <ellipse fill="#FFD700" cx="160" cy="70" rx="15" ry="8"/>
+  <!-- 旗杆 -->
+  <rect fill="#8B4513" x="230" y="50" width="5" height="120"/>
+  <path fill="#4169E1" d="M235,50 L270,60 L270,80 L235,70 Z"/>
+  <path fill="#DC143C" d="M235,70 L270,80 L270,100 L235,90 Z"/>
+  <!-- 云朵 -->
+  <ellipse fill="white" opacity="0.8" cx="50" cy="40" rx="25" ry="12"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="45" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">那达慕</text>
+</svg>

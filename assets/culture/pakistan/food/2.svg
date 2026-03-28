@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0"/>
+      <stop offset="100%" style="stop-color:#FFCC80"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg7)" width="140" height="110"/>
+  <!-- 铜锅 -->
+  <ellipse fill="#CD7F32" cx="70" cy="70" rx="40" ry="18"/>
+  <ellipse fill="#B8860B" cx="70" cy="65" rx="35" ry="14"/>
+  <!-- 比里亚尼 -->
+  <ellipse fill="#FFA726" cx="70" cy="63" rx="30" ry="11"/>
+  <!-- 米饭粒 -->
+  <circle fill="#FFFFFF" cx="55" cy="60" r="3"/>
+  <circle fill="#FFFFFF" cx="75" cy="65" r="2"/>
+  <circle fill="#FFFFFF" cx="85" cy="62" r="2"/>
+  <!-- 香料点缀 -->
+  <circle fill="#8D6E63" cx="60" cy="65" r="2"/>
+  <circle fill="#4CAF50" cx="80" cy="60" r="2"/>
+  <!-- 香菜 -->
+  <ellipse fill="#2E7D32" cx="65" cy="58" rx="4" ry="2"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">比里亚尼</text>
+</svg>

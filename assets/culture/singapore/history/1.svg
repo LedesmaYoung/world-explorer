@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 鱼尾狮身体 -->
+  <ellipse fill="#A9A9A9" cx="140" cy="130" rx="45" ry="35"/>
+  <ellipse fill="#C0C0C0" cx="140" cy="125" rx="40" ry="30"/>
+  <!-- 狮头 -->
+  <ellipse fill="#A9A9A9" cx="140" cy="70" rx="30" ry="35"/>
+  <ellipse fill="#C0C0C0" cx="140" cy="68" rx="25" ry="30"/>
+  <!-- 鬃毛 -->
+  <path fill="#808080" d="M110,50 Q140,30 170,50 Q180,60 175,75 Q140,55 105,75 Q100,60 110,50"/>
+  <!-- 鱼尾 -->
+  <path fill="#4169E1" d="M180,100 Q200,80 220,100 Q200,110 180,120"/>
+  <path fill="#4169E1" d="M190,90 Q210,70 230,90 Q210,100 190,110"/>
+  <path fill="#4169E1" d="M185,80 Q205,60 225,80 Q205,90 185,100"/>
+  <!-- 喷水 -->
+  <path fill="none" stroke="#87CEEB" stroke-width="4" d="M155,50 Q160,30 155,10"/>
+  <ellipse fill="#87CEEB" opacity="0.6" cx="155" cy="10" rx="8" ry="5"/>
+  <!-- 底座 -->
+  <rect fill="#696969" x="90" y="155" width="100" height="30"/>
+  <!-- 水面 -->
+  <rect fill="#4169E1" opacity="0.3" y="175" width="280" height="25"/>
+  <!-- 标题 -->
+  <rect fill="rgba(169,169,169,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">鱼尾狮</text>
+</svg>

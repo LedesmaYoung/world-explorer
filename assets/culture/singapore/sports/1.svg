@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 游泳池 -->
+  <rect fill="#4FC3F7" x="30" y="100" width="220" height="80" rx="10"/>
+  <rect fill="#29B6F6" x="40" y="110" width="200" height="60" rx="8"/>
+  <!-- 泳道线 -->
+  <line x1="40" y1="140" x2="240" y2="140" stroke="white" stroke-width="2" stroke-dasharray="10,5"/>
+  <!-- 跳水者 -->
+  <ellipse fill="#DEB887" cx="140" cy="70" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M132,80 L148,80 L150,110 L130,110 Z"/>
+  <!-- 手臂 -->
+  <line x1="125" y1="85" x2="110" y2="75" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <line x1="155" y1="85" x2="170" y2="75" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <!-- 腿 -->
+  <line x1="135" y1="110" x2="125" y2="130" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <line x1="145" y1="110" x2="155" y2="130" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <!-- 水花 -->
+  <ellipse fill="#B3E5FC" cx="140" cy="155" rx="30" ry="10"/>
+  <!-- 跳台 -->
+  <rect fill="#E0E0E0" x="125" y="40" width="30" height="8"/>
+  <rect fill="#BDBDBD" x="130" y="48" width="20" height="50"/>
+  <!-- 标题 -->
+  <rect fill="rgba(79,195,247,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">游泳</text>
+</svg>

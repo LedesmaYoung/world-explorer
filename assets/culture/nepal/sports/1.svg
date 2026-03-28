@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 雪山 -->
+  <polygon fill="#F5F5F5" points="0,200 70,80 140,150 210,60 280,130 280,200"/>
+  <!-- 登山者 -->
+  <ellipse fill="#DEB887" cx="120" cy="100" rx="8" ry="10"/>
+  <!-- 冲锋衣 -->
+  <path fill="#DC143C" d="M112,110 L128,110 L130,150 L110,150 Z"/>
+  <!-- 登山杖 -->
+  <line x1="100" y1="115" x2="80" y2="160" stroke="#8B4513" stroke-width="3"/>
+  <line x1="140" y1="115" x2="160" y2="160" stroke="#8B4513" stroke-width="3"/>
+  <!-- 登山包 -->
+  <rect fill="#4169E1" x="110" y="105" width="20" height="30" rx="3"/>
+  <!-- 帽子 -->
+  <ellipse fill="#FFD700" cx="120" cy="92" rx="12" ry="6"/>
+  <!-- 山峰标记 -->
+  <path fill="#DC143C" d="M160,60 L155,55 L165,55 Z"/>
+  <!-- 云 -->
+  <ellipse fill="white" opacity="0.8" cx="50" cy="50" rx="25" ry="12"/>
+  <ellipse fill="white" opacity="0.8" cx="230" cy="40" rx="20" ry="10"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">登山</text>
+</svg>

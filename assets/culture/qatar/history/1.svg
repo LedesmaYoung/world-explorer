@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 沙漠 -->
+  <path fill="#D2B48C" d="M0,150 Q70,130 140,150 Q210,170 280,150 L280,200 L0,200 Z"/>
+  <!-- 伊斯兰艺术博物馆 -->
+  <rect fill="#F5F5F5" x="80" y="70" width="120" height="90"/>
+  <rect fill="#E8E8E8" x="90" y="80" width="100" height="70"/>
+  <!-- 窗户 -->
+  <rect fill="#4169E1" x="100" y="90" width="20" height="30"/>
+  <rect fill="#4169E1" x="130" y="90" width="20" height="30"/>
+  <rect fill="#4169E1" x="160" y="90" width="20" height="30"/>
+  <!-- 入口 -->
+  <path fill="#8B4513" d="M120,160 L120,130 Q140,115 160,130 L160,160 Z"/>
+  <!-- 水池 -->
+  <rect fill="#4169E1" opacity="0.6" x="60" y="160" width="160" height="15"/>
+  <!-- 棕榈树 -->
+  <rect fill="#8B4513" x="40" y="100" width="8" height="60"/>
+  <ellipse fill="#228B22" cx="44" cy="95" rx="20" ry="10"/>
+  <rect fill="#8B4513" x="235" y="105" width="8" height="55"/>
+  <ellipse fill="#228B22" cx="239" cy="100" rx="18" ry="9"/>
+  <!-- 标题 -->
+  <rect fill="rgba(245,245,245,0.9)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="#4169E1" font-size="12" font-family="sans-serif">伊斯兰艺术馆</text>
+</svg>

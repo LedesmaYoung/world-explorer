@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#8B4513"/>
+      <stop offset="100%" style="stop-color="#A0522D"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 老挝沙拉盘 -->
+  <ellipse cx="70" cy="60" rx="45" ry="28" fill="#FFF8DC"/>
+  <!-- 生菜 -->
+  <ellipse cx="60" cy="55" rx="15" ry="10" fill="#228B22"/>
+  <!-- 肉 -->
+  <rect x="75" y="50" width="20" height="15" fill="#D2691E"/>
+  <!-- 番茄 -->
+  <circle cx="50" cy="65" r="6" fill="#FF6347"/>
+  <circle cx="90" cy="60" r="5" fill="#FF6347"/>
+  <!-- 薄荷 -->
+  <circle cx="70" cy="50" r="4" fill="#32CD32"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">老挝沙拉</text>
+</svg>

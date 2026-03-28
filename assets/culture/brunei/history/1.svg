@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#228B22" points="0,200 50,150 100,180 150,120 200,160 250,140 280,160 280,200"/>
+  <!-- 水上村落房屋 -->
+  <rect fill="#8B4513" x="60" y="100" width="60" height="50"/>
+  <polygon fill="#A0522D" points="60,100 90,70 120,100"/>
+  <rect fill="#8B4513" x="160" y="105" width="60" height="50"/>
+  <polygon fill="#A0522D" points="160,105 190,75 220,105"/>
+  <!-- 水面 -->
+  <rect fill="#4169E1" opacity="0.5" y="150" width="280" height="50"/>
+  <!-- 木桩 -->
+  <rect fill="#6B4423" x="70" y="150" width="5" height="40"/>
+  <rect fill="#6B4423" x="100" y="150" width="5" height="40"/>
+  <rect fill="#6B4423" x="170" y="150" width="5" height="40"/>
+  <rect fill="#6B4423" x="200" y="150" width="5" height="40"/>
+  <!-- 船 -->
+  <path fill="#DAA520" d="M30,160 Q50,150 70,160 Q50,165 30,160"/>
+  <path fill="#DAA520" d="M210,165 Q230,155 250,165 Q230,170 210,165"/>
+  <!-- 倒影 -->
+  <rect fill="#8B4513" opacity="0.3" x="60" y="155" width="60" height="20"/>
+  <rect fill="#8B4513" opacity="0.3" x="160" y="160" width="60" height="20"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">水上村落</text>
+</svg>

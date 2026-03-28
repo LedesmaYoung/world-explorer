@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 山脉背景 -->
+  <polygon fill="#228B22" points="0,200 40,120 80,160 120,100 160,140 200,90 240,130 280,100 280,200"/>
+  <!-- 景福宫主殿 -->
+  <polygon fill="#DAA520" points="60,130 140,90 220,130"/>
+  <rect fill="#8B0000" x="70" y="130" width="140" height="50"/>
+  <polygon fill="#B8860B" points="70,130 140,95 210,130"/>
+  <!-- 门 -->
+  <rect fill="#5D0000" x="125" y="145" width="30" height="35"/>
+  <circle fill="#FFD700" cx="130" cy="162" r="3"/>
+  <circle fill="#FFD700" cx="150" cy="162" r="3"/>
+  <!-- 装饰 -->
+  <rect fill="#DAA520" x="50" y="125" width="180" height="5"/>
+  <!-- 石阶 -->
+  <rect fill="#A0A0A0" x="80" y="180" width="120" height="20"/>
+  <rect fill="#888" x="90" y="175" width="100" height="8"/>
+  <!-- 标题 -->
+  <rect fill="rgba(0,71,171,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">景福宫</text>
+</svg>

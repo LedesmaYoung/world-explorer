@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 雪山 -->
+  <polygon fill="#F5F5F5" points="0,200 50,80 100,150 150,60 200,140 250,90 280,130 280,200"/>
+  <polygon fill="#E8E8E8" points="50,80 75,115 100,150"/>
+  <polygon fill="#E8E8E8" points="150,60 175,100 200,140"/>
+  <!-- 萨曼纪念碑 -->
+  <rect fill="#DAA520" x="110" y="80" width="60" height="80"/>
+  <polygon fill="#FFD700" points="140,50 100,80 180,80"/>
+  <rect fill="#B8860B" x="125" y="100" width="30" height="40"/>
+  <!-- 装饰 -->
+  <ellipse fill="#FFD700" cx="140" cy="70" rx="15" ry="8"/>
+  <!-- 标题 -->
+  <rect fill="rgba(218,165,32,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">萨曼纪念碑</text>
+</svg>

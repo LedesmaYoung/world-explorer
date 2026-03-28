@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#303F9F"/>
+      <stop offset="100%" style="stop-color:#5C6BC0"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <circle cx="70" cy="45" r="18" fill="#FFF"/>
+  <g fill="#303F9F">
+    <circle cx="65" cy="42" r="3"/>
+    <circle cx="75" cy="42" r="3"/>
+    <path d="M60,52 Q70,58 80,52" stroke="#303F9F" stroke-width="2" fill="none"/>
+  </g>
+  <ellipse cx="70" cy="70" rx="20" ry="8" fill="#FFD700"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">猎犬比赛</text>
+</svg>

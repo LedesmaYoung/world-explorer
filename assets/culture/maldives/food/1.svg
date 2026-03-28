@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 盘子 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="140" rx="90" ry="40"/>
+  <!-- 米饭 -->
+  <ellipse fill="#FFFACD" cx="140" cy="130" rx="60" ry="25"/>
+  <!-- 金枪鱼 -->
+  <ellipse fill="#DC143C" cx="120" cy="115" rx="30" ry="15"/>
+  <ellipse fill="#FF6B6B" cx="118" cy="113" rx="25" ry="12"/>
+  <!-- 椰子碎 -->
+  <ellipse fill="#F5F5DC" cx="170" cy="120" rx="20" ry="10"/>
+  <!-- 辣椒 -->
+  <ellipse fill="#DC143C" cx="100" cy="125" rx="8" ry="4"/>
+  <ellipse fill="#DC143C" cx="190" cy="125" rx="8" ry="4"/>
+  <!-- 柠檬 -->
+  <ellipse fill="#32CD32" cx="140" cy="105" rx="10" ry="6"/>
+  <!-- 洋葱 -->
+  <ellipse fill="#F5F5DC" cx="80" cy="115" rx="12" ry="6"/>
+  <ellipse fill="#E8E8E0" cx="78" cy="113" rx="8" ry="4"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">金枪鱼饭</text>
+</svg>

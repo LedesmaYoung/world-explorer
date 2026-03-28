@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 河流 -->
+  <rect fill="#4169E1" opacity="0.6" y="140" width="280" height="60"/>
+  <!-- 龙舟 -->
+  <path fill="#DC143C" d="M50,150 Q140,120 230,150 Q140,165 50,150"/>
+  <!-- 龙头 -->
+  <path fill="#DC143C" d="M40,145 Q20,130 30,120 L50,145"/>
+  <circle fill="#FFD700" cx="30" cy="130" r="4"/>
+  <!-- 龙尾 -->
+  <path fill="#DC143C" d="M230,145 Q250,130 240,120 L230,145"/>
+  <!-- 划船者 -->
+  <ellipse fill="#DEB887" cx="80" cy="135" rx="6" ry="8"/>
+  <rect fill="#4169E1" x="74" y="143" width="12" height="15"/>
+  <ellipse fill="#DEB887" cx="110" cy="135" rx="6" ry="8"/>
+  <rect fill="#4169E1" x="104" y="143" width="12" height="15"/>
+  <ellipse fill="#DEB887" cx="140" cy="133" rx="6" ry="8"/>
+  <rect fill="#4169E1" x="134" y="141" width="12" height="15"/>
+  <ellipse fill="#DEB887" cx="170" cy="135" rx="6" ry="8"/>
+  <rect fill="#4169E1" x="164" y="143" width="12" height="15"/>
+  <ellipse fill="#DEB887" cx="200" cy="135" rx="6" ry="8"/>
+  <rect fill="#4169E1" x="194" y="143" width="12" height="15"/>
+  <!-- 船桨 -->
+  <line x1="80" y1="145" x2="65" y2="170" stroke="#8B4513" stroke-width="3"/>
+  <line x1="110" y1="145" x2="95" y2="170" stroke="#8B4513" stroke-width="3"/>
+  <line x1="140" y1="143" x2="125" y2="168" stroke="#8B4513" stroke-width="3"/>
+  <line x1="170" y1="145" x2="155" y2="170" stroke="#8B4513" stroke-width="3"/>
+  <line x1="200" y1="145" x2="185" y2="170" stroke="#8B4513" stroke-width="3"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">赛龙舟</text>
+</svg>

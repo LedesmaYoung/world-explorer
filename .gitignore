@@ -1,0 +1,23 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 日志
+*.log
+
+# 临时文件
+tmp/
+temp/
+
+# Node modules (如果有)
+node_modules/
+
+# 环境变量
+.env
+.env.local

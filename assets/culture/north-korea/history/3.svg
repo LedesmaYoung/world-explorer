@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#8B4513"/>
+      <stop offset="100%" style="stop-color:#A0522D"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 传统建筑 -->
+  <path d="M20 50 L70 30 L120 50" fill="#DC143C"/>
+  <rect x="35" y="50" width="70" height="35" fill="#8B4513"/>
+  <!-- 门 -->
+  <rect x="55" y="60" width="30" height="25" fill="#DAA520"/>
+  <!-- 柱子 -->
+  <rect x="40" y="50" width="5" height="35" fill="#FFD700"/>
+  <rect x="95" y="50" width="5" height="35" fill="#FFD700"/>
+  <text x="70" y="105" text-anchor="middle" fill="#FFF" font-size="10">古建筑</text>
+</svg>

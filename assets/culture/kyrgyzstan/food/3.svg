@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B1FA2"/>
+      <stop offset="100%" style="stop-color:#AB47BC"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <circle cx="70" cy="50" r="25" fill="#FFF"/>
+  <circle cx="70" cy="50" r="18" fill="#F5F5DC"/>
+  <g fill="#7B1FA2">
+    <circle cx="60" cy="48" r="3"/>
+    <circle cx="80" cy="48" r="3"/>
+    <circle cx="70" cy="58" r="3"/>
+    <circle cx="65" cy="42" r="2"/>
+    <circle cx="75" cy="42" r="2"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">马奶酒</text>
+</svg>

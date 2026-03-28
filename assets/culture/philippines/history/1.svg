@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 海洋 -->
+  <rect fill="#4169E1" opacity="0.5" y="150" width="280" height="50"/>
+  <!-- 椰子树 -->
+  <rect fill="#8B4513" x="50" y="80" width="12" height="100"/>
+  <ellipse fill="#228B22" cx="56" cy="75" rx="30" ry="15"/>
+  <ellipse fill="#32CD32" cx="45" cy="70" rx="20" ry="10"/>
+  <ellipse fill="#32CD32" cx="70" cy="70" rx="20" ry="10"/>
+  <!-- 椰子 -->
+  <circle fill="#8B4513" cx="50" cy="80" r="5"/>
+  <circle fill="#A0522D" cx="62" cy="82" r="5"/>
+  <rect fill="#8B4513" x="220" y="90" width="12" height="90"/>
+  <ellipse fill="#228B22" cx="226" cy="85" rx="30" ry="15"/>
+  <!-- 茅草屋 -->
+  <polygon fill="#DAA520" points="130,70 80,130 180,130"/>
+  <rect fill="#A0522D" x="100" y="130" width="60" height="50"/>
+  <rect fill="#8B4513" x="120" y="145" width="20" height="35"/>
+  <!-- 太阳 -->
+  <circle fill="#FFD700" cx="200" cy="50" r="20"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">海岛风光</text>
+</svg>

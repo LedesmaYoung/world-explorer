@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 铜盘 -->
+  <ellipse fill="#CD7F32" cx="140" cy="130" rx="90" ry="40"/>
+  <ellipse fill="#DAA520" cx="140" cy="125" rx="80" ry="35"/>
+  <!-- Dal(豆汤) -->
+  <ellipse fill="#DAA520" cx="100" cy="115" rx="25" ry="12"/>
+  <ellipse fill="#F0E68C" cx="98" cy="113" rx="20" ry="10"/>
+  <!-- Bhat(米饭) -->
+  <ellipse fill="#FFFACD" cx="160" cy="115" rx="30" ry="15"/>
+  <!-- Tarkari(蔬菜咖喱) -->
+  <ellipse fill="#228B22" cx="180" cy="125" rx="20" ry="10"/>
+  <ellipse fill="#32CD32" cx="178" cy="123" rx="15" ry="8"/>
+  <!-- Achar(酸辣酱) -->
+  <ellipse fill="#DC143C" cx="90" cy="130" rx="15" ry="8"/>
+  <!-- 配菜 -->
+  <ellipse fill="#FFD700" cx="140" cy="100" rx="10" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(218,165,32,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">Dal Bhat</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E7D32"/>
+      <stop offset="100%" style="stop-color:#66BB6A"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <ellipse cx="70" cy="55" rx="35" ry="20" fill="#8B4513"/>
+  <circle cx="70" cy="45" r="8" fill="#FFF"/>
+  <path d="M62,45 L70,35 L78,45 L70,55 Z" fill="#2E7D32"/>
+  <g fill="#FFD700">
+    <path d="M40,48 L50,43 L50,53 L40,58 Z"/>
+    <path d="M90,48 L100,43 L100,53 L90,58 Z"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">马术</text>
+</svg>

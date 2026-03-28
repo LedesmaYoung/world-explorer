@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 海洋 -->
+  <rect fill="#4169E1" opacity="0.4" y="150" width="280" height="50"/>
+  <!-- 棕榈树 -->
+  <rect fill="#8B4513" x="40" y="60" width="12" height="110"/>
+  <ellipse fill="#228B22" cx="46" cy="55" rx="35" ry="18"/>
+  <ellipse fill="#32CD32" cx="30" cy="50" rx="25" ry="12"/>
+  <rect fill="#8B4513" x="230" y="70" width="12" height="100"/>
+  <ellipse fill="#228B22" cx="236" cy="65" rx="30" ry="15"/>
+  <!-- 城堡 -->
+  <rect fill="#D2691E" x="100" y="90" width="80" height="60"/>
+  <rect fill="#CD853F" x="110" y="100" width="60" height="40"/>
+  <!-- 城门 -->
+  <path fill="#8B4513" d="M125,150 L125,115 Q140,100 155,115 L155,150 Z"/>
+  <!-- 旗帜 -->
+  <rect fill="#8B0000" x="135" y="70" width="10" height="7"/>
+  <rect fill="#FFD700" x="135" y="77" width="10" height="7"/>
+  <rect fill="#228B22" x="135" y="84" width="10" height="7"/>
+  <rect fill="#DAA520" x="138" y="50" width="4" height="30"/>
+  <!-- 标题 -->
+  <rect fill="rgba(210,105,30,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">加勒古城</text>
+</svg>

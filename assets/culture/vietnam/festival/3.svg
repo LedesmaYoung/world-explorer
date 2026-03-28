@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4169E1"/>
+      <stop offset="100%" style="stop-color:#1E90FF"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 龙舟 -->
+  <path d="M20 60 Q70 40 120 60 Q130 65 120 70 Q70 80 20 70 Q10 65 20 60" fill="#DAA520"/>
+  <!-- 龙头 -->
+  <ellipse cx="125" cy="55" rx="12" ry="10" fill="#FF4500"/>
+  <circle cx="128" cy="52" r="3" fill="#FFF"/>
+  <circle cx="128" cy="52" r="1.5" fill="#000"/>
+  <!-- 龙尾 -->
+  <path d="M15 65 Q5 55 10 50" stroke="#FF4500" stroke-width="3" fill="none"/>
+  <!-- 划桨 -->
+  <line x1="40" y1="50" x2="35" y2="75" stroke="#8B4513" stroke-width="3"/>
+  <line x1="60" y1="50" x2="55" y2="75" stroke="#8B4513" stroke-width="3"/>
+  <line x1="80" y1="50" x2="85" y2="75" stroke="#8B4513" stroke-width="3"/>
+  <line x1="100" y1="50" x2="105" y2="75" stroke="#8B4513" stroke-width="3"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">端午节</text>
+</svg>

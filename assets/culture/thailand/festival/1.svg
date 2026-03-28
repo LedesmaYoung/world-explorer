@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#1a1a2e" width="280" height="200"/>
+  <!-- 月亮 -->
+  <circle fill="#FFD700" opacity="0.9" cx="220" cy="50" r="30"/>
+  <!-- 大象 -->
+  <ellipse fill="#D3D3D3" cx="120" cy="130" rx="40" ry="25"/>
+  <ellipse fill="#C0C0C0" cx="120" cy="125" rx="35" ry="20"/>
+  <!-- 象头 -->
+  <ellipse fill="#D3D3D3" cx="165" cy="100" rx="20" ry="25"/>
+  <!-- 象鼻 -->
+  <path fill="#C0C0C0" d="M180,110 Q190,130 175,150"/>
+  <!-- 耳朵 -->
+  <ellipse fill="#A9A9A9" cx="150" cy="90" rx="15" ry="20"/>
+  <!-- 装饰毯子 -->
+  <path fill="#DC143C" d="M90,115 L150,115 L155,145 L85,145 Z"/>
+  <path fill="#FFD700" d="M95,120 L145,120 L148,140 L92,140 Z"/>
+  <!-- 灯笼 -->
+  <rect fill="#FFD700" x="55" y="90" width="12" height="4"/>
+  <ellipse fill="#FF6347" cx="61" cy="115" rx="8" ry="15"/>
+  <rect fill="#FFD700" x="56" y="130" width="10" height="3"/>
+  <rect fill="#FFD700" x="185" y="85" width="12" height="4"/>
+  <ellipse fill="#FF6347" cx="191" cy="110" rx="8" ry="15"/>
+  <rect fill="#FFD700" x="186" y="125" width="10" height="3"/>
+  <!-- 星星 -->
+  <circle fill="#FFD700" cx="40" cy="40" r="2"/>
+  <circle fill="#FFD700" cx="100" cy="30" r="1.5"/>
+  <circle fill="#FFD700" cx="160" cy="45" r="2"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="175" width="90" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">水灯节</text>
+</svg>

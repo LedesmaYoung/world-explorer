@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF"/>
+      <stop offset="100%" style="stop-color:#00BFFF"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 烟花 -->
+  <circle cx="70" cy="50" r="5" fill="#FFD700"/>
+  <!-- 烟花射线 -->
+  <line x1="70" y1="50" x2="70" y2="25" stroke="#FF4500" stroke-width="2"/>
+  <line x1="70" y1="50" x2="95" y2="35" stroke="#FF4500" stroke-width="2"/>
+  <line x1="70" y1="50" x2="95" y2="65" stroke="#FF4500" stroke-width="2"/>
+  <line x1="70" y1="50" x2="45" y2="65" stroke="#FF4500" stroke-width="2"/>
+  <line x1="70" y1="50" x2="45" y2="35" stroke="#FF4500" stroke-width="2"/>
+  <!-- 小烟花点 -->
+  <circle cx="70" cy="20" r="3" fill="#FFD700"/>
+  <circle cx="100" cy="30" r="3" fill="#FFD700"/>
+  <circle cx="100" cy="70" r="3" fill="#FFD700"/>
+  <circle cx="40" cy="70" r="3" fill="#FFD700"/>
+  <circle cx="40" cy="30" r="3" fill="#FFD700"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">国庆日</text>
+</svg>

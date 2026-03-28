@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#228B22"/>
+      <stop offset="100%" style="stop-color="#32CD32"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 藤球 -->
+  <circle cx="70" cy="50" r="22" fill="#8B4513"/>
+  <path d="M55 45 Q70 35 85 45" stroke="#D2691E" stroke-width="2" fill="none"/>
+  <path d="M55 55 Q70 65 85 55" stroke="#D2691E" stroke-width="2" fill="none"/>
+  <line x1="70" y1="28" x2="70" y2="72" stroke="#D2691E" stroke-width="2"/>
+  <!-- 脚 -->
+  <ellipse cx="45" cy="80" rx="12" ry="6" fill="#F5DEB3"/>
+  <ellipse cx="95" cy="80" rx="12" ry="6" fill="#F5DEB3"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">藤球</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 篮球场 -->
+  <rect fill="#D2691E" x="30" y="80" width="220" height="100"/>
+  <circle fill="none" stroke="white" stroke-width="2" cx="140" cy="130" r="30"/>
+  <line x1="30" y1="130" x2="250" y2="130" stroke="white" stroke-width="2"/>
+  <!-- 篮筐 -->
+  <rect fill="#FF4500" x="50" y="90" width="5" height="40"/>
+  <ellipse fill="none" stroke="#FF4500" stroke-width="3" cx="65" cy="105" rx="15" ry="8"/>
+  <rect fill="#FF4500" x="225" y="90" width="5" height="40"/>
+  <ellipse fill="none" stroke="#FF4500" stroke-width="3" cx="215" cy="105" rx="15" ry="8"/>
+  <!-- 球员 -->
+  <ellipse fill="#DEB887" cx="120" cy="115" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M112,125 L128,125 L130,165 L110,165 Z"/>
+  <!-- 投篮姿势 -->
+  <line x1="135" y1="120" x2="150" y2="90" stroke="#DEB887" stroke-width="6" stroke-linecap="round"/>
+  <!-- 篮球 -->
+  <circle fill="#FF6347" cx="150" cy="85" r="8"/>
+  <path fill="none" stroke="#8B4513" stroke-width="1" d="M142,85 L158,85"/>
+  <path fill="none" stroke="#8B4513" stroke-width="1" d="M150,77 L150,93"/>
+  <!-- 球员2 -->
+  <ellipse fill="#DEB887" cx="180" cy="125" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M172,135 L188,135 L190,175 L170,175 Z"/>
+  <!-- 标题 -->
+  <rect fill="rgba(210,105,30,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">篮球</text>
+</svg>

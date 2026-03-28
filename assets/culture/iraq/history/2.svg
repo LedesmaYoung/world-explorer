@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 古巴比伦塔 -->
+  <rect x="45" y="55" width="50" height="30" fill="#8B4513"/>
+  <rect x="50" y="45" width="40" height="15" fill="#A0522D"/>
+  <rect x="55" y="35" width="30" height="15" fill="#CD853F"/>
+  <rect x="60" y="25" width="20" height="15" fill="#DEB887"/>
+  <!-- 门 -->
+  <rect x="65" y="60" width="10" height="15" fill="#5D3A1A"/>
+  <text x="70" y="100" text-anchor="middle" fill="#5D3A1A" font-size="10">巴比伦</text>
+</svg>

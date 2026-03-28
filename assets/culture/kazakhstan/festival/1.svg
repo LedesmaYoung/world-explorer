@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 草原 -->
+  <rect fill="#228B22" y="150" width="280" height="50"/>
+  <!-- 毡房 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="100" rx="40" ry="20"/>
+  <path fill="#E8E8D0" d="M100,100 Q140,50 180,100"/>
+  <!-- 纳乌鲁兹节日装饰 -->
+  <ellipse fill="#FFD700" cx="140" cy="85" rx="20" ry="8"/>
+  <!-- 人们庆祝 -->
+  <ellipse fill="#DEB887" cx="80" cy="130" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M72,140 L88,140 L90,180 L70,180 Z"/>
+  <ellipse fill="#DEB887" cx="200" cy="130" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M192,140 L208,140 L210,180 L190,180 Z"/>
+  <!-- 手拉手跳舞 -->
+  <line x1="90" y1="145" x2="190" y2="145" stroke="#DEB887" stroke-width="4"/>
+  <!-- 花朵 -->
+  <circle fill="#FF69B4" cx="60" cy="165" r="8"/>
+  <circle fill="#FFB7C5" cx="60" cy="165" r="4"/>
+  <circle fill="#FF69B4" cx="220" cy="165" r="8"/>
+  <circle fill="#FFB7C5" cx="220" cy="165" r="4"/>
+  <!-- 太阳 -->
+  <circle fill="#FFD700" cx="230" cy="40" r="25"/>
+  <!-- 标题 -->
+  <rect fill="rgba(34,139,34,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">纳乌鲁兹</text>
+</svg>

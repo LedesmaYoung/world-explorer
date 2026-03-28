@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 竹篮 -->
+  <ellipse fill="#8B4513" cx="140" cy="140" rx="80" ry="35"/>
+  <rect fill="#A0522D" x="60" y="110" width="160" height="50"/>
+  <ellipse fill="#C4A77D" cx="140" cy="105" rx="80" ry="25"/>
+  <!-- 沙嗲肉串 -->
+  <rect fill="#8B4513" x="80" y="90" width="4" height="70" rx="1"/>
+  <rect fill="#DAA520" x="82" y="100" width="15" height="8" rx="2"/>
+  <rect fill="#DAA520" x="82" y="112" width="15" height="8" rx="2"/>
+  <rect fill="#DAA520" x="82" y="124" width="15" height="8" rx="2"/>
+  
+  <rect fill="#8B4513" x="120" y="85" width="4" height="75" rx="1"/>
+  <rect fill="#DC143C" x="122" y="95" width="15" height="8" rx="2"/>
+  <rect fill="#DC143C" x="122" y="107" width="15" height="8" rx="2"/>
+  <rect fill="#DC143C" x="122" y="119" width="15" height="8" rx="2"/>
+  
+  <rect fill="#8B4513" x="160" y="90" width="4" height="70" rx="1"/>
+  <rect fill="#DAA520" x="162" y="100" width="15" height="8" rx="2"/>
+  <rect fill="#DAA520" x="162" y="112" width="15" height="8" rx="2"/>
+  <rect fill="#DAA520" x="162" y="124" width="15" height="8" rx="2"/>
+  <!-- 花生酱 -->
+  <ellipse fill="#8B4513" cx="220" cy="150" rx="25" ry="12"/>
+  <ellipse fill="#A0522D" cx="220" cy="148" rx="20" ry="9"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,69,19,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">沙嗲</text>
+</svg>

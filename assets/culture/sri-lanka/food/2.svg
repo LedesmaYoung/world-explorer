@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg19" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF8E1"/>
+      <stop offset="100%" style="stop-color:#FFE082"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg19)" width="140" height="110"/>
+  <!-- 蕉叶 -->
+  <ellipse fill="#2E7D32" cx="70" cy="60" rx="55" ry="35"/>
+  <!-- 米饭 -->
+  <ellipse fill="#FFFFFF" cx="55" cy="55" rx="18" ry="12"/>
+  <ellipse fill="#FFFFFF" cx="85" cy="55" rx="18" ry="12"/>
+  <!-- 咖喱 -->
+  <ellipse fill="#FF8A65" cx="45" cy="70" rx="12" ry="6"/>
+  <ellipse fill="#8D6E63" cx="70" cy="72" rx="10" ry="5"/>
+  <ellipse fill="#4CAF50" cx="95" cy="70" rx="12" ry="6"/>
+  <!-- 薄饼 -->
+  <ellipse fill="#D7CCC8" cx="30" cy="55" rx="10" ry="5"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">咖喱饭</text>
+</svg>

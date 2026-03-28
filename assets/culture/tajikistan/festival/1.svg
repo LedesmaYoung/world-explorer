@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 雪山 -->
+  <polygon fill="#F5F5F5" points="0,200 50,120 100,170 150,100 200,160 250,130 280,150 280,200"/>
+  <!-- 花田 -->
+  <rect fill="#228B22" y="160" width="280" height="40"/>
+  <!-- 郁金香 -->
+  <path fill="#DC143C" d="M60,160 Q55,140 60,130 Q70,140 60,160"/>
+  <path fill="#FF6B6B" d="M55,155 Q52,142 55,135 Q62,142 55,155"/>
+  <rect fill="#228B22" x="58" y="160" width="4" height="20"/>
+  <path fill="#DC143C" d="M140,155 Q135,135 140,125 Q150,135 140,155"/>
+  <path fill="#FF6B6B" d="M135,150 Q132,137 135,130 Q142,137 135,150"/>
+  <rect fill="#228B22" x="138" y="155" width="4" height="25"/>
+  <path fill="#FFD700" d="M220,160 Q215,140 220,130 Q230,140 220,160"/>
+  <path fill="#FFECB3" d="M215,155 Q212,142 215,135 Q222,142 215,155"/>
+  <rect fill="#228B22" x="218" y="160" width="4" height="20"/>
+  <!-- 太阳 -->
+  <circle fill="#FFD700" cx="230" cy="40" r="25"/>
+  <!-- 标题 -->
+  <rect fill="rgba(34,139,34,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">花节</text>
+</svg>

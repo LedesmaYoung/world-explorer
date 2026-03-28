@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="100%" style="stop-color:#E0F4FF"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D"/>
+      <stop offset="100%" style="stop-color:#8B4513"/>
+    </linearGradient>
+  </defs>
+  <!-- 天空 -->
+  <rect fill="url(#sky)" width="280" height="200"/>
+  <!-- 山脉 -->
+  <polygon fill="#6B8E6B" points="0,200 60,120 120,180 180,100 240,160 280,130 280,200"/>
+  <polygon fill="#5A7A5A" points="0,200 40,150 100,190 160,130 220,180 280,150 280,200"/>
+  <!-- 长城 -->
+  <path fill="url(#wall)" d="M0,170 L30,160 L50,165 L80,155 L100,160 L130,150 L160,158 L190,148 L220,155 L250,145 L280,155 L280,200 L0,200 Z"/>
+  <!-- 城楼 -->
+  <rect fill="#8B4513" x="60" y="145" width="20" height="25"/>
+  <rect fill="#654321" x="55" y="140" width="30" height="8"/>
+  <rect fill="#8B4513" x="180" y="150" width="20" height="25"/>
+  <rect fill="#654321" x="175" y="145" width="30" height="8"/>
+  <!-- 太阳 -->
+  <circle fill="#FFD700" cx="240" cy="40" r="25" opacity="0.9"/>
+  <!-- 标题 -->
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="165" width="80" height="25" rx="4"/>
+  <text x="50" y="182" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">长城</text>
+</svg>

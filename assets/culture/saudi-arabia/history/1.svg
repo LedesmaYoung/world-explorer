@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#F5DEB3" width="280" height="200"/>
+  <!-- 沙丘 -->
+  <path fill="#D2B48C" d="M0,150 Q70,130 140,150 Q210,170 280,150 L280,200 L0,200 Z"/>
+  <path fill="#C4A77D" d="M0,160 Q50,145 100,160 Q150,175 200,160 Q250,145 280,160 L280,200 L0,200 Z"/>
+  <!-- 麦加天房 -->
+  <rect fill="#1a1a1a" x="100" y="80" width="80" height="80"/>
+  <!-- 黑布幔 -->
+  <rect fill="#2F2F2F" x="105" y="85" width="70" height="70"/>
+  <!-- 金色门框 -->
+  <rect fill="#FFD700" x="125" y="100" width="30" height="40"/>
+  <!-- 周围建筑 -->
+  <rect fill="#F5F5F5" x="40" y="100" width="40" height="60"/>
+  <rect fill="#F5F5F5" x="200" y="100" width="40" height="60"/>
+  <!-- 宣礼塔 -->
+  <rect fill="#F5F5F5" x="55" y="60" width="10" height="100"/>
+  <ellipse fill="#F5F5F5" cx="60" cy="55" rx="8" ry="10"/>
+  <rect fill="#F5F5F5" x="215" y="60" width="10" height="100"/>
+  <ellipse fill="#F5F5F5" cx="220" cy="55" rx="8" ry="10"/>
+  <!-- 人群 -->
+  <ellipse fill="#DEB887" cx="90" cy="175" rx="5" ry="6"/>
+  <ellipse fill="#DEB887" cx="110" cy="178" rx="5" ry="6"/>
+  <ellipse fill="#DEB887" cx="130" cy="175" rx="5" ry="6"/>
+  <ellipse fill="#DEB887" cx="150" cy="178" rx="5" ry="6"/>
+  <ellipse fill="#DEB887" cx="170" cy="175" rx="5" ry="6"/>
+  <ellipse fill="#DEB887" cx="190" cy="178" rx="5" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(26,26,26,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">麦加天房</text>
+</svg>

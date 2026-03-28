@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF5EE" width="280" height="200"/>
+  <!-- 泡菜坛 -->
+  <ellipse fill="#8B4513" cx="140" cy="150" rx="60" ry="30"/>
+  <rect fill="#A0522D" x="80" y="80" width="120" height="70"/>
+  <ellipse fill="#C4A77D" cx="140" cy="80" rx="60" ry="25"/>
+  <ellipse fill="#8B7355" cx="140" cy="75" rx="50" ry="20"/>
+  <!-- 泡菜露出来 -->
+  <ellipse fill="#DC143C" cx="140" cy="90" rx="40" ry="15"/>
+  <!-- 泡菜叶子 -->
+  <path fill="#228B22" d="M110,85 Q130,70 150,85 Q140,95 110,85"/>
+  <path fill="#228B22" d="M130,80 Q150,65 170,80 Q155,90 130,80"/>
+  <!-- 辣椒粉 -->
+  <ellipse fill="#FF4500" cx="125" cy="95" rx="8" ry="4"/>
+  <ellipse fill="#FF4500" cx="155" cy="95" rx="8" ry="4"/>
+  <!-- 周围的小碟子 -->
+  <ellipse fill="#F5F5DC" cx="50" cy="170" rx="25" ry="10"/>
+  <ellipse fill="#FF6347" cx="50" cy="168" rx="20" ry="7"/>
+  <ellipse fill="#F5F5DC" cx="230" cy="170" rx="25" ry="10"/>
+  <ellipse fill="#FF6347" cx="230" cy="168" rx="20" ry="7"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">泡菜</text>
+</svg>

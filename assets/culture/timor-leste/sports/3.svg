@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F57C00"/>
+      <stop offset="100%" style="stop-color:#FFB74D"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <ellipse cx="70" cy="55" rx="35" ry="20" fill="#8B4513"/>
+  <circle cx="70" cy="45" r="8" fill="#FFF"/>
+  <g fill="#F57C00">
+    <path d="M62,45 L70,35 L78,45 L70,55 Z"/>
+  </g>
+  <g fill="#FFD700">
+    <path d="M35,50 L48,45 L48,55 L35,60 Z"/>
+    <path d="M92,50 L105,45 L105,55 L92,60 Z"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">武术</text>
+</svg>

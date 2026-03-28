@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 装饰花车 -->
+  <rect fill="#4169E1" x="60" y="100" width="160" height="60"/>
+  <polygon fill="#DC143C" points="140,60 60,100 220,100"/>
+  <!-- 花朵装饰 -->
+  <circle fill="#FF69B4" cx="90" cy="90" r="15"/>
+  <circle fill="#FFB7C5" cx="90" cy="90" r="8"/>
+  <circle fill="#FF69B4" cx="140" cy="80" r="15"/>
+  <circle fill="#FFB7C5" cx="140" cy="80" r="8"/>
+  <circle fill="#FF69B4" cx="190" cy="90" r="15"/>
+  <circle fill="#FFB7C5" cx="190" cy="90" r="8"/>
+  <!-- 人物 -->
+  <ellipse fill="#DEB887" cx="100" cy="115" rx="8" ry="10"/>
+  <path fill="#FFD700" d="M92,125 L108,125 L110,160 L90,160 Z"/>
+  <ellipse fill="#DEB887" cx="140" cy="110" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M132,120 L148,120 L150,155 L130,155 Z"/>
+  <ellipse fill="#DEB887" cx="180" cy="115" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M172,125 L188,125 L190,160 L170,160 Z"/>
+  <!-- 彩带 -->
+  <path fill="none" stroke="#FF69B4" stroke-width="3" d="M50,70 Q100,50 150,70 Q200,50 230,70"/>
+  <path fill="none" stroke="#4169E1" stroke-width="3" d="M50,80 Q100,60 150,80 Q200,60 230,80"/>
+  <!-- 标题 -->
+  <rect fill="rgba(255,105,180,0.85)" x="10" y="175" width="90" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">花卉节</text>
+</svg>

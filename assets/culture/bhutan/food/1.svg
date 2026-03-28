@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 碗 -->
+  <ellipse fill="#CD7F32" cx="140" cy="140" rx="80" ry="35"/>
+  <ellipse fill="#DAA520" cx="140" cy="135" rx="70" ry="30"/>
+  <!-- 红米饭 -->
+  <ellipse fill="#8B0000" cx="140" cy="125" rx="55" ry="22"/>
+  <ellipse fill="#A52A2A" cx="138" cy="123" rx="48" ry="18"/>
+  <!-- 辣椒芝士 -->
+  <ellipse fill="#FF6347" cx="120" cy="115" rx="20" ry="10"/>
+  <ellipse fill="#FFD700" cx="160" cy="115" rx="18" ry="9"/>
+  <!-- 辣椒 -->
+  <ellipse fill="#DC143C" cx="100" cy="125" rx="10" ry="5"/>
+  <ellipse fill="#DC143C" cx="180" cy="125" rx="10" ry="5"/>
+  <!-- 蔬菜 -->
+  <ellipse fill="#228B22" cx="140" cy="100" rx="12" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,0,0,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">辣椒芝士</text>
+</svg>

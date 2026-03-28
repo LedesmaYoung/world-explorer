@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <!-- 背景 -->
+  <rect fill="#FFF8E7" width="280" height="200"/>
+  <!-- 蒸笼 -->
+  <ellipse fill="#8B7355" cx="140" cy="150" rx="80" ry="25"/>
+  <rect fill="#A0896C" x="60" y="80" width="160" height="70"/>
+  <ellipse fill="#C4A77D" cx="140" cy="80" rx="80" ry="25"/>
+  <!-- 饺子们 -->
+  <ellipse fill="#FFF5E6" cx="100" cy="95" rx="18" ry="12"/>
+  <path fill="#FFE4C4" d="M82,95 Q100,85 118,95"/>
+  <ellipse fill="#FFF5E6" cx="140" cy="90" rx="18" ry="12"/>
+  <path fill="#FFE4C4" d="M122,90 Q140,80 158,90"/>
+  <ellipse fill="#FFF5E6" cx="180" cy="95" rx="18" ry="12"/>
+  <path fill="#FFE4C4" d="M162,95 Q180,85 198,95"/>
+  <ellipse fill="#FFF5E6" cx="120" cy="110" rx="18" ry="12"/>
+  <path fill="#FFE4C4" d="M102,110 Q120,100 138,110"/>
+  <ellipse fill="#FFF5E6" cx="160" cy="110" rx="18" ry="12"/>
+  <path fill="#FFE4C4" d="M142,110 Q160,100 178,110"/>
+  <!-- 醋碟 -->
+  <ellipse fill="#2F2F2F" cx="50" cy="170" rx="25" ry="10"/>
+  <ellipse fill="#3D3D3D" cx="50" cy="168" rx="20" ry="7"/>
+  <!-- 筷子 -->
+  <rect fill="#8B4513" x="230" y="60" width="4" height="100" rx="2" transform="rotate(10,232,110)"/>
+  <rect fill="#8B4513" x="240" y="60" width="4" height="100" rx="2" transform="rotate(-5,242,110)"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,69,19,0.8)" x="10" y="10" width="60" height="25" rx="4"/>
+  <text x="40" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">饺子</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color="#8B4513"/>
+      <stop offset="100%" style="stop-color="#A0522D"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 奶茶碗 -->
+  <ellipse cx="70" cy="65" rx="35" ry="20" fill="#FFF"/>
+  <ellipse cx="70" cy="60" rx="30" ry="15" fill="#F5DEB3"/>
+  <!-- 蒸汽 -->
+  <path d="M50 50 Q55 40 50 30" stroke="#FFF" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M70 45 Q75 35 70 25" stroke="#FFF" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M90 50 Q95 40 90 30" stroke="#FFF" stroke-width="2" fill="none" opacity="0.6"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10">奶茶</text>
+</svg>

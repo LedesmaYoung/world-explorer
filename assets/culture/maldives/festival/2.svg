@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg39" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B5E20"/>
+      <stop offset="100%" style="stop-color:#81C784"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg39)" width="140" height="110"/>
+  <!-- 新月 -->
+  <path fill="#FFD700" d="M90,20 A12,12 0 1,1 90,44 A10,10 0 1,0 90,20"/>
+  <!-- 星星 -->
+  <polygon fill="#FFD700" points="105,28 107,33 112,33 108,36 110,41 105,38 100,41 102,36 98,33 103,33"/>
+  <!-- 灯饰 -->
+  <circle fill="#FFEB3B" cx="30" cy="50" r="4"/>
+  <circle fill="#FFEB3B" cx="50" cy="45" r="3"/>
+  <circle fill="#FFEB3B" cx="70" cy="52" r="4"/>
+  <circle fill="#FFEB3B" cx="45" cy="65" r="3"/>
+  <circle fill="#FFEB3B" cx="75" cy="60" r="3"/>
+  <!-- 礼品 -->
+  <rect fill="#D32F2F" x="25" y="75" width="20" height="15" rx="2"/>
+  <rect fill="#FFD700" x="33" y="75" width="4" height="15"/>
+  <rect fill="#D32F2F" x="95" y="75" width="20" height="15" rx="2"/>
+  <rect fill="#FFD700" x="103" y="75" width="4" height="15"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">开斋节</text>
+</svg>

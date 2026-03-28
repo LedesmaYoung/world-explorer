@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1976D2"/>
+      <stop offset="100%" style="stop-color:#64B5F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <rect x="45" y="40" width="50" height="35" rx="3" fill="#FFD700"/>
+  <g fill="#1976D2">
+    <circle cx="60" cy="52" r="6"/>
+    <circle cx="80" cy="52" r="6"/>
+    <rect x="55" y="62" width="30" height="8" rx="2"/>
+  </g>
+  <path d="M45,40 L70,25 L95,40" fill="#F44336"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">梅尔夫古城</text>
+</svg>

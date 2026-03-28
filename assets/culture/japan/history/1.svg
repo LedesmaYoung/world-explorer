@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="sky-jp" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="60%" style="stop-color:#B0E0E6"/>
+      <stop offset="100%" style="stop-color:#E6F3FF"/>
+    </linearGradient>
+    <linearGradient id="snow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#F0F8FF"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky-jp)" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#8BA8B7" points="0,200 50,140 100,180 150,120 200,160 250,130 280,150 280,200"/>
+  <!-- 富士山 -->
+  <polygon fill="url(#snow)" points="140,30 80,160 200,160"/>
+  <polygon fill="#E8E8E8" points="140,30 100,100 180,100"/>
+  <!-- 雪顶 -->
+  <polygon fill="white" points="140,30 120,60 160,60"/>
+  <!-- 樱花 -->
+  <g transform="translate(40,60)">
+    <circle fill="#FFB7C5" cx="0" cy="0" r="8"/>
+    <circle fill="#FFB7C5" cx="8" cy="5" r="6"/>
+    <circle fill="#FFB7C5" cx="-8" cy="5" r="6"/>
+    <circle fill="#FFB7C5" cx="5" cy="-5" r="5"/>
+    <circle fill="#FFB7C5" cx="-5" cy="-5" r="5"/>
+    <circle fill="#FFD700" cx="0" cy="0" r="3"/>
+  </g>
+  <g transform="translate(230,80)">
+    <circle fill="#FFB7C5" cx="0" cy="0" r="7"/>
+    <circle fill="#FFB7C5" cx="7" cy="4" r="5"/>
+    <circle fill="#FFB7C5" cx="-7" cy="4" r="5"/>
+    <circle fill="#FFB7C5" cx="4" cy="-4" r="4"/>
+    <circle fill="#FFB7C5" cx="-4" cy="-4" r="4"/>
+    <circle fill="#FFD700" cx="0" cy="0" r="2"/>
+  </g>
+  <!-- 云朵 -->
+  <ellipse fill="white" opacity="0.8" cx="60" cy="40" rx="25" ry="12"/>
+  <ellipse fill="white" opacity="0.8" cx="220" cy="35" rx="20" ry="10"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,53,69,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">富士山</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="sky11" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFCC80"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky11)" width="140" height="110"/>
+  <!-- 虎穴寺悬崖 -->
+  <polygon fill="#795548" points="100,90 120,25 140,90"/>
+  <polygon fill="#8D6E63" points="95,90 115,30 135,90"/>
+  <!-- 寺庙 -->
+  <rect fill="#FFFFFF" x="100" y="40" width="25" height="35"/>
+  <polygon fill="#FFD700" points="100,40 112,25 125,40"/>
+  <ellipse fill="#FFD700" cx="112" cy="25" rx="5" ry="8"/>
+  <!-- 窗户 -->
+  <rect fill="#D32F2F" x="108" y="50" width="10" height="15"/>
+  <!-- 山脚 -->
+  <polygon fill="#4CAF50" points="0,90 30,60 60,90"/>
+  <polygon fill="#388E3C" points="40,90 70,55 100,90"/>
+  <!-- 云 -->
+  <ellipse fill="#FFFFFF" cx="30" cy="35" rx="15" ry="8" opacity="0.8"/>
+  <ellipse fill="#FFFFFF" cx="70" cy="30" rx="12" ry="6" opacity="0.8"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">虎穴寺</text>
+</svg>

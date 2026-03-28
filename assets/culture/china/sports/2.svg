@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F4F4F"/>
+      <stop offset="100%" style="stop-color:#556B2F"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 武术人物 -->
+  <circle cx="70" cy="30" r="12" fill="#F5DEB3"/>
+  <rect x="60" y="42" width="20" height="30" fill="#000"/>
+  <!-- 手臂 - 功夫姿势 -->
+  <rect x="40" y="45" width="20" height="8" fill="#F5DEB3" transform="rotate(-30 50 49)"/>
+  <rect x="80" y="45" width="20" height="8" fill="#F5DEB3" transform="rotate(30 90 49)"/>
+  <!-- 腿 -->
+  <rect x="55" y="72" width="8" height="25" fill="#000"/>
+  <rect x="77" y="72" width="8" height="25" fill="#000"/>
+  <!-- 功夫字 -->
+  <text x="70" y="105" text-anchor="middle" fill="#FFD700" font-size="12" font-weight="bold">功夫</text>
+</svg>

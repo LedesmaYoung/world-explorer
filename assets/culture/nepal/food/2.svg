@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg25" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF8E1"/>
+      <stop offset="100%" style="stop-color:#FFE082"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg25)" width="140" height="110"/>
+  <!-- 铜盘 -->
+  <ellipse fill="#CD7F32" cx="70" cy="65" rx="45" ry="20"/>
+  <ellipse fill="#B8860B" cx="70" cy="62" rx="40" ry="17"/>
+  <!-- 手抓饭 -->
+  <ellipse fill="#FFFFFF" cx="70" cy="60" rx="35" ry="15"/>
+  <!-- 配菜 -->
+  <ellipse fill="#FF8A65" cx="50" cy="58" rx="10" ry="6"/>
+  <ellipse fill="#4CAF50" cx="85" cy="58" rx="10" ry="6"/>
+  <ellipse fill="#8D6E63" cx="70" cy="68" rx="12" ry="5"/>
+  <!-- 手 -->
+  <ellipse fill="#D7CCC8" cx="25" cy="80" rx="15" ry="8"/>
+  <rect fill="#D7CCC8" x="15" y="70" width="4" height="15" rx="2"/>
+  <rect fill="#D7CCC8" x="22" y="68" width="3" height="18" rx="1"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">达尔巴特</text>
+</svg>

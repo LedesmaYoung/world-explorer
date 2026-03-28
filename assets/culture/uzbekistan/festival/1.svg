@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 草地 -->
+  <rect fill="#228B22" y="150" width="280" height="50"/>
+  <!-- 经学院背景 -->
+  <polygon fill="#4169E1" points="140,60 100,110 180,110"/>
+  <rect fill="#1E90FF" x="105" y="110" width="70" height="50"/>
+  <!-- 纳乌鲁兹庆祝 -->
+  <ellipse fill="#DEB887" cx="80" cy="130" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M72,140 L88,140 L90,180 L70,180 Z"/>
+  <ellipse fill="#DEB887" cx="200" cy="130" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M192,140 L208,140 L210,180 L190,180 Z"/>
+  <!-- 苏姆拉克 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="160" rx="30" ry="15"/>
+  <ellipse fill="#E8E8D0" cx="140" cy="158" rx="25" ry="12"/>
+  <!-- 花朵 -->
+  <circle fill="#FF69B4" cx="60" cy="165" r="6"/>
+  <circle fill="#FFD700" cx="220" cy="165" r="6"/>
+  <!-- 太阳 -->
+  <circle fill="#FFD700" cx="230" cy="40" r="25"/>
+  <!-- 标题 -->
+  <rect fill="rgba(34,139,34,0.85)" x="10" y="175" width="70" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">纳乌鲁兹</text>
+</svg>

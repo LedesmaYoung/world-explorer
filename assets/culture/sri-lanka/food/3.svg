@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg20" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E9"/>
+      <stop offset="100%" style="stop-color:#A5D6A7"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg20)" width="140" height="110"/>
+  <!-- 竹篮 -->
+  <ellipse fill="#8D6E63" cx="70" cy="70" rx="40" ry="18"/>
+  <ellipse fill="#A1887F" cx="70" cy="67" rx="35" ry="15"/>
+  <!-- 蛋糕 -->
+  <ellipse fill="#FFCC80" cx="50" cy="65" rx="15" ry="10"/>
+  <ellipse fill="#FFE082" cx="50" cy="62" rx="12" ry="7"/>
+  <ellipse fill="#FFCC80" cx="90" cy="65" rx="15" ry="10"/>
+  <ellipse fill="#FFE082" cx="90" cy="62" rx="12" ry="7"/>
+  <!-- 蜂蜜淋面 -->
+  <ellipse fill="#FF9800" cx="50" cy="60" rx="8" ry="4"/>
+  <ellipse fill="#FF9800" cx="90" cy="60" rx="8" ry="4"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">蜂蜜蛋糕</text>
+</svg>

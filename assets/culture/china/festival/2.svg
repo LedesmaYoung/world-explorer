@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFA500"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 舞龙 -->
+  <ellipse cx="30" cy="55" rx="20" ry="15" fill="#FF4500"/>
+  <circle cx="25" cy="50" r="4" fill="#FFF"/>
+  <circle cx="35" cy="50" r="4" fill="#FFF"/>
+  <circle cx="25" cy="50" r="2" fill="#000"/>
+  <circle cx="35" cy="50" r="2" fill="#000"/>
+  <!-- 龙身 -->
+  <path d="M50 55 Q70 45 90 55 Q110 65 130 55" stroke="#FF4500" stroke-width="12" fill="none"/>
+  <path d="M50 55 Q70 45 90 55 Q110 65 130 55" stroke="#FFD700" stroke-width="8" fill="none"/>
+  <!-- 龙鳞 -->
+  <circle cx="65" cy="52" r="4" fill="#FF6347"/>
+  <circle cx="85" cy="55" r="4" fill="#FF6347"/>
+  <circle cx="105" cy="58" r="4" fill="#FF6347"/>
+  <circle cx="125" cy="55" r="4" fill="#FF6347"/>
+</svg>

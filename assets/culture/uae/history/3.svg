@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5DEB3"/>
+      <stop offset="100%" style="stop-color:#DEB887"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 传统帆船 -->
+  <path d="M30 70 Q70 30 110 70" fill="#8B4513"/>
+  <rect x="65" y="35" width="4" height="35" fill="#5D3A1A"/>
+  <path d="M69 38 Q90 50 69 60" fill="#FFF"/>
+  <!-- 海浪 -->
+  <path d="M20 80 Q35 75 50 80 Q65 85 80 80 Q95 75 110 80 Q125 85 130 80" stroke="#4682B4" stroke-width="2" fill="none"/>
+  <text x="70" y="100" text-anchor="middle" fill="#5D3A1A" font-size="10">航海贸易</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="sky5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50"/>
+      <stop offset="100%" style="stop-color:#A5D6A7"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky5)" width="140" height="110"/>
+  <!-- 红圆（国旗元素） -->
+  <circle fill="#D32F2F" cx="70" cy="55" r="30"/>
+  <!-- 国家纪念碑轮廓 -->
+  <polygon fill="#795548" points="35,90 45,40 55,90"/>
+  <polygon fill="#795548" points="60,90 70,35 80,90"/>
+  <polygon fill="#795548" points="85,90 95,40 105,90"/>
+  <!-- 底座 -->
+  <rect fill="#5D4037" x="25" y="85" width="90" height="8"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">国家纪念碑</text>
+</svg>

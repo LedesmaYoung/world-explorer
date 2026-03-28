@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B5E20"/>
+      <stop offset="100%" style="stop-color:#4CAF50"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <g fill="#FFD700">
+    <circle cx="70" cy="42" r="20"/>
+    <path d="M50,62 L90,62 L100,78 L40,78 Z"/>
+  </g>
+  <g fill="#1B5E20">
+    <circle cx="63" cy="40" r="4"/>
+    <circle cx="77" cy="40" r="4"/>
+    <path d="M60,52 Q70,58 80,52" stroke="#1B5E20" stroke-width="2" fill="none"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">英雄纪念碑</text>
+</svg>

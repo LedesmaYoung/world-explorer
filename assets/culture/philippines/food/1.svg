@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 大盘 -->
+  <ellipse fill="#CD7F32" cx="140" cy="140" rx="90" ry="40"/>
+  <ellipse fill="#DAA520" cx="140" cy="135" rx="80" ry="35"/>
+  <!-- 整只烤乳猪 -->
+  <ellipse fill="#DAA520" cx="140" cy="120" rx="60" ry="30"/>
+  <ellipse fill="#DEB887" cx="140" cy="115" rx="55" ry="25"/>
+  <!-- 猪头 -->
+  <ellipse fill="#DAA520" cx="200" cy="115" rx="18" ry="15"/>
+  <ellipse fill="#DEB887" cx="202" cy="112" rx="14" ry="12"/>
+  <!-- 猪耳朵 -->
+  <ellipse fill="#DAA520" cx="190" cy="100" rx="8" ry="10"/>
+  <ellipse fill="#DAA520" cx="210" cy="100" rx="8" ry="10"/>
+  <!-- 猪尾巴 -->
+  <path fill="#DAA520" d="M80,120 Q60,115 65,130 Q70,140 80,135"/>
+  <!-- 苹果装饰 -->
+  <ellipse fill="#FF6347" cx="202" cy="105" rx="5" ry="4"/>
+  <!-- 配菜 -->
+  <ellipse fill="#FFD700" cx="90" cy="130" rx="15" ry="8"/>
+  <ellipse fill="#90EE90" cx="190" cy="135" rx="12" ry="6"/>
+  <!-- 标题 -->
+  <rect fill="rgba(218,165,32,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">烤乳猪</text>
+</svg>

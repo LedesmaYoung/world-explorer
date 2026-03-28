@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 雪山 -->
+  <polygon fill="#F5F5F5" points="0,200 50,130 100,170 150,90 200,150 250,110 280,140 280,200"/>
+  <!-- 寺庙 -->
+  <polygon fill="#F5F5DC" points="140,50 90,90 190,90"/>
+  <rect fill="#E8E8D0" x="95" y="90" width="90" height="50"/>
+  <polygon fill="#FFD700" points="140,50 115,65 165,65"/>
+  <!-- 面具舞者 -->
+  <ellipse fill="#DC143C" cx="80" cy="110" rx="15" ry="18"/>
+  <rect fill="#4169E1" x="65" y="128" width="30" height="50"/>
+  <ellipse fill="#DC143C" cx="200" cy="110" rx="15" ry="18"/>
+  <rect fill="#228B22" x="185" y="128" width="30" height="50"/>
+  <!-- 鼓 -->
+  <ellipse fill="#8B4513" cx="140" cy="145" rx="20" ry="10"/>
+  <ellipse fill="#DAA520" cx="140" cy="143" rx="18" ry="8"/>
+  <!-- 观众 -->
+  <ellipse fill="#DEB887" cx="50" cy="170" rx="6" ry="8"/>
+  <path fill="#DC143C" d="M44,178 L56,178 L58,200 L42,200 Z"/>
+  <ellipse fill="#DEB887" cx="230" cy="170" rx="6" ry="8"/>
+  <path fill="#4169E1" d="M224,178 L236,178 L238,200 L222,200 Z"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="175" width="90" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">面具舞节</text>
+</svg>

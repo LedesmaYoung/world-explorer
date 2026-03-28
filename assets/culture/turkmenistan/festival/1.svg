@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 沙漠 -->
+  <path fill="#D2B48C" d="M0,150 Q70,130 140,150 Q210,170 280,150 L280,200 L0,200 Z"/>
+  <!-- 阿哈尔捷金马 -->
+  <ellipse fill="#FFD700" cx="140" cy="110" rx="50" ry="28"/>
+  <ellipse fill="#FFECB3" cx="140" cy="105" rx="45" ry="23"/>
+  <!-- 马腿 -->
+  <line x1="100" y1="130" x2="90" y2="170" stroke="#FFD700" stroke-width="6"/>
+  <line x1="115" y1="130" x2="105" y2="170" stroke="#FFD700" stroke-width="6"/>
+  <line x1="165" y1="130" x2="155" y2="170" stroke="#FFD700" stroke-width="6"/>
+  <line x1="180" y1="130" x2="190" y2="170" stroke="#FFD700" stroke-width="6"/>
+  <!-- 马头 -->
+  <ellipse fill="#FFD700" cx="195" cy="90" rx="20" ry="18"/>
+  <ellipse fill="#FFECB3" cx="200" cy="85" rx="12" ry="10"/>
+  <!-- 马尾 -->
+  <path fill="#DAA520" d="M90,110 Q70,115 60,105 Q65,125 85,120"/>
+  <!-- 骑手 -->
+  <ellipse fill="#DEB887" cx="145" cy="75" rx="8" ry="10"/>
+  <path fill="#DC143C" d="M137,85 L153,85 L155,115 L135,115 Z"/>
+  <!-- 标题 -->
+  <rect fill="rgba(255,215,0,0.85)" x="10" y="175" width="90" height="22" rx="4"/>
+  <text x="55" y="190" text-anchor="middle" fill="#8B4513" font-size="11" font-family="sans-serif">汗血马节</text>
+</svg>

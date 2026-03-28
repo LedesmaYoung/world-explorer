@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#E8F5E9" width="280" height="200"/>
+  <!-- 羽毛球场 -->
+  <rect fill="#2E8B57" x="30" y="80" width="220" height="100"/>
+  <line x1="140" y1="80" x2="140" y2="180" stroke="white" stroke-width="2"/>
+  <circle fill="none" stroke="white" stroke-width="2" cx="140" cy="130" r="25"/>
+  <!-- 球网 -->
+  <rect fill="#F5F5DC" x="135" y="70" width="10" height="120"/>
+  <line x1="30" y1="80" x2="250" y2="80" stroke="#4A4A4A" stroke-width="3"/>
+  <!-- 球员 -->
+  <ellipse fill="#DEB887" cx="80" cy="115" rx="8" ry="10"/>
+  <path fill="#FFD700" d="M72,125 L88,125 L90,165 L70,165 Z"/>
+  <!-- 球拍 -->
+  <ellipse fill="none" stroke="#DC143C" stroke-width="2" cx="100" cy="110" rx="15" ry="20"/>
+  <line x1="100" y1="130" x2="100" y2="145" stroke="#DC143C" stroke-width="3"/>
+  <!-- 羽毛球 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="100" rx="6" ry="8"/>
+  <path fill="#F5F5DC" d="M134,108 L140,120 L146,108"/>
+  <!-- 球员2 -->
+  <ellipse fill="#DEB887" cx="200" cy="115" rx="8" ry="10"/>
+  <path fill="#4169E1" d="M192,125 L208,125 L210,165 L190,165 Z"/>
+  <!-- 球拍2 -->
+  <ellipse fill="none" stroke="#FFD700" stroke-width="2" cx="180" cy="110" rx="15" ry="20"/>
+  <line x1="180" y1="130" x2="180" y2="145" stroke="#FFD700" stroke-width="3"/>
+  <!-- 标题 -->
+  <rect fill="rgba(46,139,87,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">羽毛球</text>
+</svg>

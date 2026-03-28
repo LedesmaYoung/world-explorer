@@ -1,0 +1,2723 @@
+/* 世界环球旅行家 - 主样式 */
+
+/* ===== 基础重置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+  background: linear-gradient(180deg, #87CEEB 0%, #E0F4FF 50%, #B8E6FF 100%);
+  color: #333;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== 主容器 ===== */
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 15px;
+  position: relative;
+}
+
+/* ===== 首页 ===== */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ===== 头部 ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  z-index: 100;
+  width: 100%;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  font-size: 32px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.title-text {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FF6B6B, #FF8C42, #FFB347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #FF8C42, #FFB347);
+  box-shadow: 0 4px 10px rgba(255, 140, 66, 0.3);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-btn:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 5px rgba(255, 140, 66, 0.3);
+}
+
+/* ===== 世界地图容器 ===== */
+.world-map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  min-height: 400px;
+}
+
+/* 世界地图主体 */
+.world-map {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 2/1;
+  min-height: 350px;
+  position: relative;
+  border-radius: 30px;
+  background: linear-gradient(180deg, 
+    #87CEEB 0%, 
+    #A8D8EA 40%,
+    #B8E6FF 70%,
+    #C8F0FF 100%
+  );
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    inset 0 0 80px rgba(255, 255, 255, 0.4);
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+
+/* 世界地图 SVG */
+.world-map-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 卡通色块地图 */
+.map-block {
+  stroke-width: 3;
+  stroke-linejoin: round;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.map-block.clickable {
+  pointer-events: all;
+}
+
+.map-block.clickable:hover {
+  filter: brightness(1.1);
+  transform-origin: center;
+}
+
+.map-block.clickable:active {
+  filter: brightness(0.95);
+}
+
+.north-america-block,
+.south-america-block {
+  fill: rgba(149, 225, 211, 0.6);
+  stroke: rgba(100, 180, 160, 0.9);
+}
+
+.europe-block {
+  fill: rgba(78, 205, 196, 0.6);
+  stroke: rgba(50, 160, 150, 0.9);
+}
+
+.africa-block {
+  fill: rgba(255, 230, 109, 0.6);
+  stroke: rgba(200, 180, 80, 0.9);
+}
+
+.asia-block {
+  fill: rgba(255, 107, 107, 0.5);
+  stroke: rgba(200, 80, 80, 0.8);
+}
+
+.oceania-block {
+  fill: rgba(168, 230, 207, 0.6);
+  stroke: rgba(120, 180, 160, 0.9);
+}
+
+/* 地图标签 */
+.map-label {
+  font-size: 28px;
+  text-anchor: middle;
+  pointer-events: none;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.map-label-text {
+  font-size: 16px;
+  font-weight: 700;
+  text-anchor: middle;
+  fill: #333;
+  pointer-events: none;
+}
+
+.map-label-count {
+  font-size: 11px;
+  text-anchor: middle;
+  fill: #666;
+  pointer-events: none;
+}
+
+/* ===== 装饰性云朵 ===== */
+.cloud {
+  position: absolute;
+  font-size: 40px;
+  opacity: 0.8;
+  animation: floatCloud linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-1 {
+  top: 5%;
+  left: -50px;
+  animation-duration: 25s;
+}
+
+.cloud-2 {
+  top: 15%;
+  right: -60px;
+  animation-duration: 30s;
+  animation-delay: -5s;
+  font-size: 50px;
+}
+
+.cloud-3 {
+  bottom: 25%;
+  left: -70px;
+  animation-duration: 35s;
+  animation-delay: -10s;
+  font-size: 35px;
+}
+
+.cloud-4 {
+  bottom: 35%;
+  right: -80px;
+  animation-duration: 28s;
+  animation-delay: -15s;
+  font-size: 45px;
+}
+
+@keyframes floatCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px));
+  }
+}
+
+/* ===== 世界地图 ===== */
+.world-map {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 520px;
+  height: auto;
+  aspect-ratio: 19/11;
+  background: linear-gradient(180deg, 
+    #87CEEB 0%, 
+    #A8D8EA 30%,
+    #B8E6FF 60%,
+    #C8F0FF 100%
+  );
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    inset 0 0 60px rgba(255, 255, 255, 0.3);
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+/* 世界地图 SVG */
+.world-map-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 地图区块通用样式 */
+.map-block {
+  stroke-width: 2;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.map-block.clickable {
+  pointer-events: all;
+}
+
+.map-block.clickable:hover {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+  transform: translateY(-2px);
+}
+
+.map-block.clickable:active {
+  transform: scale(0.98);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* 各大洲颜色 - 儿童友好的柔和配色 */
+.north-america-block {
+  fill: rgba(149, 225, 211, 0.65);
+  stroke: rgba(100, 180, 160, 0.9);
+}
+
+.north-america-block:hover {
+  fill: rgba(149, 225, 211, 0.85);
+}
+
+.south-america-block {
+  fill: rgba(100, 200, 150, 0.65);
+  stroke: rgba(70, 160, 110, 0.9);
+}
+
+.south-america-block:hover {
+  fill: rgba(100, 200, 150, 0.85);
+}
+
+.europe-block {
+  fill: rgba(78, 205, 196, 0.65);
+  stroke: rgba(50, 160, 150, 0.9);
+}
+
+.europe-block:hover {
+  fill: rgba(78, 205, 196, 0.85);
+}
+
+.africa-block {
+  fill: rgba(255, 200, 87, 0.65);
+  stroke: rgba(200, 150, 50, 0.9);
+}
+
+.africa-block:hover {
+  fill: rgba(255, 200, 87, 0.85);
+}
+
+.asia-block {
+  fill: rgba(255, 127, 127, 0.6);
+  stroke: rgba(200, 90, 90, 0.85);
+}
+
+.asia-block:hover {
+  fill: rgba(255, 127, 127, 0.8);
+}
+
+.oceania-block {
+  fill: rgba(168, 230, 207, 0.65);
+  stroke: rgba(120, 180, 160, 0.9);
+}
+
+.oceania-block:hover {
+  fill: rgba(168, 230, 207, 0.85);
+}
+
+/* 地图标签样式 */
+.map-label {
+  font-size: 28px;
+  text-anchor: middle;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.8));
+}
+
+.map-label-text {
+  font-size: 14px;
+  font-weight: 700;
+  fill: #333;
+  text-anchor: middle;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.9));
+}
+
+.map-label-count {
+  font-size: 10px;
+  font-weight: 500;
+  fill: #666;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+/* 海洋波纹效果 */
+.world-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ===== 大洲位置 ===== */
+.continent-spot {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* 北美洲 - 左上方 */
+.continent-spot.north-america {
+  top: 18%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+/* 南美洲 - 左下方 (气泡放在美洲一起) */
+/* 注：美洲气泡统一放在北美洲位置 */
+
+/* 欧洲 - 中上方 */
+.continent-spot.europe {
+  top: 18%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
+/* 非洲 - 中下方 */
+.continent-spot.africa {
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 亚洲 - 右上方 */
+.continent-spot.asia {
+  top: 24%;
+  right: 20%;
+  transform: translate(50%, -50%);
+}
+
+/* 大洋洲 - 右下角 */
+.continent-spot.oceania {
+  bottom: 20%;
+  right: 18%;
+  transform: translate(50%, 50%);
+}
+
+/* ===== 大洲气泡 ===== */
+.continent-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 4px solid;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.continent-spot.europe .continent-bubble {
+  border-color: #4ECDC4;
+  background: linear-gradient(135deg, #fff 0%, #E8FFFE 100%);
+}
+
+.continent-spot.asia .continent-bubble {
+  border-color: #FF6B6B;
+  background: linear-gradient(135deg, #fff 0%, #FFE8E8 100%);
+}
+
+.continent-spot.africa .continent-bubble {
+  border-color: #FFE66D;
+  background: linear-gradient(135deg, #fff 0%, #FFF9E6 100%);
+}
+
+.continent-spot.north-america .continent-bubble {
+  border-color: #95E1D3;
+  background: linear-gradient(135deg, #fff 0%, #E8FFF5 100%);
+}
+
+.continent-spot.oceania .continent-bubble {
+  border-color: #A8E6CF;
+  background: linear-gradient(135deg, #fff 0%, #E8FFF0 100%);
+}
+
+/* 气泡内容 */
+.bubble-icon {
+  font-size: 36px;
+  margin-bottom: 2px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.bubble-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.bubble-count {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* ===== 发光效果 ===== */
+.continent-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.continent-spot.europe .continent-glow {
+  background: radial-gradient(circle, rgba(78, 205, 196, 0.4) 0%, transparent 70%);
+}
+
+.continent-spot.asia .continent-glow {
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.4) 0%, transparent 70%);
+}
+
+.continent-spot.africa .continent-glow {
+  background: radial-gradient(circle, rgba(255, 230, 109, 0.4) 0%, transparent 70%);
+}
+
+.continent-spot.north-america .continent-glow {
+  background: radial-gradient(circle, rgba(149, 225, 211, 0.4) 0%, transparent 70%);
+}
+
+.continent-spot.oceania .continent-glow {
+  background: radial-gradient(circle, rgba(168, 230, 207, 0.4) 0%, transparent 70%);
+}
+
+/* 悬停和点击效果 */
+.continent-spot:hover .continent-glow,
+.continent-spot:active .continent-glow {
+  opacity: 1;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.continent-spot:hover .continent-bubble,
+.continent-spot:active .continent-bubble {
+  transform: scale(1.15);
+}
+
+.continent-spot:active .continent-bubble {
+  transform: scale(1.05);
+}
+
+/* ===== 装饰性元素 ===== */
+.map-decoration {
+  position: absolute;
+  font-size: 28px;
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.map-decoration.plane {
+  top: 8%;
+  left: 30%;
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.map-decoration.ship {
+  bottom: 12%;
+  left: 35%;
+  animation-delay: -2s;
+  animation-duration: 6s;
+  font-size: 24px;
+}
+
+.map-decoration.whale {
+  bottom: 8%;
+  right: 35%;
+  animation-delay: -1s;
+  animation-duration: 7s;
+  font-size: 30px;
+}
+
+.map-decoration.dolphin {
+  top: 65%;
+  left: 20%;
+  animation-delay: -3s;
+  animation-duration: 5s;
+  font-size: 22px;
+}
+
+/* ===== 地图提示 ===== */
+.map-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: bounce 2s ease-in-out infinite;
+  z-index: 20;
+}
+
+.hint-icon {
+  font-size: 20px;
+  animation: pointDown 1s ease-in-out infinite;
+}
+
+.hint-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF8C42;
+}
+
+/* ===== 底部状态栏 ===== */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  z-index: 100;
+  width: 100%;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #FFF9E6, #FFE4B5);
+}
+
+.footer-item:active {
+  transform: scale(0.96);
+  background: linear-gradient(135deg, #FFE4B5, #FFDAB9);
+}
+
+.footer-icon {
+  font-size: 22px;
+}
+
+.footer-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+}
+
+.footer-count {
+  font-weight: 700;
+  color: #FF8C42;
+  font-size: 14px;
+}
+
+/* ===== 大洲国家列表弹窗 ===== */
+.continent-modal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000 !important;
+  display: none !important;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.continent-modal.active {
+  display: flex !important;
+}
+
+.continent-modal-content {
+  background: linear-gradient(180deg, #FFF9E6 0%, #FFE4B5 100%);
+  width: 100%;
+  height: 90%;
+  border-radius: 30px 30px 0 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.continent-modal.active .continent-modal-content {
+  transform: translateY(0);
+}
+
+.continent-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #FF8C42, #FFB347);
+  box-shadow: 0 4px 10px rgba(255, 140, 66, 0.3);
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-btn:active {
+  transform: scale(0.92);
+}
+
+.continent-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== 国家卡片网格 ===== */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.country-card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.country-card:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-card.collected {
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFE4B5 100%);
+  border-color: #FFD700;
+}
+
+.country-flag {
+  font-size: 42px;
+  margin-bottom: 6px;
+  transition: transform 0.3s ease;
+}
+
+.country-card:hover .country-flag,
+.country-card:active .country-flag {
+  transform: scale(1.1);
+}
+
+.country-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.country-icon {
+  font-size: 22px;
+}
+
+.country-collected-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 18px;
+  background: #FFD700;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== 洲进度 ===== */
+.continent-progress {
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #666;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.continent-progress span {
+  font-weight: 700;
+  color: #FF8C42;
+}
+
+/* ===== 国旗详情弹窗 ===== */
+.flag-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.flag-modal.active {
+  display: flex;
+}
+
+.flag-modal-content {
+  background: white;
+  border-radius: 30px;
+  padding: 25px 20px;
+  text-align: center;
+  max-width: 420px;
+  width: 95%;
+  animation: scaleIn 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.modal-flag {
+  font-size: 70px;
+  animation: bounce 0.5s ease;
+}
+
+.modal-title-group {
+  text-align: left;
+}
+
+.modal-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.modal-fullname {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.modal-icon {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+/* 详细信息区域 */
+.modal-details {
+  text-align: left;
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFE4B5 100%);
+  border-radius: 15px;
+  padding: 12px 15px;
+  margin: 10px 0;
+}
+
+.modal-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.modal-detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.detail-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-info {
+  text-align: left;
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFE4B5 100%);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.modal-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.modal-info-item:last-child {
+  border-bottom: none;
+}
+
+.modal-info-label {
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal-info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-collected {
+  font-size: 16px;
+  color: #4CAF50;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #E8F5E9;
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.modal-stars {
+  font-size: 24px;
+  margin-top: 10px;
+  animation: starBurst 0.5s ease forwards;
+}
+
+/* ===== 印章状态和按钮 ===== */
+.stamp-status {
+  margin: 15px 0;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stamp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.stamp-badge.entry {
+  background: linear-gradient(135deg, #FFEBEE, #FFCDD2);
+  color: #C62828;
+  border: 2px solid #EF5350;
+}
+
+.stamp-badge.exit {
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+  color: #1565C0;
+  border: 2px solid #42A5F5;
+}
+
+.stamp-badge.special {
+  background: linear-gradient(135deg, #FFF8E1, #FFECB3);
+  color: #F57F17;
+  border: 2px solid #FFD54F;
+}
+
+.stamp-badge.creative {
+  background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+  color: #6A1B9A;
+  border: 2px solid #AB47BC;
+}
+
+.stamp-badge-icon {
+  font-size: 24px;
+}
+
+.stamp-badge-text {
+  font-size: 16px;
+}
+
+.get-passport-btn {
+  width: 100%;
+  padding: 18px 25px;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.get-passport-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+}
+
+/* ===== 护照页面 ===== */
+.passport-page {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.passport-page.active {
+  display: flex;
+}
+
+.passport-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.passport-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passport-summary {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.passport-summary span {
+  font-weight: 700;
+  color: #FF8C42;
+}
+
+.passport-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+.passport-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.passport-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 20px 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.passport-card:active {
+  transform: scale(0.97);
+}
+
+.passport-card-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.passport-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.passport-card-stamps {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.passport-stamp-mini {
+  font-size: 16px;
+}
+
+.passport-card.empty {
+  opacity: 0.5;
+  filter: grayscale(50%);
+}
+
+.passport-section {
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.passport-section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #eee;
+}
+
+.passport-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.passport-flag {
+  font-size: 32px;
+  padding: 8px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== 勋章页面 ===== */
+.badge-page {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.badge-page.active {
+  display: flex;
+}
+
+.badge-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.badge-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+.badge-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 20px 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.badge-card:active {
+  transform: scale(0.97);
+}
+
+.badge-card.locked {
+  opacity: 0.5;
+  filter: grayscale(50%);
+}
+
+.badge-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.badge-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.badge-status {
+  font-size: 12px;
+  color: #4CAF50;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.badge-card.locked .badge-status {
+  color: #999;
+}
+
+/* ===== 勋章详情弹窗 ===== */
+.badge-detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  animation: fadeIn 0.3s ease;
+}
+
+.badge-detail-content {
+  background: white;
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 85%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.3s ease;
+}
+
+.badge-detail-header {
+  margin-bottom: 20px;
+}
+
+.badge-detail-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.badge-detail-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.badge-detail-body {
+  margin-bottom: 20px;
+}
+
+.badge-detail-status {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.badge-detail-status.unlocked {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  color: white;
+}
+
+.badge-detail-status.locked {
+  background: #f5f5f5;
+  color: #999;
+}
+
+.badge-detail-condition {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+
+.condition-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.condition-text {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.badge-detail-progress {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 12px 15px;
+}
+
+.progress-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.badge-detail-close {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.badge-detail-close:active {
+  transform: scale(0.95);
+}
+
+/* ===== 勋章解锁通知 ===== */
+.badge-unlock-notification {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #FFD700, #FFC107);
+  border-radius: 20px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+  z-index: 4000;
+  animation: badgeUnlockSlide 0.5s ease, badgeUnlockFade 3s ease forwards;
+}
+
+.unlock-icon {
+  font-size: 40px;
+  animation: badgeUnlockBounce 0.6s ease;
+}
+
+.unlock-text {
+  text-align: left;
+}
+
+.unlock-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.unlock-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+@keyframes badgeUnlockSlide {
+  from {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes badgeUnlockBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+@keyframes badgeUnlockFade {
+  0%, 70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ===== 动画 ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.6; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes starBurst {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pointDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+/* ===== 响应式适配 ===== */
+@media (max-width: 600px) {
+  .title-text {
+    font-size: 20px;
+  }
+  
+  .world-map {
+    border-radius: 20px;
+  }
+  
+  .continent-bubble {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .bubble-icon {
+    font-size: 28px;
+  }
+  
+  .bubble-name {
+    font-size: 14px;
+  }
+  
+  .bubble-count {
+    font-size: 11px;
+  }
+  
+  .continent-glow {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .map-decoration {
+    font-size: 22px;
+  }
+  
+  .hint-text {
+    font-size: 14px;
+  }
+  
+  .country-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .country-flag {
+    font-size: 36px;
+  }
+  
+  .modal-flag {
+    font-size: 80px;
+  }
+}
+
+/* ===== 横屏适配 ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .world-map {
+    max-height: 300px;
+  }
+  
+  .continent-bubble {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .bubble-icon {
+    font-size: 24px;
+  }
+  
+  .bubble-name {
+    font-size: 12px;
+  }
+  
+  .map-hint {
+    display: none;
+  }
+}
+
+/* ===== 颜色辨识游戏弹窗 ===== */
+.game-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+}
+
+.game-modal.active {
+  display: flex;
+}
+
+.game-modal-content {
+  background: linear-gradient(180deg, #FFF9E6 0%, #FFFFFF 100%);
+  border-radius: 30px;
+  padding: 25px 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: scaleIn 0.3s ease;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.game-modal-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.2) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.game-header {
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.game-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF8C42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.game-flag-display {
+  margin: 15px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.game-flag-large {
+  font-size: 80px;
+  margin-bottom: 10px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.game-flag-hint {
+  font-size: 16px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* 颜色目标指示器 */
+.color-target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  padding: 15px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.target-color-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 4px solid white;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.target-hint {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* 气球容器 */
+.balloons-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+/* 单个气球 */
+.balloon {
+  width: 70px;
+  height: 90px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  animation: floatBalloon 3s ease-in-out infinite;
+}
+
+.balloon:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+.balloon:nth-child(3) {
+  animation-delay: -1s;
+}
+
+.balloon:nth-child(4) {
+  animation-delay: -1.5s;
+}
+
+.balloon:nth-child(5) {
+  animation-delay: -2s;
+}
+
+.balloon:hover {
+  transform: scale(1.1);
+}
+
+.balloon:active {
+  transform: scale(0.95);
+}
+
+.balloon-body {
+  width: 70px;
+  height: 85px;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  position: relative;
+  box-shadow: 
+    inset -10px -10px 20px rgba(0, 0, 0, 0.1),
+    inset 10px 10px 20px rgba(255, 255, 255, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 气球高光 */
+.balloon-body::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+
+/* 气球结 */
+.balloon-knot {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  filter: brightness(0.8);
+  border-radius: 0 0 50% 50%;
+}
+
+/* 气球线 */
+.balloon-string {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, #999 0%, #ccc 100%);
+}
+
+/* 气球颜色 */
+.balloon-red .balloon-body { background: linear-gradient(135deg, #FF6B6B 0%, #EE5A5A 100%); }
+.balloon-red .balloon-knot { background: #CC4444; }
+
+.balloon-blue .balloon-body { background: linear-gradient(135deg, #4DABF7 0%, #339AF0 100%); }
+.balloon-blue .balloon-knot { background: #228BE6; }
+
+.balloon-yellow .balloon-body { background: linear-gradient(135deg, #FFD43B 0%, #FCC419 100%); }
+.balloon-yellow .balloon-knot { background: #E67700; }
+
+.balloon-green .balloon-body { background: linear-gradient(135deg, #69DB7C 0%, #51CF66 100%); }
+.balloon-green .balloon-knot { background: #37B24D; }
+
+.balloon-white .balloon-body { background: linear-gradient(135deg, #FFFFFF 0%, #F1F3F5 100%); border: 2px solid #dee2e6; }
+.balloon-white .balloon-knot { background: #ADB5BD; }
+
+.balloon-black .balloon-body { background: linear-gradient(135deg, #495057 0%, #212529 100%); }
+.balloon-black .balloon-knot { background: #000000; }
+
+.balloon-orange .balloon-body { background: linear-gradient(135deg, #FF922B 0%, #FD7E14 100%); }
+.balloon-orange .balloon-knot { background: #E8590C; }
+
+.balloon-purple .balloon-body { background: linear-gradient(135deg, #DA77F2 0%, #BE4BDB 100%); }
+.balloon-purple .balloon-knot { background: #9C36B5; }
+
+.balloon-brown .balloon-body { background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%); }
+.balloon-brown .balloon-knot { background: #5D3A1A; }
+
+.balloon-gold .balloon-body { background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%); }
+.balloon-gold .balloon-knot { background: #D4A900; }
+
+/* 正确动画 */
+.balloon.correct {
+  animation: correctPop 0.5s ease forwards;
+}
+
+@keyframes correctPop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.3); }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+/* 错误动画 */
+.balloon.wrong {
+  animation: wrongShake 0.5s ease;
+}
+
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+}
+
+/* 气球漂浮动画 */
+@keyframes floatBalloon {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* 进度指示器 */
+.game-progress {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: all 0.3s ease;
+}
+
+.progress-dot.active {
+  background: #FFD700;
+  transform: scale(1.2);
+}
+
+.progress-dot.completed {
+  background: #4CAF50;
+}
+
+/* ===== 印章庆祝弹窗 ===== */
+.stamp-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1200;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+}
+
+.stamp-modal.active {
+  display: flex;
+}
+
+.stamp-modal-content {
+  background: linear-gradient(180deg, #FFF9E6 0%, #FFFFFF 100%);
+  border-radius: 30px;
+  padding: 30px 25px;
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+  animation: scaleIn 0.5s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.stamp-celebration {
+  font-size: 50px;
+  margin-bottom: 10px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.stamp-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FF8C42;
+  margin-bottom: 20px;
+}
+
+/* 印章样式 */
+.stamp-display {
+  margin: 20px 0;
+  position: relative;
+}
+
+.stamp-icon-large {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  animation: stampIn 0.5s ease;
+  position: relative;
+}
+
+.stamp-icon-large.entry {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.stamp-icon-large.exit {
+  background: linear-gradient(135deg, #4DABF7 0%, #74C0FC 100%);
+  box-shadow: 0 8px 25px rgba(77, 171, 247, 0.4);
+}
+
+.stamp-icon-large.special {
+  background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.stamp-icon-large.creative {
+  background: linear-gradient(135deg, #AB47BC 0%, #CE93D8 100%);
+  box-shadow: 0 8px 25px rgba(171, 71, 188, 0.4);
+}
+
+.stamp-type {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.stamp-country {
+  font-size: 16px;
+  color: #666;
+}
+
+.stamp-date {
+  font-size: 14px;
+  color: #999;
+  margin-top: 5px;
+}
+
+@keyframes stampIn {
+  0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* 护照预览 */
+.stamp-passport-preview {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.preview-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.stamp-preview-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stamp-mini {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.stamp-mini.entry {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+}
+
+.stamp-mini.exit {
+  background: linear-gradient(135deg, #4DABF7 0%, #74C0FC 100%);
+}
+
+.stamp-mini.special {
+  background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+}
+
+.stamp-mini.creative {
+  background: linear-gradient(135deg, #AB47BC 0%, #CE93D8 100%);
+}
+
+.stamp-mini.locked {
+  background: #eee;
+  opacity: 0.5;
+}
+
+/* 关闭按钮 */
+.stamp-close-btn {
+  margin-top: 20px;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #FF8C42, #FFB347);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4);
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stamp-close-btn:active {
+  transform: scale(0.95);
+}
+
+/* 继续挑战按钮 */
+.stamp-continue-btn {
+  margin-top: 15px;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stamp-continue-btn:active {
+  transform: scale(0.95);
+}
+
+/* 返回按钮 */
+.stamp-back-btn {
+  margin-top: 10px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  background: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stamp-back-btn:active {
+  transform: scale(0.95);
+  background: #eee;
+}
+
+/* 星星烟花效果 */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+/* ===== 护照本页面 ===== */
+.passport-book-page {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.passport-book-page.active {
+  display: flex;
+}
+
+.passport-book-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.passport-book-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 统计区 */
+.passport-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 5px;
+  margin-bottom: 15px;
+  gap: 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 10px 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #666;
+}
+
+/* 印章卡片网格 */
+.passport-stamps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+/* 大洲分隔标题 */
+.continent-divider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+  border-radius: 15px;
+  margin: 5px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.continent-icon {
+  font-size: 20px;
+}
+
+.continent-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.continent-count {
+  font-size: 13px;
+  color: #888;
+  margin-left: auto;
+}
+
+.stamp-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 20px 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.stamp-card:active {
+  transform: scale(0.97);
+}
+
+.stamp-card-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.stamp-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.stamp-card-progress {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.stamp-card-mini {
+  font-size: 16px;
+}
+
+.stamp-card.empty {
+  opacity: 0.5;
+  filter: grayscale(50%);
+}
+
+/* 空印章提示 */
+.no-stamps-hint {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+.no-stamps-hint .hint-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* 打开护照本的按钮 */
+.open-passport-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1a3657h, #0f2f1f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 15px rgba(26, 54, 83, 0.4);
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.open-passport-btn:active {
+  transform: scale(0.95);
+}
+
+/* 印章详情页样式 */
+.stamp-detail {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.stamp-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.stamp-detail-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stamp-detail-count {
+  font-size: 14px;
+  color: #FF8C42;
+  font-weight: 700;
+}
+
+.stamp-detail-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stamp-detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 60px;
+}
+
+.stamp-detail-flag {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.stamp-detail-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* ===== 弹窗关闭按钮 ===== */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  color: #666;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.modal-close-btn:active {
+  transform: scale(0.95);
+}
+
+/* ===== 弹窗改为可滚动 ===== */
+.flag-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.flag-modal-content {
+  background: white;
+  border-radius: 30px;
+  padding: 25px 20px;
+  text-align: center;
+  max-width: 450px;
+  width: 95%;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: scaleIn 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* ===== 文化探索板块样式 ===== */
+.culture-sections {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.culture-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 2px solid #eee;
+}
+
+.culture-section:last-child {
+  margin-bottom: 0;
+}
+
+.culture-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed #ddd;
+}
+
+.culture-section-icon {
+  font-size: 20px;
+}
+
+/* 文化内容卡片 */
+.culture-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.culture-item:last-child {
+  margin-bottom: 0;
+}
+
+.culture-item:active {
+  transform: scale(0.98);
+}
+
+.culture-item-image {
+  width: 70px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.culture-item-text {
+  flex: 1;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* 图片加载占位 */
+.culture-item-image.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* 不同板块的主题色 */
+.culture-section.history {
+  border-color: #FFE4B5;
+  background: linear-gradient(135deg, #FFF9E6 0%, #ffffff 100%);
+}
+
+.culture-section.history .culture-section-title {
+  color: #B8860B;
+}
+
+.culture-section.food {
+  border-color: #FFB6C1;
+  background: linear-gradient(135deg, #FFF0F5 0%, #ffffff 100%);
+}
+
+.culture-section.food .culture-section-title {
+  color: #CD5C5C;
+}
+
+.culture-section.festival {
+  border-color: #98D8C8;
+  background: linear-gradient(135deg, #F0FFF0 0%, #ffffff 100%);
+}
+
+.culture-section.festival .culture-section-title {
+  color: #2E8B57;
+}
+
+.culture-section.sports {
+  border-color: #87CEEB;
+  background: linear-gradient(135deg, #F0F8FF 0%, #ffffff 100%);
+}
+
+.culture-section.sports .culture-section-title {
+  color: #4682B4;
+}
+
+/* 暂无文化数据提示 */
+.no-culture-data {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 14px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+/* ===== 文化详情弹窗 ===== */
+.culture-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.culture-detail-overlay.active {
+  display: flex;
+}
+
+.culture-detail-card {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.culture-detail-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.culture-detail-content {
+  padding: 20px;
+}
+
+.culture-detail-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.culture-detail-category {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.culture-detail-category.history {
+  background: #FFF9E6;
+  color: #B8860B;
+}
+
+.culture-detail-category.food {
+  background: #FFF0F5;
+  color: #CD5C5C;
+}
+
+.culture-detail-category.festival {
+  background: #F0FFF0;
+  color: #2E8B57;
+}
+
+.culture-detail-category.sports {
+  background: #F0F8FF;
+  color: #4682B4;
+}
+
+.culture-detail-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+.culture-detail-close {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.culture-detail-close:active {
+  transform: scale(0.98);
+}
+
+/* 滚动条美化 */
+.flag-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.flag-modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.flag-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+.flag-modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ===== 语音按钮 ===== */
+.voice-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.voice-btn:hover {
+  transform: scale(1.1);
+}
+
+.voice-btn:active {
+  transform: scale(0.95);
+}
+
+.voice-btn.playing {
+  animation: voicePulse 1s ease-in-out infinite;
+}
+
+@keyframes voicePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.5); }
+  50% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+}

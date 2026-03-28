@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="sky-mg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4169E1"/>
+      <stop offset="100%" style="stop-color:#87CEEB"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky-mg)" width="280" height="200"/>
+  <!-- 草原 -->
+  <rect fill="#228B22" y="120" width="280" height="80"/>
+  <rect fill="#32CD32" y="130" width="280" height="70"/>
+  <!-- 蒙古包 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="140" rx="60" ry="30"/>
+  <path fill="#DC143C" d="M80,140 Q140,80 200,140"/>
+  <path fill="#4169E1" d="M100,135 Q140,100 180,135"/>
+  <!-- 门 -->
+  <rect fill="#8B4513" x="125" y="130" width="30" height="30"/>
+  <rect fill="#DAA520" x="130" y="135" width="20" height="20"/>
+  <!-- 装饰图案 -->
+  <circle fill="#FFD700" cx="110" cy="115" r="5"/>
+  <circle fill="#FFD700" cx="140" cy="105" r="5"/>
+  <circle fill="#FFD700" cx="170" cy="115" r="5"/>
+  <!-- 马匹 -->
+  <ellipse fill="#8B4513" cx="50" cy="170" rx="20" ry="12"/>
+  <ellipse fill="#A0522D" cx="45" cy="155" rx="8" ry="10"/>
+  <line x1="35" y1="165" x2="30" y2="185" stroke="#8B4513" stroke-width="3"/>
+  <line x1="45" y1="165" x2="40" y2="185" stroke="#8B4513" stroke-width="3"/>
+  <line x1="55" y1="165" x2="50" y2="185" stroke="#8B4513" stroke-width="3"/>
+  <line x1="65" y1="165" x2="60" y2="185" stroke="#8B4513" stroke-width="3"/>
+  <ellipse fill="#8B4513" cx="240" cy="175" rx="18" ry="10"/>
+  <!-- 云朵 -->
+  <ellipse fill="white" opacity="0.8" cx="60" cy="50" rx="25" ry="12"/>
+  <ellipse fill="white" opacity="0.8" cx="220" cy="40" rx="20" ry="10"/>
+  <!-- 标题 -->
+  <rect fill="rgba(65,105,225,0.85)" x="10" y="10" width="50" height="25" rx="4"/>
+  <text x="35" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">蒙古包</text>
+</svg>

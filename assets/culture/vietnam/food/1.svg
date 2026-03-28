@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 大碗 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="140" rx="85" ry="35"/>
+  <ellipse fill="#FFFACD" cx="140" cy="135" rx="75" ry="30"/>
+  <!-- 河粉汤 -->
+  <ellipse fill="#F5DEB3" cx="140" cy="130" rx="65" ry="25"/>
+  <!-- 牛肉片 -->
+  <ellipse fill="#8B4513" cx="120" cy="120" rx="20" ry="10"/>
+  <ellipse fill="#A0522D" cx="160" cy="125" rx="18" ry="8"/>
+  <!-- 葱花 -->
+  <ellipse fill="#90EE90" cx="140" cy="115" rx="15" ry="6"/>
+  <ellipse fill="#90EE90" cx="180" cy="125" rx="8" ry="4"/>
+  <!-- 豆芽 -->
+  <ellipse fill="#FFFACD" cx="100" cy="130" rx="12" ry="5"/>
+  <!-- 蒸汽 -->
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M100,100 Q105,85 100,70"/>
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M140,95 Q145,80 140,65"/>
+  <path fill="none" stroke="#E0E0E0" stroke-width="2" opacity="0.5" d="M180,100 Q185,85 180,70"/>
+  <!-- 筷子 -->
+  <rect fill="#8B4513" x="230" y="80" width="4" height="80" rx="2" transform="rotate(10,232,120)"/>
+  <rect fill="#8B4513" x="242" y="80" width="4" height="80" rx="2" transform="rotate(-10,244,120)"/>
+  <!-- 汤勺 -->
+  <ellipse fill="#C0C0C0" cx="50" cy="160" rx="15" ry="8"/>
+  <rect fill="#C0C0C0" x="45" y="168" width="10" height="20" rx="3"/>
+  <!-- 标题 -->
+  <rect fill="rgba(139,69,19,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">牛肉河粉</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2691E"/>
+      <stop offset="100%" style="stop-color:#A0522D"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 骆驼 -->
+  <ellipse cx="70" cy="60" rx="35" ry="18" fill="#DEB887"/>
+  <ellipse cx="100" cy="50" rx="12" ry="10" fill="#DEB887"/>
+  <ellipse cx="40" cy="65" rx="8" ry="12" fill="#D2B48C"/>
+  <ellipse cx="90" cy="65" rx="8" ry="12" fill="#D2B48C"/>
+  <ellipse cx="50" cy="65" rx="8" ry="12" fill="#D2B48C"/>
+  <ellipse cx="80" cy="65" rx="8" ry="12" fill="#D2B48C"/>
+  <!-- 驼峰 -->
+  <ellipse cx="65" cy="45" rx="12" ry="10" fill="#C4A67A"/>
+  <circle cx="105" cy="48" r="4" fill="#8B4513"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10">赛骆驼</text>
+</svg>

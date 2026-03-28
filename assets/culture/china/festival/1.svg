@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <!-- 夜空背景 -->
+  <rect fill="#1a1a2e" width="280" height="200"/>
+  <!-- 星星 -->
+  <circle fill="#FFD700" cx="30" cy="30" r="2"/>
+  <circle fill="#FFD700" cx="80" cy="20" r="1.5"/>
+  <circle fill="#FFD700" cx="150" cy="40" r="2"/>
+  <circle fill="#FFD700" cx="220" cy="25" r="1.5"/>
+  <circle fill="#FFD700" cx="260" cy="50" r="2"/>
+  <!-- 烟花 -->
+  <g transform="translate(70,60)">
+    <line x1="0" y1="0" x2="20" y2="-30" stroke="#FF6B6B" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-20" y2="-30" stroke="#FF6B6B" stroke-width="2"/>
+    <line x1="0" y1="0" x2="30" y2="-10" stroke="#FFD93D" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-30" y2="-10" stroke="#FFD93D" stroke-width="2"/>
+    <line x1="0" y1="0" x2="25" y2="15" stroke="#FF6B6B" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-25" y2="15" stroke="#FF6B6B" stroke-width="2"/>
+    <circle fill="#FFD700" cx="20" cy="-30" r="3"/>
+    <circle fill="#FFD700" cx="-20" cy="-30" r="3"/>
+    <circle fill="#FF6B6B" cx="30" cy="-10" r="3"/>
+    <circle fill="#FF6B6B" cx="-30" cy="-10" r="3"/>
+  </g>
+  <g transform="translate(210,50)">
+    <line x1="0" y1="0" x2="15" y2="-25" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-15" y2="-25" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="0" y1="0" x2="25" y2="0" stroke="#FF6B6B" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-25" y2="0" stroke="#FF6B6B" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="-30" stroke="#FFD93D" stroke-width="2"/>
+    <circle fill="#FFD700" cx="0" cy="-30" r="4"/>
+  </g>
+  <!-- 灯笼 -->
+  <rect fill="#FFD700" x="55" y="80" width="30" height="5" rx="2"/>
+  <ellipse fill="#FF0000" cx="70" cy="115" rx="20" ry="30"/>
+  <ellipse fill="#CC0000" cx="70" cy="115" rx="15" ry="25"/>
+  <rect fill="#FFD700" x="60" y="145" width="20" height="5" rx="2"/>
+  <line x1="70" y1="150" x2="70" y2="170" stroke="#FFD700" stroke-width="2"/>
+  
+  <rect fill="#FFD700" x="195" y="80" width="30" height="5" rx="2"/>
+  <ellipse fill="#FF0000" cx="210" cy="115" rx="20" ry="30"/>
+  <ellipse fill="#CC0000" cx="210" cy="115" rx="15" ry="25"/>
+  <rect fill="#FFD700" x="200" y="145" width="20" height="5" rx="2"/>
+  <line x1="210" y1="150" x2="210" y2="170" stroke="#FFD700" stroke-width="2"/>
+  <!-- "福"字 -->
+  <rect fill="#FF0000" x="125" y="90" width="30" height="40" rx="3"/>
+  <text x="140" y="118" text-anchor="middle" fill="#FFD700" font-size="24" font-family="serif">福</text>
+  <!-- 标题 -->
+  <rect fill="rgba(255,0,0,0.8)" x="10" y="170" width="60" height="25" rx="4"/>
+  <text x="40" y="187" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">春节</text>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="400" height="60" fill="#0073CF"/>
+  <rect x="0" y="240" width="400" height="60" fill="#0073CF"/>
+  <ellipse cx="200" cy="150" rx="100" ry="70" fill="#0073CF"/>
+  <text x="200" y="145" font-family="Arial, sans-serif" font-size="40" text-anchor="middle" fill="#0073CF">🏛️</text>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0073CF">Historical Figure</text>
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#0073CF">Honduras</text>
+</svg>

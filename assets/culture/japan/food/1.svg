@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF5EE" width="280" height="200"/>
+  <!-- 木质托盘 -->
+  <rect fill="#8B4513" x="30" y="130" width="220" height="50" rx="5"/>
+  <rect fill="#A0522D" x="35" y="135" width="210" height="40" rx="3"/>
+  <!-- 寿司卷 -->
+  <rect fill="#2F4F4F" x="60" y="145" width="80" height="25" rx="3"/>
+  <rect fill="#F5F5DC" x="65" y="148" width="70" height="19" rx="2"/>
+  <!-- 三文鱼寿司 -->
+  <ellipse fill="#F5F5DC" cx="170" cy="158" rx="18" ry="12"/>
+  <ellipse fill="#FA8072" cx="170" cy="155" rx="15" ry="9"/>
+  <!-- 虾寿司 -->
+  <ellipse fill="#F5F5DC" cx="210" cy="158" rx="18" ry="12"/>
+  <ellipse fill="#FF6347" cx="210" cy="155" rx="15" ry="9"/>
+  <!-- 筷子 -->
+  <rect fill="#8B4513" x="240" y="100" width="4" height="80" rx="2" transform="rotate(5,242,140)"/>
+  <rect fill="#8B4513" x="250" y="100" width="4" height="80" rx="2" transform="rotate(-5,252,140)"/>
+  <!-- 酱油碟 -->
+  <ellipse fill="#2F2F2F" cx="50" cy="165" rx="20" ry="8"/>
+  <ellipse fill="#3D3D3D" cx="50" cy="163" rx="16" ry="6"/>
+  <!-- 装饰 -->
+  <ellipse fill="#90EE90" cx="100" y="145" rx="8" ry="5"/>
+  <text x="180" y="30" text-anchor="middle" fill="#8B4513" font-size="16" font-family="sans-serif">🍣 寿司</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 远山 -->
+  <polygon fill="#228B22" points="0,200 40,140 100,180 160,120 220,160 280,130 280,200"/>
+  <!-- 大皇宫主塔 -->
+  <polygon fill="#FFD700" points="140,30 110,80 170,80"/>
+  <rect fill="#DAA520" x="115" y="80" width="50" height="60"/>
+  <polygon fill="#FFD700" points="115,80 140,60 165,80"/>
+  <!-- 装饰 -->
+  <rect fill="#DC143C" x="130" y="90" width="20" height="40"/>
+  <!-- 侧塔 -->
+  <polygon fill="#FFD700" points="70,60 55,100 85,100"/>
+  <rect fill="#DAA520" x="60" y="100" width="30" height="40"/>
+  <polygon fill="#FFD700" points="210,60 195,100 225,100"/>
+  <rect fill="#DAA520" x="200" y="100" width="30" height="40"/>
+  <!-- 台阶 -->
+  <rect fill="#F5F5DC" x="100" y="140" width="80" height="40"/>
+  <rect fill="#E8E8D0" x="110" y="145" width="60" height="35"/>
+  <!-- 标题 -->
+  <rect fill="rgba(0,71,171,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">大皇宫</text>
+</svg>

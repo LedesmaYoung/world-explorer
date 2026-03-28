@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#87CEEB" width="280" height="200"/>
+  <!-- 鸟居 -->
+  <rect fill="#DC143C" x="50" y="80" width="15" height="100"/>
+  <rect fill="#DC143C" x="100" y="80" width="15" height="100"/>
+  <rect fill="#DC143C" x="150" y="70" width="15" height="110"/>
+  <rect fill="#DC143C" x="200" y="80" width="15" height="100"/>
+  <!-- 顶部横梁 -->
+  <rect fill="#DC143C" x="35" y="75" width="45" height="12" rx="2"/>
+  <rect fill="#DC143C" x="85" y="75" width="45" height="12" rx="2"/>
+  <rect fill="#DC143C" x="135" y="65" width="45" height="12" rx="2"/>
+  <rect fill="#DC143C" x="185" y="75" width="45" height="12" rx="2"/>
+  <!-- 顶部装饰 -->
+  <rect fill="#B22222" x="30" y="68" width="55" height="8" rx="2"/>
+  <rect fill="#B22222" x="80" y="68" width="55" height="8" rx="2"/>
+  <rect fill="#B22222" x="130" y="58" width="55" height="8" rx="2"/>
+  <rect fill="#B22222" x="180" y="68" width="55" height="8" rx="2"/>
+  <!-- 石板路 -->
+  <path fill="#A0A0A0" d="M0,180 L280,180 L280,200 L0,200 Z"/>
+  <rect fill="#888" x="20" y="182" width="40" height="16" rx="2"/>
+  <rect fill="#888" x="80" y="182" width="40" height="16" rx="2"/>
+  <rect fill="#888" x="140" y="182" width="40" height="16" rx="2"/>
+  <rect fill="#888" x="200" y="182" width="40" height="16" rx="2"/>
+  <!-- 樱花飘落 -->
+  <circle fill="#FFB7C5" cx="30" cy="100" r="4"/>
+  <circle fill="#FFB7C5" cx="120" cy="120" r="3"/>
+  <circle fill="#FFB7C5" cx="180" cy="90" r="4"/>
+  <circle fill="#FFB7C5" cx="250" cy="110" r="3"/>
+  <!-- 标题 -->
+  <rect fill="rgba(220,20,60,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">鸟居神社</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C62828"/>
+      <stop offset="100%" style="stop-color:#EF5350"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <circle cx="55" cy="50" r="15" fill="#FFF"/>
+  <circle cx="85" cy="50" r="15" fill="#FFF"/>
+  <g fill="#C62828">
+    <circle cx="55" cy="50" r="6"/>
+    <circle cx="85" cy="50" r="6"/>
+  </g>
+  <path d="M70,30 L75,45 L90,45 L78,55 L83,70 L70,60 L57,70 L62,55 L50,45 L65,45 Z" fill="#FFD700"/>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">摔跤</text>
+</svg>

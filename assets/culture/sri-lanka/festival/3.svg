@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg22" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C27B0"/>
+      <stop offset="100%" style="stop-color:#CE93D8"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg22)" width="140" height="110"/>
+  <!-- 佛像 -->
+  <ellipse fill="#FFD700" cx="70" cy="35" r="12"/>
+  <rect fill="#FFD700" x="60" y="47" width="20" height="30"/>
+  <polygon fill="#FFD700" points="55,77 70,90 85,77"/>
+  <!-- 莲花 -->
+  <ellipse fill="#E91E63" cx="35" cy="75" rx="10" ry="8"/>
+  <ellipse fill="#E91E63" cx="105" cy="75" rx="10" ry="8"/>
+  <ellipse fill="#FCE4EC" cx="35" cy="73" rx="6" ry="4"/>
+  <ellipse fill="#FCE4EC" cx="105" cy="73" rx="6" ry="4"/>
+  <!-- 光芒 -->
+  <circle fill="#FFEB3B" cx="70" cy="35" r="20" opacity="0.3"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">卫塞节</text>
+</svg>

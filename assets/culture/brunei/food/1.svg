@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 大盘 -->
+  <ellipse fill="#F5F5DC" cx="140" cy="140" rx="90" ry="40"/>
+  <!-- 姜黄饭 -->
+  <ellipse fill="#FFD700" cx="140" cy="130" rx="70" ry="30"/>
+  <!-- 鸡肉 -->
+  <ellipse fill="#DAA520" cx="110" cy="120" rx="25" ry="12"/>
+  <ellipse fill="#DEB887" cx="108" cy="118" rx="20" ry="10"/>
+  <!-- 酱汁 -->
+  <ellipse fill="#8B4513" cx="170" cy="125" rx="20" ry="10"/>
+  <!-- 黄瓜 -->
+  <rect fill="#90EE90" x="85" y="130" width="20" height="6" rx="2"/>
+  <!-- 蛋 -->
+  <ellipse fill="#FFD700" cx="200" cy="130" rx="10" ry="7"/>
+  <!-- 坚果 -->
+  <ellipse fill="#8B4513" cx="90" cy="115" rx="8" ry="5"/>
+  <!-- 香菜 -->
+  <ellipse fill="#228B22" cx="150" cy="115" rx="10" ry="5"/>
+  <!-- 标题 -->
+  <rect fill="rgba(218,165,32,0.85)" x="10" y="10" width="70" height="25" rx="4"/>
+  <text x="45" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">姜黄饭</text>
+</svg>

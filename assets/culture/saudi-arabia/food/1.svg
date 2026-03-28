@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <rect fill="#FFF8DC" width="280" height="200"/>
+  <!-- 大盘 -->
+  <ellipse fill="#CD7F32" cx="140" cy="140" rx="90" ry="40"/>
+  <ellipse fill="#DAA520" cx="140" cy="135" rx="80" ry="35"/>
+  <!-- 米饭 -->
+  <ellipse fill="#FFFACD" cx="140" cy="125" rx="60" ry="25"/>
+  <!-- 羊肉 -->
+  <ellipse fill="#D2691E" cx="130" cy="115" rx="35" ry="18"/>
+  <ellipse fill="#CD853F" cx="128" cy="113" rx="30" ry="15"/>
+  <!-- 配料 -->
+  <ellipse fill="#FFD700" cx="100" cy="105" rx="12" ry="6"/>
+  <ellipse fill="#FFD700" cx="160" cy="105" rx="12" ry="6"/>
+  <!-- 坚果 -->
+  <ellipse fill="#8B4513" cx="180" cy="120" rx="8" ry="4"/>
+  <ellipse fill="#A0522D" cx="90" cy="120" rx="8" ry="4"/>
+  <!-- 香料 -->
+  <circle fill="#DC143C" cx="140" cy="100" r="3"/>
+  <circle fill="#228B22" cx="150" cy="105" r="2"/>
+  <!-- 标题 -->
+  <rect fill="rgba(210,180,140,0.85)" x="10" y="10" width="90" height="25" rx="4"/>
+  <text x="55" y="27" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">羊肉手抓饭</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#2E5A8F"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="140" height="110" rx="8"/>
+  <!-- 大城王朝遗址 -->
+  <rect x="30" y="50" width="80" height="40" fill="#8B7355" rx="2"/>
+  <rect x="35" y="35" width="25" height="55" fill="#A0896C"/>
+  <rect x="80" y="40" width="25" height="50" fill="#A0896C"/>
+  <!-- 佛塔尖 -->
+  <polygon points="47,35 47,20 55,35" fill="#D4AF37"/>
+  <polygon points="92,40 92,25 100,40" fill="#D4AF37"/>
+  <!-- 标签 -->
+  <text x="70" y="100" text-anchor="middle" fill="white" font-size="10">大城王朝</text>
+</svg>

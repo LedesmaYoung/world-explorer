@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#388E3C"/>
+      <stop offset="100%" style="stop-color:#66BB6A"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="110" fill="url(#bg)"/>
+  <ellipse cx="70" cy="55" rx="38" ry="22" fill="#8B4513"/>
+  <circle cx="70" cy="45" r="8" fill="#FFF"/>
+  <g fill="#388E3C">
+    <path d="M62,45 L70,35 L78,45 L70,55 Z"/>
+  </g>
+  <g fill="#FFD700">
+    <path d="M32,50 L45,45 L45,55 L32,60 Z"/>
+    <path d="M95,50 L108,45 L108,55 L95,60 Z"/>
+  </g>
+  <text x="70" y="100" text-anchor="middle" fill="#FFF" font-size="10" font-family="sans-serif">赛马</text>
+</svg>

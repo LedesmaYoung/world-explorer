@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <linearGradient id="bg40" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#29B6F6"/>
+      <stop offset="100%" style="stop-color:#81D4FA"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg40)" width="140" height="110"/>
+  <!-- 国旗元素 -->
+  <rect fill="#D32F2F" x="20" y="30" width="100" height="50"/>
+  <rect fill="#4CAF50" x="20" y="30" width="100" height="15"/>
+  <!-- 白边 -->
+  <rect fill="#FFFFFF" x="17" y="27" width="106" height="56" fill-opacity="0" stroke="#FFFFFF" stroke-width="3"/>
+  <!-- 新月和星星 -->
+  <path fill="#FFFFFF" d="M70,45 A8,8 0 1,1 70,61 A6,6 0 1,0 70,45"/>
+  <polygon fill="#FFFFFF" points="80,50 82,54 86,54 83,57 84,61 80,58 76,61 77,57 74,54 78,54"/>
+  <!-- 装饰 -->
+  <circle fill="#FFEB3B" cx="35" cy="70" r="5"/>
+  <circle fill="#FFEB3B" cx="105" cy="70" r="5"/>
+  <rect fill="rgba(0,0,0,0.5)" x="10" y="92" width="50" height="16" rx="2"/>
+  <text x="35" y="104" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif">独立日</text>
+</svg>
