@@ -2,7 +2,7 @@
 
 > 本文档专为 AI 编程助手（如 CodeBuddy、Claude、ChatGPT 等）设计，提供项目开发的完整上下文和规范。
 
-**最后更新：2026-03-27**
+**最后更新：2026-03-28**
 
 ---
 
@@ -796,6 +796,70 @@ npx cap sync
 
 # 4. 打开 Xcode 打包
 npx cap open ios
+```
+
+---
+
+## 🐙 GitHub 仓库管理
+
+### 仓库地址
+
+**https://github.com/LedesmaYoung/world-explorer**
+
+### 提交规范
+
+使用语义化提交信息：
+
+```
+feat: 新功能
+fix: 修复 Bug
+docs: 文档更新
+style: 代码格式（不影响功能）
+refactor: 重构
+perf: 性能优化
+test: 测试相关
+chore: 构建/工具变动
+```
+
+**示例**：
+```
+feat: 添加国旗连连看游戏
+fix: 修复连连看排行榜保存失败的问题
+docs: 更新 README 印章体系说明
+```
+
+### 推送代码
+
+```bash
+cd world-explorer
+
+# 查看状态
+git status
+
+# 添加修改
+git add .
+
+# 提交
+git commit -m "feat: 描述修改内容"
+
+# 推送
+git push origin main
+```
+
+### 分支策略
+
+- `main` - 主分支，稳定版本
+- `feature/*` - 新功能开发分支
+- `fix/*` - Bug 修复分支
+
+### 版本发布
+
+1. 更新 `manifest.json` 和 `README.md` 中的版本号
+2. 更新 `sw.js` 中的缓存版本号
+3. 提交并打 tag：
+```bash
+git tag -a v1.0.0 -m "版本 1.0.0"
+git push origin v1.0.0
 ```
 
 ---
