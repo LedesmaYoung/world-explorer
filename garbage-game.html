@@ -146,6 +146,14 @@
       margin-bottom: 8px;
     }
     
+    .garbage-item-image {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    
     .garbage-item-name {
       font-size: 14px;
       color: #333;
@@ -227,6 +235,81 @@
     .game-message.error {
       background-color: #f8d7da;
       color: #721c24;
+    }
+    
+    .confetti-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #f00;
+      animation: confetti-fall 3s ease-out forwards;
+    }
+    
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    
+    .wrong-mark-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      pointer-events: none;
+    }
+    
+    .wrong-mark {
+      font-size: 120px;
+      color: #ff4444;
+      animation: wrong-shake 0.5s ease-out forwards;
+      text-shadow: 0 4px 20px rgba(255, 68, 68, 0.5);
+    }
+    
+    @keyframes wrong-shake {
+      0%, 100% { transform: scale(0); opacity: 0; }
+      10% { transform: scale(1.3) rotate(-10deg); opacity: 1; }
+      20% { transform: scale(1) rotate(10deg); }
+      30% { transform: scale(1.1) rotate(-5deg); }
+      40% { transform: scale(1) rotate(0deg); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+    
+    .correct-mark-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      pointer-events: none;
+    }
+    
+    .correct-mark {
+      font-size: 100px;
+      animation: correct-pop 0.6s ease-out forwards;
+    }
+    
+    @keyframes correct-pop {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0; }
     }
     
     .result-container {
@@ -341,6 +424,49 @@
       hard: { name: '困难', itemCount: 14, timeLimit: 120, scorePerItem: 20 }
     };
     
+    function showConfetti() {
+      const container = document.createElement('div');
+      container.className = 'confetti-container';
+      document.body.appendChild(container);
+      
+      const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7', '#dfe6e9', '#fd79a8', '#a29bfe', '#00b894', '#e17055'];
+      const shapes = ['■', '●', '▲', '★', '♦', '♥', '✦'];
+      
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 0.5 + 's';
+        confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
+        confetti.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+        confetti.style.fontSize = (10 + Math.random() * 15) + 'px';
+        confetti.style.background = 'transparent';
+        confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+        container.appendChild(confetti);
+      }
+      
+      setTimeout(() => container.remove(), 3500);
+    }
+    
+    function showWrongMark() {
+      const container = document.createElement('div');
+      container.className = 'wrong-mark-container';
+      container.innerHTML = '<div class="wrong-mark">✖</div>';
+      document.body.appendChild(container);
+      
+      setTimeout(() => container.remove(), 600);
+    }
+    
+    function showCorrectMark() {
+      const container = document.createElement('div');
+      container.className = 'correct-mark-container';
+      container.innerHTML = '<div class="correct-mark">✅</div>';
+      document.body.appendChild(container);
+      
+      setTimeout(() => container.remove(), 700);
+    }
+    
     async function loadGarbageData() {
       try {
         const response = await fetch('data/garbage/garbage-data.json');
@@ -414,10 +540,18 @@
         div.dataset.type = item.type;
         div.dataset.id = item.id;
         
-        div.innerHTML = `
-          <div class="garbage-item-icon">${item.icon}</div>
-          <div class="garbage-item-name">${item.name}</div>
-        `;
+        if (item.image) {
+          div.innerHTML = `
+            <img class="garbage-item-image" src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="garbage-item-icon" style="display:none;">${item.icon || '🗑️'}</div>
+            <div class="garbage-item-name">${item.name}</div>
+          `;
+        } else {
+          div.innerHTML = `
+            <div class="garbage-item-icon">${item.icon || '🗑️'}</div>
+            <div class="garbage-item-name">${item.name}</div>
+          `;
+        }
         
         div.addEventListener('dragstart', (e) => {
           e.dataTransfer.setData('text/plain', item.type);
@@ -483,20 +617,29 @@
         score += currentDifficulty.scorePerItem;
         document.getElementById('score').textContent = score;
         
-        // 移除物品
+        showCorrectMark();
+        showConfetti();
+        
         const itemElement = document.querySelector(`.garbage-item[data-id="${itemId}"]`);
         if (itemElement) {
           const item = currentItems.find(i => i.id === itemId);
           itemElement.remove();
           
-          // 添加到垃圾桶
           const itemsContainer = bin.querySelector('.garbage-bin-items');
           const itemDiv = document.createElement('div');
           itemDiv.className = 'garbage-bin-item';
-          itemDiv.innerHTML = `
-            <div>${item.icon}</div>
-            <div>${item.name}</div>
-          `;
+          
+          if (item.image) {
+            itemDiv.innerHTML = `
+              <img src="${item.image}" alt="${item.name}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px;" onerror="this.outerHTML='<div style=\\'font-size: 24px;\\'>${item.icon || '🗑️'}</div>'" />
+              <div style="font-size: 10px; margin-top: 2px; text-align: center; max-width: 50px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</div>
+            `;
+          } else {
+            itemDiv.innerHTML = `
+              <div style="font-size: 24px;">${item.icon || '🗑️'}</div>
+              <div style="font-size: 10px; margin-top: 2px; text-align: center; max-width: 50px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</div>
+            `;
+          }
           itemsContainer.appendChild(itemDiv);
           
           currentItems = currentItems.filter(i => i.id !== itemId);
@@ -510,6 +653,8 @@
           endGame(true);
         }
       } else {
+        showWrongMark();
+        
         messageDiv.textContent = '❌ 分类错误，再试一次！';
         messageDiv.className = 'game-message error';
       }

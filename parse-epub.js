@@ -138,11 +138,28 @@ async function extractContent(zip) {
     console.log('开始提取文字内容和图片关联...');
     const garbageItems = [];
     
+    // 章节与垃圾类型的映射
+    const chapterTypeMap = {
+      'chapter3': 'recyclable',
+      'chapter4': 'kitchen',
+      'chapter5': 'other',
+      'chapter6': 'hazardous'
+    };
+    
     for (const item of spine) {
       const filePath = basePath ? `${basePath}/${item.href}` : item.href;
       const content = await zip.file(filePath)?.async('string');
       if (content) {
-        const items = parseHtmlContent(content, imageMap, basePath);
+        // 根据章节名称确定垃圾类型
+        let garbageType = 'other';
+        for (const [chapter, type] of Object.entries(chapterTypeMap)) {
+          if (item.href.includes(chapter)) {
+            garbageType = type;
+            break;
+          }
+        }
+        
+        const items = parseHtmlContent(content, imageMap, basePath, garbageType);
         garbageItems.push(...items);
         console.log(`提取章节: ${item.href}, 找到 ${items.length} 个物品`);
       }
@@ -158,76 +175,77 @@ async function extractContent(zip) {
   }
 }
 
-function parseHtmlContent(html, imageMap, basePath) {
+function parseHtmlContent(html, imageMap, basePath, garbageType = 'other') {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   const items = [];
   
-  // 获取所有图片标签
-  const images = doc.getElementsByTagName('img');
-  console.log(`  找到 ${images.length} 个图片标签`);
+  const body = doc.getElementsByTagName('body')[0];
+  if (!body) {
+    console.log('  无法找到 body 元素');
+    return items;
+  }
   
-  for (let i = 0; i < images.length; i++) {
-    const img = images[i];
-    const imgSrc = img.getAttribute('src');
+  const allElements = body.childNodes;
+  const elementsArray = [];
+  for (let i = 0; i < allElements.length; i++) {
+    if (allElements[i].nodeType === 1) {
+      elementsArray.push(allElements[i]);
+    }
+  }
+  
+  console.log(`  找到 ${elementsArray.length} 个顶级元素`);
+  
+  for (let i = 0; i < elementsArray.length; i++) {
+    const elem = elementsArray[i];
     
+    const img = elem.getElementsByTagName('img')[0];
+    if (!img) continue;
+    
+    const imgSrc = img.getAttribute('src');
     if (!imgSrc) continue;
     
-    // 获取图片的父元素（通常是 div.center）
-    const parentDiv = img.parentElement;
-    if (!parentDiv) continue;
-    
-    // 获取图片后面的兄弟元素
-    let nextElement = parentDiv.nextElementSibling;
     let itemName = '';
     let itemDesc = '';
     
-    // 查找物品名称（通常是加粗的文字）
-    let attempts = 0;
-    while (nextElement && attempts < 5) {
-      attempts++;
+    for (let j = i + 1; j < Math.min(i + 6, elementsArray.length); j++) {
+      const nextElem = elementsArray[j];
       
-      // 检查是否有加粗文字
-      const boldText = nextElement.getElementsByTagName('b')[0];
-      if (boldText) {
-        const text = boldText.textContent?.trim() || '';
-        // 过滤掉一些非物品名称的文字
-        if (text.length > 0 && text.length < 20 && 
-            !text.includes('Recyclable') && !text.includes('Hazardous') && 
-            !text.includes('Kitchen') && !text.includes('Other') &&
-            !text.includes('投放') && !text.includes('小贴士')) {
-          itemName = text;
-          console.log(`    找到物品名称: ${itemName}`);
-          break;
-        }
-      }
-      
-      nextElement = nextElement.nextElementSibling;
-    }
-    
-    // 查找描述文字（通常是左对齐的段落）
-    if (itemName) {
-      let currentElement = parentDiv.nextElementSibling;
-      let descAttempts = 0;
-      while (currentElement && descAttempts < 10 && !itemDesc) {
-        descAttempts++;
-        const pClass = currentElement.getAttribute('class');
-        if (pClass && pClass.includes('left')) {
-          const text = currentElement.textContent?.trim() || '';
-          // 过滤掉一些非描述的文字
-          if (text.length > 10 && !text.includes('注：')) {
-            itemDesc = text;
-            console.log(`    找到描述: ${itemDesc.substring(0, 30)}...`);
+      if (nextElem.tagName.toLowerCase() === 'p') {
+        const pClass = nextElem.getAttribute('class') || '';
+        const boldElem = nextElem.getElementsByTagName('b')[0];
+        
+        if (boldElem && pClass.includes('center')) {
+          const text = boldElem.textContent?.trim() || '';
+          if (text.length > 0 && text.length < 20 && 
+              !text.includes('Recyclable') && !text.includes('Hazardous') && 
+              !text.includes('Kitchen') && !text.includes('Other') &&
+              !text.includes('Food Waste') && !text.includes('Waste') &&
+              !text.includes('投放') && !text.includes('小贴士') &&
+              !text.includes('Household') && !text.includes('Restaurant')) {
+            itemName = text;
+            console.log(`    找到物品: ${itemName} -> ${imgSrc}`);
+            
+            for (let k = j + 1; k < Math.min(j + 4, elementsArray.length); k++) {
+              const descElem = elementsArray[k];
+              if (descElem.tagName.toLowerCase() === 'p') {
+                const descClass = descElem.getAttribute('class') || '';
+                if (descClass.includes('left')) {
+                  const descText = descElem.textContent?.trim() || '';
+                  if (descText.length > 10 && !descText.includes('注：')) {
+                    itemDesc = descText;
+                    break;
+                  }
+                }
+              }
+            }
             break;
           }
         }
-        currentElement = currentElement.nextElementSibling;
       }
     }
     
-    // 如果找到了物品名称，添加到列表中
     if (itemName && itemName.length > 0 && itemName.length < 20) {
-      // 处理图片路径
       let imagePath = '';
       if (imgSrc.startsWith('../Images/')) {
         const relativePath = imgSrc.replace('../', '');
@@ -239,7 +257,8 @@ function parseHtmlContent(html, imageMap, basePath) {
       items.push({
         name: itemName,
         desc: itemDesc,
-        image: imagePath
+        image: imagePath,
+        type: garbageType
       });
     }
   }
@@ -336,20 +355,17 @@ function buildGarbageData(garbageItems, imageMap) {
       }
     }
     
-    // 如果没有找到匹配的，根据关键词判断类型
+    // 如果没有找到匹配的，使用物品自带的类型（从 EPUB 章节推断）
     if (!matchedItem) {
-      let type = 'other';
+      let type = item.type || 'other';
       let icon = '🗑️';
       
-      if (item.name.includes('纸') || item.name.includes('盒') || item.name.includes('本')) {
-        type = 'recyclable';
-        icon = '📄';
-      } else if (item.name.includes('瓶') || item.name.includes('罐')) {
-        type = 'recyclable';
-        icon = '🥤';
-      } else if (item.name.includes('果') || item.name.includes('菜')) {
-        type = 'kitchen';
+      if (type === 'kitchen') {
         icon = '🍎';
+      } else if (type === 'recyclable') {
+        icon = '♻️';
+      } else if (type === 'hazardous') {
+        icon = '⚠️';
       }
       
       matchedItem = { name: item.name, type, icon, defaultDesc: item.desc || `${item.name}的相关描述` };

@@ -1,12 +1,45 @@
 // 垃圾分类游戏功能
 
 class GarbageGame {
+  static garbageData = null;
+  static isLoading = false;
+  
   static init() {
     console.log('=== 初始化垃圾分类游戏 ===');
+    this.loadGarbageData();
+  }
+  
+  static async loadGarbageData() {
+    if (this.garbageData) return this.garbageData;
+    if (this.isLoading) {
+      while (this.isLoading) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+      return this.garbageData;
+    }
+    
+    this.isLoading = true;
+    try {
+      const response = await fetch('data/garbage/garbage-data.json');
+      this.garbageData = await response.json();
+      console.log(`垃圾分类数据加载完成，共 ${this.garbageData.items?.length || 0} 个物品`);
+      return this.garbageData;
+    } catch (error) {
+      console.error('加载垃圾分类数据失败:', error);
+      return null;
+    } finally {
+      this.isLoading = false;
+    }
   }
 
-  static showDifficultySelect() {
-    // 创建难度选择弹窗
+  static async showDifficultySelect() {
+    await this.loadGarbageData();
+    
+    if (!this.garbageData || !this.garbageData.types) {
+      alert('数据加载失败，请刷新页面重试');
+      return;
+    }
+
     const modal = document.createElement('div');
     modal.className = 'garbage-game-modal active';
     modal.id = 'garbage-game-modal';
@@ -39,31 +72,33 @@ class GarbageGame {
 
     document.body.appendChild(modal);
     
-    // 播放点击音效
     if (typeof audioManager !== 'undefined') {
       audioManager.playSound('tap');
     }
   }
 
-  static start(level) {
+  static async start(level) {
     const config = GARBAGE_GAME_LEVELS[level];
     if (!config) return;
 
-    // 关闭难度选择弹窗
     const modal = document.getElementById('garbage-game-modal');
     if (modal) {
       modal.remove();
     }
 
-    // 创建游戏弹窗
     const gameModal = document.createElement('div');
     gameModal.className = 'garbage-game-modal active';
     gameModal.id = 'garbage-game-play-modal';
 
-    // 生成游戏物品
-    const items = this.generateGameItems(config.itemCount);
+    const items = await this.generateGameItems(config.itemCount);
     
-    // 渲染游戏界面
+    if (!items || items.length === 0) {
+      alert('无法生成游戏物品，请刷新页面重试');
+      return;
+    }
+
+    const types = this.garbageData.types;
+    
     gameModal.innerHTML = `
       <div class="garbage-game-content">
         <div class="garbage-game-header">
@@ -77,17 +112,18 @@ class GarbageGame {
           <div class="garbage-items-container" id="garbage-items-container">
             ${items.map(item => `
               <div class="garbage-item" draggable="true" data-type="${item.type}" data-id="${item.id}">
-                <span class="garbage-item-icon">${item.icon}</span>
+                <img class="garbage-item-image" src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <span class="garbage-item-icon" style="display:none;">${item.icon || '🗑️'}</span>
                 <span class="garbage-item-name">${item.name}</span>
               </div>
             `).join('')}
           </div>
           <div class="garbage-bins">
             ${[
-              { type: 'hazardous', info: GARBAGE_TYPE_INFO.hazardous },
-              { type: 'kitchen', info: GARBAGE_TYPE_INFO.kitchen },
-              { type: 'recyclable', info: GARBAGE_TYPE_INFO.recyclable },
-              { type: 'other', info: GARBAGE_TYPE_INFO.other }
+              { type: 'hazardous', info: types.hazardous },
+              { type: 'kitchen', info: types.kitchen },
+              { type: 'recyclable', info: types.recyclable },
+              { type: 'other', info: types.other }
             ].map(({ type, info }) => `
               <div class="garbage-bin" style="border-color: ${info.color}" data-type="${type}">
                 <div class="garbage-bin-icon" style="background-color: ${info.color}">
@@ -105,17 +141,22 @@ class GarbageGame {
 
     document.body.appendChild(gameModal);
     
-    // 绑定拖拽事件
     this.bindDragEvents();
     
-    // 开始游戏
     this.startGame(config, items);
   }
 
-  static generateGameItems(count) {
-    // 随机选择指定数量的垃圾物品
-    const shuffled = [...GARBAGE_ITEMS].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+  static async generateGameItems(count) {
+    await this.loadGarbageData();
+    
+    if (!this.garbageData || !this.garbageData.items) {
+      console.error('垃圾分类数据未加载');
+      return [];
+    }
+    
+    const allItems = this.garbageData.items;
+    const shuffled = [...allItems].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, Math.min(count, shuffled.length));
   }
 
   static bindDragEvents() {
@@ -198,32 +239,35 @@ class GarbageGame {
     const messageElement = this.gameState.messageElement;
     
     if (isCorrect) {
-      // 正确
       this.gameState.score += this.gameState.config.scorePerItem;
       this.gameState.scoreElement.textContent = this.gameState.score;
       this.gameState.itemsLeft--;
       
-      // 移除被拖拽的物品
       if (draggedItem) {
-        // 获取物品信息
-        const itemIcon = draggedItem.querySelector('.garbage-item-icon').textContent;
+        const itemImage = draggedItem.querySelector('.garbage-item-image');
+        const itemIcon = draggedItem.querySelector('.garbage-item-icon');
         const itemName = draggedItem.querySelector('.garbage-item-name').textContent;
         
-        // 移除原物品
         draggedItem.remove();
         
-        // 找到对应的垃圾桶并添加物品
         const bin = document.querySelector(`.garbage-bin[data-type="${binType}"]`);
         if (bin) {
           const itemsContainer = bin.querySelector('.garbage-bin-items');
           if (itemsContainer) {
-            // 创建新的物品元素
             const newItem = document.createElement('div');
             newItem.className = 'garbage-bin-item';
-            newItem.innerHTML = `
-              <div>${itemIcon}</div>
-              <div style="font-size: 12px; margin-top: 2px;">${itemName}</div>
-            `;
+            
+            if (itemImage && itemImage.style.display !== 'none') {
+              newItem.innerHTML = `
+                <img src="${itemImage.src}" alt="${itemName}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px;" />
+                <div style="font-size: 10px; margin-top: 2px; text-align: center; max-width: 50px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${itemName}</div>
+              `;
+            } else {
+              newItem.innerHTML = `
+                <div style="font-size: 24px;">${itemIcon ? itemIcon.textContent : '🗑️'}</div>
+                <div style="font-size: 10px; margin-top: 2px; text-align: center; max-width: 50px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${itemName}</div>
+              `;
+            }
             itemsContainer.appendChild(newItem);
           }
         }
@@ -232,28 +276,23 @@ class GarbageGame {
       messageElement.textContent = '✅ 分类正确！';
       messageElement.className = 'game-message correct';
       
-      // 播放正确音效
       if (typeof audioManager !== 'undefined') {
         audioManager.playSound('badge');
       }
       
-      // 检查是否完成游戏
       if (this.gameState.itemsLeft === 0) {
         clearInterval(this.gameState.timer);
         this.endGame(this.gameState.score, true);
       }
     } else {
-      // 错误
       messageElement.textContent = '❌ 分类错误，再试一次！';
       messageElement.className = 'game-message error';
       
-      // 播放错误音效
       if (typeof audioManager !== 'undefined') {
         audioManager.playSound('error');
       }
     }
     
-    // 3秒后清除消息
     setTimeout(() => {
       messageElement.textContent = '';
       messageElement.className = 'game-message';

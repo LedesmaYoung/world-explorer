@@ -5,21 +5,46 @@
       "color": "#F94343",
       "desc": "有害垃圾是指含有对人体健康有害的重金属、有毒的物质或者对环境造成现实危害或者潜在危害的废弃物。",
       "examples": [
-        "Household Food Waste",
-        "木瓜皮",
-        "葡萄皮",
-        "梨",
-        "甘蔗渣",
-        "草莓",
-        "香蕉"
+        "电池",
+        "灯管",
+        "家用化学品",
+        "灯泡",
+        "卤素灯",
+        "节能灯",
+        "油漆"
       ],
       "icon": "⚠️",
-      "image": "data/garbage/images/29_01.jpg"
+      "image": "data/garbage/images/ab29_01.jpg"
     },
     "kitchen": {
       "name": "厨余垃圾",
       "color": "#52C41A",
       "desc": "厨余垃圾是指居民日常生活及食品加工、饮食服务、单位供餐等活动中产生的垃圾。",
+      "examples": [
+        "橙皮",
+        "木瓜皮",
+        "葡萄皮",
+        "梨"
+      ],
+      "icon": "🍎",
+      "image": "data/garbage/images/ab13_01.jpg"
+    },
+    "recyclable": {
+      "name": "可回收物",
+      "color": "#4B9CD3",
+      "desc": "可回收物是指适宜回收循环使用和资源利用的废物。",
+      "examples": [
+        "金属",
+        "玻璃瓶",
+        "纸筒"
+      ],
+      "icon": "♻️",
+      "image": "data/garbage/images/ab5_01.jpg"
+    },
+    "other": {
+      "name": "其他垃圾",
+      "color": "#9E9E9E",
+      "desc": "其他垃圾是指危害较小，但无再次利用价值的垃圾。",
       "examples": [
         "厕纸",
         "烟蒂",
@@ -29,50 +54,42 @@
         "碎纸张",
         "污损纸张"
       ],
-      "icon": "🍎",
-      "image": "data/garbage/images/13_01.jpg"
-    },
-    "recyclable": {
-      "name": "可回收物",
-      "color": "#4B9CD3",
-      "desc": "适宜回收循环使用和资源利用的废物。<br><br>注：目前全国各大城市的垃圾分类标准并不统一，虽然大部分标准是相同的，但也有个别地方存在差异。本书在编写时参考了上海、广州、深圳等地的垃圾分类标准，力求内容更加全面、科学。",
-      "examples": [
-        "Paper",
-        "Plastic",
-        "Metal",
-        "Glass",
-        "Textiles",
-        "纸盒",
-        "笔记本"
-      ],
-      "icon": "♻️",
-      "image": "data/garbage/images/5_01.jpg"
-    },
-    "other": {
-      "name": "其他垃圾",
-      "color": "#9E9E9E",
-      "desc": "其他垃圾是指危害较小，但无再次利用价值的垃圾。",
-      "examples": [
-        "Tubes",
-        "Household Chemicals",
-        "Batteries",
-        "蓄电池",
-        "灯泡",
-        "灯管",
-        "卤素灯"
-      ],
       "icon": "🗑️",
-      "image": "data/garbage/images/21_01.jpg"
+      "image": "data/garbage/images/ab21_01.jpg"
     }
   },
   "items": [
+    {
+      "id": "金属",
+      "name": "金属",
+      "type": "recyclable",
+      "icon": "♻️",
+      "desc": "金属的相关描述",
+      "image": "data/garbage/images/ab5_04.jpg"
+    },
+    {
+      "id": "玻璃瓶",
+      "name": "玻璃瓶",
+      "type": "recyclable",
+      "icon": "🍾",
+      "desc": "玻璃瓶可以多次回收利用，节约资源。应小心轻放，避免破碎，投放到可回收物桶中。",
+      "image": "data/garbage/images/ab5_05.jpg"
+    },
+    {
+      "id": "纸筒",
+      "name": "纸筒",
+      "type": "recyclable",
+      "icon": "♻️",
+      "desc": "纸筒是用硬纸板制成的，可以回收利用，再生为新的纸制品。",
+      "image": "data/garbage/images/ab8_01.jpg"
+    },
     {
       "id": "纸盒",
       "name": "纸盒",
       "type": "recyclable",
       "icon": "♻️",
-      "desc": "纸筒是用硬纸板制成的，可以回收利用，再生为新的纸制品。",
-      "image": "data/garbage/images/6_02.jpg"
+      "desc": "纸盒一般由瓦楞纸制成，可回收后送到造纸厂，经过处理后再生为新的纸制品。",
+      "image": "data/garbage/images/ab8_02.jpg"
     },
     {
       "id": "笔记本",
@@ -80,7 +97,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "笔记本是可回收的纸类，能够化浆再生为新的纸制品。",
-      "image": "data/garbage/images/8_02.jpg"
+      "image": "data/garbage/images/ab8_03.jpg"
     },
     {
       "id": "杂志",
@@ -88,7 +105,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "杂志回收后，经过制浆、脱墨等工序，能够再生为新的纸制品。",
-      "image": "data/garbage/images/8_03.jpg"
+      "image": "data/garbage/images/ab8_04.jpg"
     },
     {
       "id": "信封",
@@ -96,7 +113,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "信封是人们用来邮寄信件的纸袋子，可以回收处理成为再生纸。",
-      "image": "data/garbage/images/8_04.jpg"
+      "image": "data/garbage/images/ab8_05.jpg"
     },
     {
       "id": "公文袋",
@@ -104,7 +121,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "公文袋是用纸制成的，回收后可以送往纸厂，进行再生处理，制成新的纸制品。",
-      "image": "data/garbage/images/8_05.jpg"
+      "image": "data/garbage/images/ab8_06.jpg"
     },
     {
       "id": "广告单",
@@ -112,7 +129,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "广告单一般都是印刷在纸上，属于废纸类可回收物。",
-      "image": "data/garbage/images/8_06.jpg"
+      "image": "data/garbage/images/ab8_07.jpg"
     },
     {
       "id": "礼物盒",
@@ -120,7 +137,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "礼物盒一般用硬卡纸制成，可以回收利用。",
-      "image": "data/garbage/images/8_07.jpg"
+      "image": "data/garbage/images/ab8_08.jpg"
     },
     {
       "id": "牛奶盒",
@@ -128,7 +145,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "牛奶盒也是用纸制成的，可以回收利用。投放前最好把它清洗干净并压扁。",
-      "image": "data/garbage/images/8_08.jpg"
+      "image": "data/garbage/images/ab8_09.jpg"
     },
     {
       "id": "购物袋",
@@ -136,7 +153,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "纸质购物袋属于废纸类可回收物。",
-      "image": "data/garbage/images/8_09.jpg"
+      "image": "data/garbage/images/ab8_10.jpg"
     },
     {
       "id": "罐头盒",
@@ -144,15 +161,15 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "罐头盒的主要材质为金属，可以回收利用。",
-      "image": "data/garbage/images/8_10.jpg"
+      "image": "data/garbage/images/ab8_11.jpg"
     },
     {
       "id": "易拉罐",
       "name": "易拉罐",
       "type": "recyclable",
-      "icon": "♻️",
+      "icon": "🥫",
       "desc": "易拉罐一般由铝制成，可以加热熔化，去掉颜色后可重新制成新的铝制品。",
-      "image": "data/garbage/images/8_11.jpg"
+      "image": "data/garbage/images/ab8_12.jpg"
     },
     {
       "id": "剪刀",
@@ -160,7 +177,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "剪刀上含有金属和塑料，这两种材料都是可回收物。",
-      "image": "data/garbage/images/8_12.jpg"
+      "image": "data/garbage/images/ab9_01.jpg"
     },
     {
       "id": "美工刀",
@@ -168,7 +185,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "美工刀上含有金属和塑料，这两种材料都是可回收物。",
-      "image": "data/garbage/images/9_01.jpg"
+      "image": "data/garbage/images/ab9_02.jpg"
     },
     {
       "id": "锅",
@@ -176,7 +193,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "金属是不可再生资源，旧铁锅可以回收送到铁厂，经过重熔等工序制成新的铁制品。",
-      "image": "data/garbage/images/9_02.jpg"
+      "image": "data/garbage/images/ab9_03.jpg"
     },
     {
       "id": "电线",
@@ -184,7 +201,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "电线的芯一般是铜和铝，属于金属类可回收物。",
-      "image": "data/garbage/images/9_03.jpg"
+      "image": "data/garbage/images/ab9_04.jpg"
     },
     {
       "id": "螺丝",
@@ -192,7 +209,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "常见的螺丝材质有碳钢、不锈钢、铜及铜合金等，属于金属类可回收物。",
-      "image": "data/garbage/images/9_04.jpg"
+      "image": "data/garbage/images/ab9_05.jpg"
     },
     {
       "id": "数据线",
@@ -200,7 +217,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "数据线中含有金属和塑料，属于可回收物。",
-      "image": "data/garbage/images/9_05.jpg"
+      "image": "data/garbage/images/ab9_06.jpg"
     },
     {
       "id": "锁",
@@ -208,7 +225,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "废锁是金属制品，可以回收利用。",
-      "image": "data/garbage/images/9_06.jpg"
+      "image": "data/garbage/images/ab9_07.jpg"
     },
     {
       "id": "夹子",
@@ -216,7 +233,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "夹子一般是用金属制成的，可以回收利用。",
-      "image": "data/garbage/images/9_07.jpg"
+      "image": "data/garbage/images/ab9_08.jpg"
     },
     {
       "id": "螺丝刀",
@@ -224,7 +241,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "螺丝刀的主体部分是金属，手柄一般是塑料，这两种材料都有回收价值，属于可回收物。",
-      "image": "data/garbage/images/9_08.jpg"
+      "image": "data/garbage/images/ab9_09.jpg"
     },
     {
       "id": "铁钉",
@@ -232,7 +249,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "铁钉是铁制品，可以回收至铁厂，经过重熔等工序成为新的铁制品。",
-      "image": "data/garbage/images/9_09.jpg"
+      "image": "data/garbage/images/ab9_10.jpg"
     },
     {
       "id": "菜刀",
@@ -240,7 +257,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "菜刀的主体部分是金属，可以回收利用。",
-      "image": "data/garbage/images/9_10.jpg"
+      "image": "data/garbage/images/ab9_11.jpg"
     },
     {
       "id": "指甲钳",
@@ -248,7 +265,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "指甲钳的主体部分是金属，可以回收利用。",
-      "image": "data/garbage/images/9_11.jpg"
+      "image": "data/garbage/images/ab9_12.jpg"
     },
     {
       "id": "饮料瓶",
@@ -256,7 +273,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "饮料瓶回收后，经过分拣、粉碎、清洗、干燥、重新加工等工艺，可以再生为新的塑料制品。",
-      "image": "data/garbage/images/9_12.jpg"
+      "image": "data/garbage/images/ab10_01.jpg"
     },
     {
       "id": "塑料篮子",
@@ -264,7 +281,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "塑料篮子回收后经过一系列工艺，可以加工处理成再生塑料，再制成生活用品回到千家万户中。",
-      "image": "data/garbage/images/10_01.jpg"
+      "image": "data/garbage/images/ab10_02.jpg"
     },
     {
       "id": "沐浴露瓶子",
@@ -272,7 +289,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "沐浴露瓶子是用塑料制成的，可以回收处理，成为再生塑料。",
-      "image": "data/garbage/images/10_02.jpg"
+      "image": "data/garbage/images/ab10_03.jpg"
     },
     {
       "id": "洗洁精瓶子",
@@ -280,7 +297,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "洗洁精瓶子是用塑料制成的，可以回收处理，成为再生塑料。",
-      "image": "data/garbage/images/10_03.jpg"
+      "image": "data/garbage/images/ab10_04.jpg"
     },
     {
       "id": "塑料盆",
@@ -288,7 +305,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "塑料盆经过回收处理后可以再生为新的塑料制品。",
-      "image": "data/garbage/images/10_04.jpg"
+      "image": "data/garbage/images/ab10_05.jpg"
     },
     {
       "id": "安全帽",
@@ -296,7 +313,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "安全帽是用塑料制成的，可以回收处理为再生塑料。",
-      "image": "data/garbage/images/10_05.jpg"
+      "image": "data/garbage/images/ab10_06.jpg"
     },
     {
       "id": "塑料玩具",
@@ -304,7 +321,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "玩旧的塑料玩具可回收到塑料厂，经过粉碎、熔化等工序成为再生塑料。",
-      "image": "data/garbage/images/10_06.jpg"
+      "image": "data/garbage/images/ab10_07.jpg"
     },
     {
       "id": "塑料梳子",
@@ -312,7 +329,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "塑料梳子可以回收制成再生塑料，属于可回收物。",
-      "image": "data/garbage/images/10_07.jpg"
+      "image": "data/garbage/images/ab10_08.jpg"
     },
     {
       "id": "塑料垃圾桶",
@@ -320,7 +337,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "塑料制成的家用垃圾桶属于塑料类可回收物。",
-      "image": "data/garbage/images/10_08.jpg"
+      "image": "data/garbage/images/ab10_09.jpg"
     },
     {
       "id": "牙膏皮",
@@ -328,7 +345,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "牙膏皮一般用塑料制成，可以回收制成再生塑料。",
-      "image": "data/garbage/images/10_09.jpg"
+      "image": "data/garbage/images/ab10_10.jpg"
     },
     {
       "id": "食用油桶",
@@ -336,15 +353,15 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "食用油桶由优质塑料制成，可以回收利用。",
-      "image": "data/garbage/images/10_10.jpg"
+      "image": "data/garbage/images/ab10_11.jpg"
     },
     {
-      "id": "衣服",
-      "name": "衣服",
+      "id": "旧衣服",
+      "name": "旧衣服",
       "type": "recyclable",
-      "icon": "♻️",
+      "icon": "👕",
       "desc": "衣服是可再生资源，不同质地的衣服可处理、加工成不同的化工原料。",
-      "image": "data/garbage/images/10_11.jpg"
+      "image": "data/garbage/images/ab10_12.jpg"
     },
     {
       "id": "篮球",
@@ -352,7 +369,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "篮球一般由橡胶、PVC、皮革等材料制成，这些材料都具有回收价值，可以回收利用，制成新的产品。",
-      "image": "data/garbage/images/10_12.jpg"
+      "image": "data/garbage/images/ab11_01.jpg"
     },
     {
       "id": "足球",
@@ -360,7 +377,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "足球和篮球一样，一般由橡胶、PVC、皮革等材料制成，都属于可回收物。",
-      "image": "data/garbage/images/11_01.jpg"
+      "image": "data/garbage/images/ab11_02.jpg"
     },
     {
       "id": "皮球",
@@ -368,7 +385,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "皮球也是由橡胶、PVC、皮革等材料制成，属于可回收物。",
-      "image": "data/garbage/images/11_02.jpg"
+      "image": "data/garbage/images/ab11_03.jpg"
     },
     {
       "id": "鞋子",
@@ -376,7 +393,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "鞋子的材质很多，如皮革、橡胶、布料等。皮革、橡胶、布料等都属于可回收物。",
-      "image": "data/garbage/images/11_03.jpg"
+      "image": "data/garbage/images/ab11_04.jpg"
     },
     {
       "id": "帽子",
@@ -384,7 +401,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "帽子可以回收再生为纺线或棉纱等织物原料。",
-      "image": "data/garbage/images/11_04.jpg"
+      "image": "data/garbage/images/ab11_05.jpg"
     },
     {
       "id": "棉被",
@@ -392,7 +409,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "棉被可以回收处理为再生棉纱，循环利用。",
-      "image": "data/garbage/images/11_05.jpg"
+      "image": "data/garbage/images/ab11_06.jpg"
     },
     {
       "id": "书包",
@@ -400,7 +417,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "书包一般由尼龙、帆布、皮革等材料制成，可回收处理成织物原料或再生皮革等产品。",
-      "image": "data/garbage/images/11_06.jpg"
+      "image": "data/garbage/images/ab11_07.jpg"
     },
     {
       "id": "手提包",
@@ -408,7 +425,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "手提包一般由人造革或者动物皮革制成，可回收处理成为再生皮革。",
-      "image": "data/garbage/images/11_07.jpg"
+      "image": "data/garbage/images/ab11_08.jpg"
     },
     {
       "id": "布绒玩偶",
@@ -416,7 +433,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "布绒玩偶可以回收再生为纺线或棉纱等织物原料。",
-      "image": "data/garbage/images/11_08.jpg"
+      "image": "data/garbage/images/ab11_09.jpg"
     },
     {
       "id": "窗帘",
@@ -424,7 +441,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "窗帘一般是用布料制成的，可以回收再利用。",
-      "image": "data/garbage/images/11_09.jpg"
+      "image": "data/garbage/images/ab11_10.jpg"
     },
     {
       "id": "皮带",
@@ -432,7 +449,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "皮带一般由人造革或者动物皮革制成，可以回收利用。",
-      "image": "data/garbage/images/11_10.jpg"
+      "image": "data/garbage/images/ab11_11.jpg"
     },
     {
       "id": "枕头",
@@ -440,7 +457,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "枕头可以回收再生为纺线或棉纱等织物原料。",
-      "image": "data/garbage/images/11_11.jpg"
+      "image": "data/garbage/images/ab11_12.jpg"
     },
     {
       "id": "床单",
@@ -448,7 +465,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "床单一般由纺线、丝绸等织物制成，可以回收利用。",
-      "image": "data/garbage/images/11_12.jpg"
+      "image": "data/garbage/images/ab12_01.jpg"
     },
     {
       "id": "酒瓶",
@@ -456,7 +473,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "酒瓶是玻璃制品，回收后经过分选、粉碎、清洗、熔化等工序，可加工为再生玻璃。",
-      "image": "data/garbage/images/12_01.jpg"
+      "image": "data/garbage/images/ab12_02.jpg"
     },
     {
       "id": "碎玻璃",
@@ -464,7 +481,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "破碎的玻璃一样可以回收，不过要注意包裹好，防止伤手。",
-      "image": "data/garbage/images/12_02.jpg"
+      "image": "data/garbage/images/ab12_03.jpg"
     },
     {
       "id": "香水瓶",
@@ -472,7 +489,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "香水瓶大多是玻璃制品，可以回收利用，制成再生玻璃。",
-      "image": "data/garbage/images/12_03.jpg"
+      "image": "data/garbage/images/ab12_04.jpg"
     },
     {
       "id": "墨水瓶",
@@ -480,7 +497,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "墨水瓶是玻璃或塑料制品，可以回收后制成再生原料。",
-      "image": "data/garbage/images/12_04.jpg"
+      "image": "data/garbage/images/ab12_05.jpg"
     },
     {
       "id": "放大镜",
@@ -488,7 +505,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "放大镜由玻璃和塑料制成，这两种材料都是可回收物。",
-      "image": "data/garbage/images/12_05.jpg"
+      "image": "data/garbage/images/ab12_06.jpg"
     },
     {
       "id": "玻璃壶",
@@ -496,7 +513,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "玻璃壶回收后，经过分选、粉碎、清洗、熔化等工序，可加工成再生玻璃。",
-      "image": "data/garbage/images/12_06.jpg"
+      "image": "data/garbage/images/ab12_07.jpg"
     },
     {
       "id": "玻璃窗",
@@ -504,7 +521,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "玻璃窗是由玻璃、金属和塑料制成的，都可以回收再利用。",
-      "image": "data/garbage/images/12_07.jpg"
+      "image": "data/garbage/images/ab12_08.jpg"
     },
     {
       "id": "手机",
@@ -512,7 +529,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "手机是小型电子产品，可扔到装可回收物的垃圾桶里。",
-      "image": "data/garbage/images/12_08.jpg"
+      "image": "data/garbage/images/ab12_09.jpg"
     },
     {
       "id": "计算器",
@@ -520,7 +537,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "计算器是小型电子产品，可扔到装可回收物的垃圾桶里。",
-      "image": "data/garbage/images/12_09.jpg"
+      "image": "data/garbage/images/ab12_10.jpg"
     },
     {
       "id": "充电宝",
@@ -528,7 +545,7 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "充电宝所含的主板、连接线路等部件都可回收。废旧充电宝可整体扔到装可回收物的垃圾桶里。",
-      "image": "data/garbage/images/12_10.jpg"
+      "image": "data/garbage/images/ab12_11.jpg"
     },
     {
       "id": "闹钟",
@@ -536,1143 +553,1135 @@
       "type": "recyclable",
       "icon": "♻️",
       "desc": "闹钟一般由金属和塑料制成，这两种材料都可以回收利用。",
-      "image": "data/garbage/images/12_11.jpg"
+      "image": "data/garbage/images/ab12_12.jpg"
+    },
+    {
+      "id": "橙皮",
+      "name": "橙皮",
+      "type": "kitchen",
+      "icon": "🍎",
+      "desc": "橙皮是柔软的果皮，容易腐烂，属于厨余垃圾。",
+      "image": "data/garbage/images/ab16_01.jpg"
     },
     {
       "id": "木瓜皮",
       "name": "木瓜皮",
       "type": "kitchen",
-      "icon": "⚠️",
-      "desc": "橙皮是柔软的果皮，容易腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/14_01.jpg"
+      "icon": "🍎",
+      "desc": "木瓜的果皮柔软，容易腐烂，属于厨余垃圾。",
+      "image": "data/garbage/images/ab16_02.jpg"
     },
     {
       "id": "葡萄皮",
       "name": "葡萄皮",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "葡萄的水分含量高，它的皮柔软容易腐烂，可用于堆肥，属于厨余垃圾。",
-      "image": "data/garbage/images/16_02.jpg"
+      "image": "data/garbage/images/ab16_03.jpg"
     },
     {
       "id": "梨",
       "name": "梨",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "梨是常见水果，水分含量高，容易腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/16_03.jpg"
+      "image": "data/garbage/images/ab16_04.jpg"
     },
     {
       "id": "甘蔗渣",
       "name": "甘蔗渣",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "甘蔗的果肉纤维能够降解，吃剩的甘蔗渣属于厨余垃圾。不过甘蔗皮的纤维多，不容易降解，属于其他垃圾。",
-      "image": "data/garbage/images/16_04.jpg"
+      "image": "data/garbage/images/ab16_05.jpg"
     },
     {
       "id": "草莓",
       "name": "草莓",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "草莓是常见水果，水分含量高，容易腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/16_05.jpg"
+      "image": "data/garbage/images/ab16_06.jpg"
     },
     {
       "id": "香蕉",
       "name": "香蕉",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "香蕉是常见水果，果肉柔软，属于厨余垃圾。",
-      "image": "data/garbage/images/16_06.jpg"
+      "image": "data/garbage/images/ab16_07.jpg"
     },
     {
       "id": "苹果核",
       "name": "苹果核",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "苹果核能够降解，进行生化堆肥处理，属于厨余垃圾。",
-      "image": "data/garbage/images/16_07.jpg"
+      "image": "data/garbage/images/ab16_08.jpg"
     },
     {
       "id": "桃子",
       "name": "桃子",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "桃子果肉水分多，容易腐烂，属于厨余垃圾。不过桃子核质地坚硬，不易降解，属于其他垃圾。",
-      "image": "data/garbage/images/16_08.jpg"
+      "image": "data/garbage/images/ab16_09.jpg"
     },
     {
       "id": "胡萝卜",
       "name": "胡萝卜",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "胡萝卜是常见食材，属于厨余垃圾。",
-      "image": "data/garbage/images/16_09.jpg"
+      "image": "data/garbage/images/ab16_10.jpg"
     },
     {
       "id": "马铃薯",
       "name": "马铃薯",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "发芽的马铃薯有毒，千万不要吃哦！它属于厨余垃圾。",
-      "image": "data/garbage/images/16_10.jpg"
+      "image": "data/garbage/images/ab16_11.jpg"
     },
     {
       "id": "番茄",
       "name": "番茄",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "番茄的水分含量高，容易腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/16_11.jpg"
+      "image": "data/garbage/images/ab16_12.jpg"
     },
     {
       "id": "茄子",
       "name": "茄子",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "茄子是常见蔬菜，容易降解，属于厨余垃圾。",
-      "image": "data/garbage/images/16_12.jpg"
+      "image": "data/garbage/images/ab17_01.jpg"
     },
     {
       "id": "豌豆",
       "name": "豌豆",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "豌豆是常见蔬菜，属于厨余垃圾。",
-      "image": "data/garbage/images/17_01.jpg"
+      "image": "data/garbage/images/ab17_02.jpg"
     },
     {
       "id": "小白菜",
       "name": "小白菜",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "小白菜容易腐烂，容易降解，属于厨余垃圾。",
-      "image": "data/garbage/images/17_02.jpg"
+      "image": "data/garbage/images/ab17_03.jpg"
     },
     {
       "id": "青椒",
       "name": "青椒",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "青椒是常见蔬菜，容易降解，属于厨余垃圾。",
-      "image": "data/garbage/images/17_03.jpg"
+      "image": "data/garbage/images/ab17_04.jpg"
     },
     {
       "id": "葱",
       "name": "葱",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "葱是常见蔬菜，属于厨余垃圾。",
-      "image": "data/garbage/images/17_04.jpg"
+      "image": "data/garbage/images/ab17_05.jpg"
     },
     {
       "id": "大蒜",
       "name": "大蒜",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "大蒜是厨房里常见的调味料，属于厨余垃圾。",
-      "image": "data/garbage/images/17_05.jpg"
+      "image": "data/garbage/images/ab17_06.jpg"
     },
     {
       "id": "玉米",
       "name": "玉米",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "玉米是常见的粮食作物，营养价值高，属于厨余垃圾。",
-      "image": "data/garbage/images/17_06.jpg"
+      "image": "data/garbage/images/ab17_07.jpg"
     },
     {
       "id": "果仁",
       "name": "果仁",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "果仁大多是水果里的种子，瓜皮果核大部分都是厨余垃圾。",
-      "image": "data/garbage/images/17_07.jpg"
+      "image": "data/garbage/images/ab17_08.jpg"
     },
     {
       "id": "香菇",
       "name": "香菇",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "香菇是常见的食物，属于厨余垃圾。",
-      "image": "data/garbage/images/17_08.jpg"
+      "image": "data/garbage/images/ab17_09.jpg"
     },
     {
       "id": "洋葱",
       "name": "洋葱",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "洋葱是常见蔬菜，属于厨余垃圾。",
-      "image": "data/garbage/images/17_09.jpg"
+      "image": "data/garbage/images/ab17_10.jpg"
     },
     {
       "id": "莲藕",
       "name": "莲藕",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "莲藕是常见蔬菜，属于厨余垃圾。",
-      "image": "data/garbage/images/17_10.jpg"
+      "image": "data/garbage/images/ab17_11.jpg"
     },
     {
       "id": "南瓜",
       "name": "南瓜",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "南瓜容易腐烂，能够降解，属于厨余垃圾。",
-      "image": "data/garbage/images/17_11.jpg"
+      "image": "data/garbage/images/ab17_12.jpg"
     },
     {
       "id": "面包",
       "name": "面包",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "面包一般由面粉制成，容易腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/17_12.jpg"
+      "image": "data/garbage/images/ab18_01.jpg"
     },
     {
       "id": "剩饭",
       "name": "剩饭",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "米饭是我们的主食之一，剩饭剩菜是最常见的厨余垃圾。",
-      "image": "data/garbage/images/18_01.jpg"
+      "image": "data/garbage/images/ab18_02.jpg"
     },
     {
       "id": "粽子",
       "name": "粽子",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "粽子主要由糯米制作而成，属于厨余垃圾。",
-      "image": "data/garbage/images/18_02.jpg"
+      "image": "data/garbage/images/ab18_03.jpg"
     },
     {
       "id": "蛋糕",
       "name": "蛋糕",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "蛋糕是常见的食物，容易变质腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/18_03.jpg"
+      "image": "data/garbage/images/ab18_04.jpg"
     },
     {
       "id": "寿司",
       "name": "寿司",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "寿司是一种日本传统美食，吃剩的寿司也是厨余垃圾。",
-      "image": "data/garbage/images/18_04.jpg"
+      "image": "data/garbage/images/ab18_05.jpg"
     },
     {
       "id": "香肠",
       "name": "香肠",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "香肠是常见的食物，属于厨余垃圾。",
-      "image": "data/garbage/images/18_05.jpg"
+      "image": "data/garbage/images/ab18_06.jpg"
     },
     {
       "id": "烤鱿鱼",
       "name": "烤鱿鱼",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "烤鱿鱼容易变质腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/18_06.jpg"
+      "image": "data/garbage/images/ab18_07.jpg"
     },
     {
       "id": "豆腐",
       "name": "豆腐",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "豆腐是最常见的豆制品，保质期短，易变质，属于厨余垃圾。",
-      "image": "data/garbage/images/18_07.jpg"
+      "image": "data/garbage/images/ab18_08.jpg"
     },
     {
       "id": "番茄酱",
       "name": "番茄酱",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "番茄酱是一种由番茄制成的调料，属于厨余垃圾。",
-      "image": "data/garbage/images/18_08.jpg"
+      "image": "data/garbage/images/ab18_09.jpg"
     },
     {
       "id": "糖果",
       "name": "糖果",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "糖果是以糖为主要成分的一种零食，属于厨余垃圾。",
-      "image": "data/garbage/images/18_09.jpg"
+      "image": "data/garbage/images/ab18_10.jpg"
     },
     {
       "id": "饼干",
       "name": "饼干",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "饼干由面粉、糖、油脂等材料制成，吃剩或过期的饼干，都属于厨余垃圾。",
-      "image": "data/garbage/images/18_10.jpg"
+      "image": "data/garbage/images/ab18_11.jpg"
     },
     {
       "id": "巧克力",
       "name": "巧克力",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "巧克力是一种甜食，容易变质发霉，属于厨余垃圾。",
-      "image": "data/garbage/images/18_11.jpg"
+      "image": "data/garbage/images/ab18_12.jpg"
     },
     {
       "id": "生蚝肉",
       "name": "生蚝肉",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "生蚝肉质细嫩，是非常美味的海鲜。吃剩或者变质的生蚝肉属于厨余垃圾。不过，生蚝壳质地坚硬，属于其他垃圾。",
-      "image": "data/garbage/images/18_12.jpg"
+      "image": "data/garbage/images/ab19_01.jpg"
     },
     {
       "id": "鸡肉",
       "name": "鸡肉",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "鸡肉容易腐烂和降解，属于厨余垃圾。",
-      "image": "data/garbage/images/19_01.jpg"
+      "image": "data/garbage/images/ab19_02.jpg"
     },
     {
       "id": "蛋壳",
       "name": "蛋壳",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🥚",
       "desc": "鸡蛋壳易于降解，可用来堆肥，属于厨余垃圾。",
-      "image": "data/garbage/images/19_02.jpg"
+      "image": "data/garbage/images/ab19_03.jpg"
     },
     {
       "id": "鱼骨",
       "name": "鱼骨",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "鱼骨是吃鱼剩下的骨头，属于厨余垃圾。",
-      "image": "data/garbage/images/19_03.jpg"
+      "image": "data/garbage/images/ab19_04.jpg"
     },
     {
       "id": "蟹壳",
       "name": "蟹壳",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "蟹壳是食材废料，能够降解、堆肥，属于厨余垃圾。",
-      "image": "data/garbage/images/19_04.jpg"
+      "image": "data/garbage/images/ab19_05.jpg"
     },
     {
       "id": "虾壳",
       "name": "虾壳",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "虾壳是食材废料，能够降解、堆肥，属于厨余垃圾。",
-      "image": "data/garbage/images/19_05.jpg"
+      "image": "data/garbage/images/ab19_06.jpg"
     },
     {
       "id": "动物内脏",
       "name": "动物内脏",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "动物内脏是容易腐烂的食物，属于厨余垃圾。",
-      "image": "data/garbage/images/19_06.jpg"
+      "image": "data/garbage/images/ab19_07.jpg"
     },
     {
       "id": "章鱼",
       "name": "章鱼",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "章鱼是一种海洋软体动物，吃剩的章鱼易腐烂，要扔进装厨余垃圾的垃圾桶里。",
-      "image": "data/garbage/images/19_07.jpg"
+      "image": "data/garbage/images/ab19_08.jpg"
     },
     {
       "id": "多肉植物",
       "name": "多肉植物",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "多肉植物是一种肥厚多汁的、储藏大量水分的植物，属于厨余垃圾。",
-      "image": "data/garbage/images/19_08.jpg"
+      "image": "data/garbage/images/ab19_09.jpg"
     },
     {
       "id": "盆栽落叶",
       "name": "盆栽落叶",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "家里种的盆栽的叶子，如果掉落了，属于厨余垃圾。",
-      "image": "data/garbage/images/19_09.jpg"
+      "image": "data/garbage/images/ab19_10.jpg"
     },
     {
       "id": "枯花",
       "name": "枯花",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "家中摆放的插花枯萎了，要扔到装厨余垃圾的垃圾桶里。",
-      "image": "data/garbage/images/19_10.jpg"
+      "image": "data/garbage/images/ab19_11.jpg"
     },
     {
-      "id": "茶叶渣",
-      "name": "茶叶渣",
+      "id": "茶叶",
+      "name": "茶叶",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍵",
       "desc": "茶叶渣容易降解，可用于堆肥，属于厨余垃圾。",
-      "image": "data/garbage/images/19_11.jpg"
+      "image": "data/garbage/images/ab19_12.jpg"
     },
     {
       "id": "面条",
       "name": "面条",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "面条是一种制作简单、食用方便的食品，但容易变质腐烂，属于厨余垃圾。",
-      "image": "data/garbage/images/19_12.jpg"
+      "image": "data/garbage/images/ab20_01.jpg"
     },
     {
       "id": "冰激凌",
       "name": "冰激凌",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "冰激凌是以饮用水、奶粉、奶油、糖等为主要原料制成的冷冻食品，属于厨余垃圾。",
-      "image": "data/garbage/images/20_01.jpg"
+      "image": "data/garbage/images/ab20_02.jpg"
     },
     {
       "id": "瓜子",
       "name": "瓜子",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "瓜子的种类有很多，常见的有葵花子、南瓜子等，瓜子可以降解，进行生化堆肥处理，属于厨余垃圾。",
-      "image": "data/garbage/images/20_02.jpg"
+      "image": "data/garbage/images/ab20_03.jpg"
     },
     {
       "id": "枸杞子",
       "name": "枸杞子",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "枸杞子既可用于做饭做菜，又可以药用，具有多种保健功效。坏掉的枸杞子属于厨余垃圾。",
-      "image": "data/garbage/images/20_03.jpg"
+      "image": "data/garbage/images/ab20_04.jpg"
     },
     {
       "id": "薯片",
       "name": "薯片",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "薯片是由马铃薯切片后，经过煎炸或烘烤制成的一种零食，属于厨余垃圾。",
-      "image": "data/garbage/images/20_04.jpg"
+      "image": "data/garbage/images/ab20_05.jpg"
     },
     {
       "id": "油条",
       "name": "油条",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "油条是一种油炸食品，口感松脆有韧劲，是中国人传统的早点之一。吃剩的油条属于厨余垃圾。",
-      "image": "data/garbage/images/20_05.jpg"
+      "image": "data/garbage/images/ab20_06.jpg"
     },
     {
       "id": "排骨",
       "name": "排骨",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "排骨的骨头能够被机器搅碎，进行生化堆肥处理，属于厨余垃圾。",
-      "image": "data/garbage/images/20_06.jpg"
+      "image": "data/garbage/images/ab20_07.jpg"
     },
     {
       "id": "包子",
       "name": "包子",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "包子的主要制作材料有面粉和馅，吃剩的包子属于厨余垃圾。",
-      "image": "data/garbage/images/20_07.jpg"
+      "image": "data/garbage/images/ab20_08.jpg"
     },
     {
       "id": "海带",
       "name": "海带",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "海带是多年生冷水性大型食用藻类，营养丰富，吃剩的海带属于厨余垃圾。",
-      "image": "data/garbage/images/20_08.jpg"
+      "image": "data/garbage/images/ab20_09.jpg"
     },
     {
       "id": "花生",
       "name": "花生",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "花生可以直接食用，也可以用来榨油。花生和花生壳都能被机器搅碎，容易降解，属于厨余垃圾。",
-      "image": "data/garbage/images/20_09.jpg"
+      "image": "data/garbage/images/ab20_10.jpg"
     },
     {
       "id": "冬瓜",
       "name": "冬瓜",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "冬瓜容易腐烂，能够降解，属于厨余垃圾。",
-      "image": "data/garbage/images/20_10.jpg"
+      "image": "data/garbage/images/ab20_11.jpg"
     },
     {
       "id": "鸭脖子",
       "name": "鸭脖子",
       "type": "kitchen",
-      "icon": "⚠️",
+      "icon": "🍎",
       "desc": "鸭脖子可用酱汁加工成酱鸭脖，过期的酱鸭脖属于厨余垃圾。",
-      "image": "data/garbage/images/20_11.jpg"
+      "image": "data/garbage/images/ab20_12.jpg"
     },
     {
       "id": "厕纸",
       "name": "厕纸",
       "type": "other",
-      "icon": "🍎",
-      "desc": "烟蒂是香烟燃吸后的残余部分，没有回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/21_01.jpg"
+      "icon": "🗑️",
+      "desc": "厕纸上沾染了污物，无法回收，属于其他垃圾。",
+      "image": "data/garbage/images/ab22_02.jpg"
     },
     {
       "id": "烟蒂",
       "name": "烟蒂",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "烟蒂是香烟燃吸后的残余部分，没有回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/22_01.jpg"
+      "image": "data/garbage/images/ab24_02.jpg"
     },
     {
       "id": "内裤",
       "name": "内裤",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "内裤是人们贴身穿的衣物，一般不回收利用，属于其他垃圾。",
-      "image": "data/garbage/images/24_02.jpg"
+      "image": "data/garbage/images/ab24_03.jpg"
     },
     {
       "id": "破碗碟",
       "name": "破碗碟",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "陶瓷破碗碟没有回收价值，属于其他垃圾，一般进行填埋处理。",
-      "image": "data/garbage/images/24_03.jpg"
+      "image": "data/garbage/images/ab24_04.jpg"
     },
     {
       "id": "气泡膜",
       "name": "气泡膜",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "气泡膜是一种新型塑料包装材料，难以降解，属于其他垃圾。",
-      "image": "data/garbage/images/24_04.jpg"
+      "image": "data/garbage/images/ab24_05.jpg"
     },
     {
       "id": "碎纸张",
       "name": "碎纸张",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "碎纸张不利于回收，人工整理起来太过麻烦，回收成本高，所以属于其他垃圾。",
-      "image": "data/garbage/images/24_05.jpg"
+      "image": "data/garbage/images/ab24_06.jpg"
     },
     {
       "id": "污损纸张",
       "name": "污损纸张",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "污损纸张上沾染了污物，难以回收利用，属于其他垃圾。",
-      "image": "data/garbage/images/24_06.jpg"
+      "image": "data/garbage/images/ab24_07.jpg"
     },
     {
       "id": "塑料袋",
       "name": "塑料袋",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🛍️",
       "desc": "塑料袋回收价值低，难以降解，属于其他垃圾。",
-      "image": "data/garbage/images/24_07.jpg"
+      "image": "data/garbage/images/ab24_08.jpg"
     },
     {
       "id": "宠物粪便",
       "name": "宠物粪便",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "宠物粪便没有多少回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/24_08.jpg"
+      "image": "data/garbage/images/ab24_09.jpg"
     },
     {
       "id": "一次性纸杯",
       "name": "一次性纸杯",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "为了防止渗水，一次性纸杯里边附有一层薄薄的塑料膜，这会影响废纸的回收利用，所以它属于其他垃圾。",
-      "image": "data/garbage/images/24_09.jpg"
+      "image": "data/garbage/images/ab24_10.jpg"
     },
     {
       "id": "打火机",
       "name": "打火机",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "打火机含有多种材质，分类回收处理难度高，所以列为其他垃圾。",
-      "image": "data/garbage/images/24_10.jpg"
+      "image": "data/garbage/images/ab24_11.jpg"
     },
     {
       "id": "火柴",
       "name": "火柴",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "火柴主要成分是木头，回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/24_11.jpg"
+      "image": "data/garbage/images/ab24_12.jpg"
     },
     {
       "id": "面膜",
       "name": "面膜",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "面膜是一种护肤品，按材质可分为蚕丝、全棉、涤纶、混纺、生物纤维等，没有回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/24_12.jpg"
+      "image": "data/garbage/images/ab25_01.jpg"
     },
     {
       "id": "贝壳",
       "name": "贝壳",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "贝壳质地坚硬，不容易生化降解，属于其他垃圾。",
-      "image": "data/garbage/images/25_01.jpg"
+      "image": "data/garbage/images/ab25_02.jpg"
     },
     {
       "id": "创可贴",
       "name": "创可贴",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "创可贴难降解，也没有什么回收价值，所以属于其他垃圾。",
-      "image": "data/garbage/images/25_02.jpg"
+      "image": "data/garbage/images/ab25_03.jpg"
     },
     {
       "id": "胶带",
       "name": "胶带",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "用过的胶带分布零散，粘在各种包装物上面，搜集起来人力成本高，所以它属于其他垃圾。",
-      "image": "data/garbage/images/25_03.jpg"
+      "image": "data/garbage/images/ab25_04.jpg"
     },
     {
       "id": "橡皮泥",
       "name": "橡皮泥",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "儿童玩的橡皮泥由碳酸钙、液体石蜡、甘油等材料配制而成，不宜回收利用，属于其他垃圾。",
-      "image": "data/garbage/images/25_04.jpg"
+      "image": "data/garbage/images/ab25_05.jpg"
     },
     {
       "id": "纸尿裤",
       "name": "纸尿裤",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "纸尿裤上沾染了人体排泄物，没有回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/25_05.jpg"
+      "image": "data/garbage/images/ab25_06.jpg"
     },
     {
-      "id": "陶瓷花瓶",
-      "name": "陶瓷花瓶",
+      "id": "陶瓷",
+      "name": "陶瓷",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🍶",
       "desc": "陶瓷花瓶的主要材质是陶瓷，没有回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/25_06.jpg"
+      "image": "data/garbage/images/ab25_07.jpg"
     },
     {
       "id": "眼镜",
       "name": "眼镜",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "眼镜的组成材料多，如玻璃、塑料、金属等，分类处理成本高，属于其他垃圾。",
-      "image": "data/garbage/images/25_07.jpg"
+      "image": "data/garbage/images/ab25_08.jpg"
     },
     {
       "id": "一次性饭盒",
       "name": "一次性饭盒",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "一次性饭盒上会沾染许多油脂，不利于回收，所以属于其他垃圾。",
-      "image": "data/garbage/images/25_08.jpg"
+      "image": "data/garbage/images/ab25_09.jpg"
     },
     {
       "id": "头发",
       "name": "头发",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "头发回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/25_09.jpg"
+      "image": "data/garbage/images/ab25_10.jpg"
     },
     {
       "id": "核桃壳",
       "name": "核桃壳",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "核桃壳质地坚硬，难以降解，属于其他垃圾。",
-      "image": "data/garbage/images/25_10.jpg"
+      "image": "data/garbage/images/ab25_11.jpg"
     },
     {
       "id": "吸管",
       "name": "吸管",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "吸管虽然是塑料制品，但用过的吸管已经被污染，不利于回收，属于其他垃圾。",
-      "image": "data/garbage/images/25_11.jpg"
+      "image": "data/garbage/images/ab25_12.jpg"
     },
     {
       "id": "茶包",
       "name": "茶包",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "茶包是用纸或布包着茶叶，直接用水泡来喝，方便快捷，用完的茶包属于其他垃圾。",
-      "image": "data/garbage/images/25_12.jpg"
+      "image": "data/garbage/images/ab26_01.jpg"
     },
     {
       "id": "猫砂",
       "name": "猫砂",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "猫砂是猫用来掩埋粪便和尿液的物体，有较好的吸水性，属于其他垃圾。",
-      "image": "data/garbage/images/26_01.jpg"
+      "image": "data/garbage/images/ab26_02.jpg"
     },
     {
       "id": "干燥剂",
       "name": "干燥剂",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "干燥剂是指能除去潮湿物质中水分的物质，无毒，不会对环境造成污染，属于其他垃圾。",
-      "image": "data/garbage/images/26_02.jpg"
+      "image": "data/garbage/images/ab26_03.jpg"
     },
     {
       "id": "椰子壳",
       "name": "椰子壳",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "椰子壳十分坚硬，且不容易腐烂，所以不属于厨余垃圾，而是其他垃圾。",
-      "image": "data/garbage/images/26_03.jpg"
+      "image": "data/garbage/images/ab26_04.jpg"
     },
     {
       "id": "玉米皮",
       "name": "玉米皮",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "玉米皮的纤维在土壤里很难降解，所以不属于厨余垃圾，而是其他垃圾。",
-      "image": "data/garbage/images/26_04.jpg"
+      "image": "data/garbage/images/ab26_05.jpg"
     },
     {
       "id": "袜子",
       "name": "袜子",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "袜子虽然是织物制成的，但经常穿在脚上，被脚汗浸湿，会沾染上污渍，所以属于其他垃圾。",
-      "image": "data/garbage/images/26_05.jpg"
+      "image": "data/garbage/images/ab26_06.jpg"
     },
     {
       "id": "脏污衣服",
       "name": "脏污衣服",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "普通衣服是可回收的，但如果衣服破损太厉害或被污染就不再属于可回收物了，而应该属于其他垃圾。",
-      "image": "data/garbage/images/26_06.jpg"
+      "image": "data/garbage/images/ab26_07.jpg"
     },
     {
       "id": "坛子",
       "name": "坛子",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "坛子一般为陶土制成，没有回收价值，一般会粉碎后进行填埋处理，属于其他垃圾。",
-      "image": "data/garbage/images/26_07.jpg"
+      "image": "data/garbage/images/ab26_08.jpg"
     },
     {
       "id": "刷子",
       "name": "刷子",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "刷子在使用过程中容易沾染污渍，所以它属于其他垃圾。",
-      "image": "data/garbage/images/26_08.jpg"
+      "image": "data/garbage/images/ab26_09.jpg"
     },
     {
       "id": "海绵",
       "name": "海绵",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "人们常用的海绵回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/26_09.jpg"
+      "image": "data/garbage/images/ab26_10.jpg"
     },
     {
       "id": "扫把",
       "name": "扫把",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "扫把回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/26_10.jpg"
+      "image": "data/garbage/images/ab26_11.jpg"
     },
     {
       "id": "口罩",
       "name": "口罩",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "口罩没什么回收价值，对环境也没有害处，属于其他垃圾。",
-      "image": "data/garbage/images/26_11.jpg"
+      "image": "data/garbage/images/ab26_12.jpg"
     },
     {
-      "id": "水果硬核",
-      "name": "水果硬核",
-      "type": "other",
+      "id": "水果",
+      "name": "水果",
+      "type": "kitchen",
       "icon": "🍎",
       "desc": "水果硬核质地坚硬，难以降解，属于其他垃圾。",
-      "image": "data/garbage/images/26_12.jpg"
-    },
-    {
-      "id": "陶瓷花盆",
-      "name": "陶瓷花盆",
-      "type": "other",
-      "icon": "🍎",
-      "desc": "陶瓷花盆是难以回收的固体废弃物，属于其他垃圾，一般在粉碎后进行填埋处理。",
-      "image": "data/garbage/images/27_01.jpg"
+      "image": "data/garbage/images/ab27_01.jpg"
     },
     {
       "id": "渣土",
       "name": "渣土",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "渣土属于固体废弃物，没有回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/27_02.jpg"
+      "image": "data/garbage/images/ab27_03.jpg"
     },
     {
       "id": "橡胶手套",
       "name": "橡胶手套",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "橡胶手套回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/27_03.jpg"
+      "image": "data/garbage/images/ab27_04.jpg"
     },
     {
       "id": "竹篮",
       "name": "竹篮",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "竹篮由竹片制成，回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/27_04.jpg"
+      "image": "data/garbage/images/ab27_05.jpg"
     },
     {
       "id": "橡皮擦",
       "name": "橡皮擦",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "橡皮擦的主要成分是一种无毒的增塑剂，属于其他垃圾。",
-      "image": "data/garbage/images/27_05.jpg"
+      "image": "data/garbage/images/ab27_06.jpg"
     },
     {
-      "id": "干电池",
-      "name": "干电池",
-      "type": "other",
-      "icon": "🍎",
+      "id": "电池",
+      "name": "电池",
+      "type": "hazardous",
+      "icon": "🔋",
       "desc": "现在普通的1号、5号、7号等一次性干电池虽都不含有汞等重金属，但没有回收价值，属于其他垃圾。",
-      "image": "data/garbage/images/27_06.jpg"
+      "image": "data/garbage/images/ab32_01.jpg"
     },
     {
       "id": "榴莲壳",
       "name": "榴莲壳",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "榴莲壳质地坚硬，难以降解，所以不是厨余垃圾，而是其他垃圾。",
-      "image": "data/garbage/images/27_07.jpg"
+      "image": "data/garbage/images/ab27_08.jpg"
     },
     {
       "id": "口香糖",
       "name": "口香糖",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "口香糖很难进行再生循环利用，属于不可回收垃圾，所以应该扔到装其他垃圾的桶里。",
-      "image": "data/garbage/images/27_08.jpg"
+      "image": "data/garbage/images/ab27_09.jpg"
     },
     {
       "id": "笔",
       "name": "笔",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "笔含有多种物质，不利于回收利用，所以被列为其他垃圾。",
-      "image": "data/garbage/images/27_09.jpg"
+      "image": "data/garbage/images/ab27_10.jpg"
     },
     {
       "id": "毛巾",
       "name": "毛巾",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "毛巾回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/27_10.jpg"
+      "image": "data/garbage/images/ab27_11.jpg"
     },
     {
       "id": "粽叶",
       "name": "粽叶",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "粽叶不容易腐烂，难以降解，所以被列为其他垃圾。",
-      "image": "data/garbage/images/27_11.jpg"
+      "image": "data/garbage/images/ab27_12.jpg"
     },
     {
       "id": "奶茶杯",
       "name": "奶茶杯",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "奶茶杯里涂了一层隔水涂层，难分离，回收利用价值低，所以列为其他垃圾。",
-      "image": "data/garbage/images/27_12.jpg"
+      "image": "data/garbage/images/ab28_01.jpg"
     },
     {
       "id": "一次性筷子",
       "name": "一次性筷子",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "一次性筷子本身回收价值低，而且上面沾染了油渍，更加难以处理，属于其他垃圾。",
-      "image": "data/garbage/images/28_01.jpg"
+      "image": "data/garbage/images/ab28_02.jpg"
     },
     {
       "id": "牙签",
       "name": "牙签",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "牙签回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/28_02.jpg"
+      "image": "data/garbage/images/ab28_03.jpg"
     },
     {
       "id": "镜子",
       "name": "镜子",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "镜子虽然是玻璃制品，但它背后有一层涂层，难和玻璃分离，回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/28_03.jpg"
+      "image": "data/garbage/images/ab28_04.jpg"
     },
     {
       "id": "光盘",
       "name": "光盘",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "光盘上有涂层，回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/28_04.jpg"
+      "image": "data/garbage/images/ab28_05.jpg"
     },
     {
       "id": "粉笔",
       "name": "粉笔",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "粉笔的主要成分是碳酸钙，回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/28_05.jpg"
+      "image": "data/garbage/images/ab28_06.jpg"
     },
     {
       "id": "蚊香",
       "name": "蚊香",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "蚊香不可回收，属于其他垃圾。",
-      "image": "data/garbage/images/28_06.jpg"
+      "image": "data/garbage/images/ab28_07.jpg"
     },
     {
-      "id": "大骨头",
-      "name": "大骨头",
-      "type": "other",
-      "icon": "🍎",
+      "id": "骨头",
+      "name": "骨头",
+      "type": "kitchen",
+      "icon": "🍖",
       "desc": "动物的头骨、筒骨等较大的骨头，难以降解，所以列为其他垃圾。",
-      "image": "data/garbage/images/28_07.jpg"
+      "image": "data/garbage/images/ab28_08.jpg"
     },
     {
       "id": "乒乓球",
       "name": "乒乓球",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "乒乓球的材质是易燃塑料，回收价值低，所以乒乓球归类于其他垃圾。",
-      "image": "data/garbage/images/28_08.jpg"
+      "image": "data/garbage/images/ab28_09.jpg"
     },
     {
       "id": "气球",
       "name": "气球",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "气球的主要制作材料是橡胶，回收价值低，属于其他垃圾。",
-      "image": "data/garbage/images/28_09.jpg"
+      "image": "data/garbage/images/ab28_10.jpg"
     },
     {
       "id": "口红",
       "name": "口红",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "口红是化妆品的一种，废弃化妆品一般都属于其他垃圾。",
-      "image": "data/garbage/images/28_10.jpg"
+      "image": "data/garbage/images/ab28_11.jpg"
     },
     {
       "id": "牙刷",
       "name": "牙刷",
       "type": "other",
-      "icon": "🍎",
+      "icon": "🗑️",
       "desc": "牙刷虽然是塑料制品，但回收价值低，所以列为其他垃圾。",
-      "image": "data/garbage/images/28_11.jpg"
-    },
-    {
-      "id": "蓄电池",
-      "name": "蓄电池",
-      "type": "hazardous",
-      "icon": "🗑️",
-      "desc": "蓄电池含有硫酸、铅等有害物质，属于有害垃圾。",
-      "image": "data/garbage/images/30_01.jpg"
-    },
-    {
-      "id": "灯泡",
-      "name": "灯泡",
-      "type": "hazardous",
-      "icon": "🗑️",
-      "desc": "灯泡中含有铅、镉、铬、汞等有害物质，属于有害垃圾。",
-      "image": "data/garbage/images/32_02.jpg"
+      "image": "data/garbage/images/ab28_12.jpg"
     },
     {
       "id": "灯管",
       "name": "灯管",
       "type": "hazardous",
-      "icon": "🗑️",
-      "desc": "灯管中含有铅、镉、铬、汞等有害物质，属于有害垃圾。",
-      "image": "data/garbage/images/32_03.jpg"
+      "icon": "💡",
+      "desc": "荧光灯管含有汞蒸气，破碎后会释放有毒物质。废弃灯管应完整包装后投放到有害垃圾桶中。",
+      "image": "data/garbage/images/ab32_04.jpg"
+    },
+    {
+      "id": "家用化学品",
+      "name": "家用化学品",
+      "type": "hazardous",
+      "icon": "⚠️",
+      "desc": "家用化学品的相关描述",
+      "image": "data/garbage/images/ab29_03.jpg"
+    },
+    {
+      "id": "灯泡",
+      "name": "灯泡",
+      "type": "hazardous",
+      "icon": "💡",
+      "desc": "灯泡中含有铅、镉、铬、汞等有害物质，属于有害垃圾。",
+      "image": "data/garbage/images/ab32_03.jpg"
     },
     {
       "id": "卤素灯",
       "name": "卤素灯",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "卤素灯中含有汞等有害物质，属于有害垃圾。",
-      "image": "data/garbage/images/32_04.jpg"
+      "image": "data/garbage/images/ab32_05.jpg"
     },
     {
       "id": "节能灯",
       "name": "节能灯",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "节能灯中的汞为有害物质，所以它属于有害垃圾。",
-      "image": "data/garbage/images/32_05.jpg"
+      "image": "data/garbage/images/ab32_06.jpg"
     },
     {
       "id": "油漆",
       "name": "油漆",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "🎨",
       "desc": "油漆含有甲苯、二甲苯、苯等有毒物质，属于有害垃圾。",
-      "image": "data/garbage/images/32_06.jpg"
-    },
-    {
-      "id": "油漆桶",
-      "name": "油漆桶",
-      "type": "hazardous",
-      "icon": "🗑️",
-      "desc": "油漆桶里的油漆是有害垃圾，所以油漆桶属于危险化学品，也属于有害垃圾，需要集中处理。",
-      "image": "data/garbage/images/32_07.jpg"
+      "image": "data/garbage/images/ab32_07.jpg"
     },
     {
       "id": "指甲油",
       "name": "指甲油",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "指甲油中含有许多有毒化学物质，属于有害垃圾。",
-      "image": "data/garbage/images/32_08.jpg"
+      "image": "data/garbage/images/ab32_09.jpg"
     },
     {
       "id": "染发剂",
       "name": "染发剂",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "染发剂属于废化学品类有害垃圾。",
-      "image": "data/garbage/images/32_09.jpg"
+      "image": "data/garbage/images/ab32_10.jpg"
     },
     {
       "id": "过期药片",
       "name": "过期药片",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "过期药片如果没有合理地处理，会污染环境，如果胡乱丢弃，会对土壤和水质产生污染，所以属于有害垃圾。",
-      "image": "data/garbage/images/32_10.jpg"
+      "image": "data/garbage/images/ab32_11.jpg"
     },
     {
       "id": "胶囊药物",
       "name": "胶囊药物",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "胶囊药物中的药物成分会污染环境，因此属于有害垃圾。",
-      "image": "data/garbage/images/32_11.jpg"
+      "image": "data/garbage/images/ab32_12.jpg"
     },
     {
       "id": "口服液",
       "name": "口服液",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "口服液中含有一些化学成分，随便丢弃会污染环境，因此它属于有害垃圾。",
-      "image": "data/garbage/images/32_12.jpg"
+      "image": "data/garbage/images/ab33_01.jpg"
     },
     {
       "id": "眼药水",
       "name": "眼药水",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "眼药水也是药物，所以过期眼药水也属于有害垃圾。",
-      "image": "data/garbage/images/33_01.jpg"
+      "image": "data/garbage/images/ab33_02.jpg"
     },
     {
       "id": "药瓶",
       "name": "药瓶",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "装过药的药瓶会沾染上药物中的化学物质，因此属于有害垃圾。",
-      "image": "data/garbage/images/33_02.jpg"
+      "image": "data/garbage/images/ab33_03.jpg"
     },
     {
       "id": "农药瓶",
       "name": "农药瓶",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "农药大多是有毒物质，装过农药的瓶中会有农药残留，属于有害垃圾。",
-      "image": "data/garbage/images/33_03.jpg"
+      "image": "data/garbage/images/ab33_04.jpg"
     },
     {
       "id": "老鼠药",
       "name": "老鼠药",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "老鼠药中含有剧毒物质，属于有害垃圾。",
-      "image": "data/garbage/images/33_04.jpg"
+      "image": "data/garbage/images/ab33_05.jpg"
     },
     {
       "id": "蟑螂药",
       "name": "蟑螂药",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "蟑螂药中含有毒物质，属于有害垃圾。",
-      "image": "data/garbage/images/33_05.jpg"
+      "image": "data/garbage/images/ab33_06.jpg"
     },
     {
       "id": "杀虫剂",
       "name": "杀虫剂",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "🐛",
       "desc": "杀虫喷雾中的化学制剂可能会释放甲醛、苯等有害物质，使人中毒，属于有害垃圾。",
-      "image": "data/garbage/images/33_06.jpg"
+      "image": "data/garbage/images/ab33_07.jpg"
     },
     {
       "id": "消毒剂",
       "name": "消毒剂",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "消毒剂具有一定的毒性和腐蚀性，属于有害垃圾。",
-      "image": "data/garbage/images/33_07.jpg"
+      "image": "data/garbage/images/ab33_08.jpg"
     },
     {
       "id": "x光片",
       "name": "X光片",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "X光片属于胶片，在洗印过程中会使用到一些化学制剂，所以它属于有害垃圾。",
-      "image": "data/garbage/images/33_08.jpg"
+      "image": "data/garbage/images/ab33_09.jpg"
     },
     {
       "id": "洗甲水",
       "name": "洗甲水",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "洗甲水中大多含有丙酮，这是一种有刺激气味的液体，会对人体健康产生危害，所以洗甲水属于有害垃圾。",
-      "image": "data/garbage/images/33_09.jpg"
+      "image": "data/garbage/images/ab33_10.jpg"
     },
     {
       "id": "水银血压计",
       "name": "水银血压计",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "⚠️",
       "desc": "水银是“汞”的俗称，是有毒物质，所以水银血压计属于有害垃圾。",
-      "image": "data/garbage/images/33_10.jpg"
+      "image": "data/garbage/images/ab33_11.jpg"
     },
     {
-      "id": "水银温度计",
-      "name": "水银温度计",
+      "id": "温度计",
+      "name": "温度计",
       "type": "hazardous",
-      "icon": "🗑️",
+      "icon": "🌡️",
       "desc": "水银是有毒物质，所以水银温度计属于有害垃圾。",
-      "image": "data/garbage/images/33_11.jpg"
+      "image": "data/garbage/images/ab33_12.jpg"
     }
   ]
 }
