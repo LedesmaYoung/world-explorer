@@ -434,6 +434,50 @@ VoiceManager.templates.continentIntro(continent)
 
 ---
 
+## 🔄 原生 APP 同步流程
+
+本项目（world-explorer-web）是主要开发场所，更新后需同步到原生 APP 项目（world-explorer）。
+
+### 工作链流程
+
+```
+world-explorer-web 更新
+        ↓
+  git commit & push
+        ↓
+cd ../world-explorer && ./sync-from-web.sh
+        ↓
+  npx cap sync ios（自动执行）
+        ↓
+  npx cap open ios
+        ↓
+  Xcode 手动构建安装到 iPad
+```
+
+### 同步命令
+
+```bash
+# 1. 在 world-explorer-web 提交更新
+git add -A && git commit -m "feat: 描述"
+git push
+
+# 2. 切换到 world-explorer 项目执行同步
+cd /Users/ledesmayoung/CodeBuddy/Claw/world-explorer
+./sync-from-web.sh
+
+# 3. 打开 Xcode 构建
+npx cap open ios
+```
+
+### 项目关系
+
+| 项目 | 类型 | 说明 |
+|------|------|------|
+| world-explorer-web | Web/PWA | 主要开发场所 |
+| world-explorer | 原生 APP | Capacitor 打包，从 Web 同步 |
+
+---
+
 ### v1.3 当前版本
 
 - [x] 国旗点击游戏（天梯模式）界面优化

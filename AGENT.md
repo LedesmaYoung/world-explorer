@@ -52,6 +52,57 @@ PWA 支持通过 URL 参数控制缓存：
 
 ---
 
+## 🔄 原生 APP 同步流程
+
+本项目（world-explorer-web）是主要开发场所，更新后需同步到原生 APP 项目（world-explorer）。
+
+### 工作链流程
+
+```
+world-explorer-web 更新
+        ↓
+  git commit & push
+        ↓
+cd ../world-explorer && ./sync-from-web.sh
+        ↓
+  npx cap sync ios（自动执行）
+        ↓
+  npx cap open ios
+        ↓
+  Xcode 手动构建安装到 iPad
+```
+
+### 同步命令
+
+```bash
+# 1. 在 world-explorer-web 提交更新
+git add -A && git commit -m "feat: 描述"
+git push
+
+# 2. 切换到 world-explorer 项目执行同步
+cd /Users/ledesmayoung/CodeBuddy/Claw/world-explorer
+./sync-from-web.sh
+
+# 3. 打开 Xcode 构建
+npx cap open ios
+```
+
+### 项目关系
+
+| 项目 | 类型 | 说明 |
+|------|------|------|
+| world-explorer-web | Web/PWA | 主要开发场所 |
+| world-explorer | 原生 APP | Capacitor 打包，从 Web 同步 |
+
+### 同步脚本说明
+
+`world-explorer/sync-from-web.sh` 会自动：
+1. 复制 Web 项目文件到 `www/` 目录
+2. 排除 PWA 相关文件（manifest.json, sw.js）
+3. 执行 `npx cap sync ios` 同步到 iOS 项目
+
+---
+
 ## 📋 项目概述
 
 ### 项目名称
