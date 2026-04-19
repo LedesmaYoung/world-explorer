@@ -155,20 +155,31 @@
 
 /* 国旗容器 */
 .tap-flags-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  display: grid;
+  gap: 12px;
   margin: 20px 0;
-  min-height: 300px;
   align-items: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
-/* 根据数量调整布局 */
-.tap-flags-container.flags-4,
-.tap-flags-container.flags-5,
+/* 动态列数布局 */
+.tap-flags-container.flags-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .tap-flags-container.flags-6 {
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tap-flags-container.flags-8 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tap-flags-container.flags-10 {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* 单个国旗项 */
@@ -180,8 +191,12 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  min-width: 100px;
   animation: flagFloat 3s ease-in-out infinite;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .tap-flag-item:hover {
@@ -193,9 +208,24 @@
   transform: scale(0.95);
 }
 
-/* 国旗 emoji */
-.tap-flag-emoji {
+/* 国旗 emoji - 根据选项数量调整大小 */
+.tap-flags-container.flags-4 .tap-flag-emoji {
+  font-size: 72px;
+}
+
+.tap-flags-container.flags-6 .tap-flag-emoji {
+  font-size: 64px;
+}
+
+.tap-flags-container.flags-8 .tap-flag-emoji {
+  font-size: 56px;
+}
+
+.tap-flags-container.flags-10 .tap-flag-emoji {
   font-size: 48px;
+}
+
+.tap-flag-emoji {
   margin-bottom: 8px;
 }
 
@@ -2544,4 +2574,414 @@
 
 .close-btn:hover {
   color: #333;
+}
+
+/* ===== 垃圾分类天梯挑战 ===== */
+
+.garbage-game-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  z-index: 1001;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.garbage-game-modal.active {
+  display: flex;
+}
+
+.garbage-game-content {
+  background: white;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.garbage-game-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.garbage-game-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.garbage-game-score {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.garbage-game-score .score-value {
+  font-weight: bold;
+  color: #11998e;
+  font-size: 20px;
+}
+
+.garbage-game-score .score-level {
+  color: #999;
+}
+
+/* 物品显示区域 */
+.garbage-item-display {
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.garbage-challenge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.garbage-challenge-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: white;
+  padding: 5px;
+}
+
+.garbage-challenge-icon {
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.garbage-challenge-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.garbage-challenge-timer {
+  font-size: 18px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* 4个选项按钮 */
+.garbage-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.garbage-option-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  border: 3px solid #e0e0e0;
+  border-radius: 16px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 100px;
+}
+
+.garbage-option-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: #11998e;
+}
+
+.garbage-option-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.garbage-option-btn.correct-answer {
+  border-color: #4CAF50;
+  background: #e8f5e9;
+  animation: correctPulse 0.5s ease;
+}
+
+.garbage-option-btn.wrong-answer {
+  border-color: #f44336;
+  background: #ffebee;
+  animation: wrongShake 0.5s ease;
+}
+
+@keyframes correctPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.option-icon {
+  font-size: 36px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.option-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 游戏消息 */
+.garbage-game-message {
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  min-height: 24px;
+}
+
+.garbage-game-message.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.garbage-game-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* 返回按钮 */
+.garbage-skip-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.garbage-skip-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* 天梯挑战结果弹窗 */
+.garbage-challenge-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 24px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.garbage-challenge-modal.active {
+  display: flex;
+}
+
+.garbage-challenge-content {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+.challenge-result-header h2 {
+  font-size: 28px;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.challenge-result-score {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.result-score-item {
+  text-align: center;
+}
+
+.result-score-item .score-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.result-score-item .score-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #11998e;
+}
+
+.result-score-item .score-value.rank {
+  color: #f39c12;
+}
+
+/* 排行榜 */
+.challenge-leaderboard {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.challenge-leaderboard h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.garbage-leaderboard {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.garbage-leaderboard .leaderboard-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.garbage-leaderboard .leaderboard-item.current {
+  background: #e8f5e9;
+  border: 2px solid #4CAF50;
+}
+
+.garbage-leaderboard .leaderboard-rank {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+.garbage-leaderboard .leaderboard-item:nth-child(1) .leaderboard-rank {
+  background: #FFD700;
+  color: white;
+}
+
+.garbage-leaderboard .leaderboard-item:nth-child(2) .leaderboard-rank {
+  background: #C0C0C0;
+  color: white;
+}
+
+.garbage-leaderboard .leaderboard-item:nth-child(3) .leaderboard-rank {
+  background: #CD7F32;
+  color: white;
+}
+
+.garbage-leaderboard .leaderboard-info {
+  flex: 1;
+  text-align: left;
+}
+
+.garbage-leaderboard .leaderboard-name {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+}
+
+.garbage-leaderboard .leaderboard-score {
+  font-size: 12px;
+  color: #666;
+}
+
+.garbage-leaderboard .leaderboard-date {
+  font-size: 11px;
+  color: #999;
+}
+
+.garbage-leaderboard .leaderboard-empty {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+/* 操作按钮 */
+.challenge-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.challenge-continue-btn {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.challenge-continue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+}
+
+.challenge-back-btn {
+  background: #f1f1f1;
+  color: #666;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.challenge-back-btn:hover {
+  background: #e0e0e0;
 }

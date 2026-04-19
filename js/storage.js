@@ -1002,3 +1002,95 @@ function getBadgeProgress(badge) {
       return { current: 0, target: 0 };
   }
 }
+
+// ==================== 垃圾分类游戏天梯排行榜 ====================
+
+// 保存垃圾分类天梯分数
+function saveGarbageGameScore(score) {
+  const data = loadGlobalData();
+  const currentTraveler = getCurrentTraveler();
+  
+  if (!currentTraveler) {
+    console.error('没有当前旅行家，无法保存分数');
+    return -1;
+  }
+  
+  // 初始化排行榜
+  if (!data.garbageGameLeaderboard) {
+    data.garbageGameLeaderboard = [];
+  }
+  
+  // 创建新记录
+  const record = {
+    travelerId: currentTraveler.id,
+    travelerName: currentTraveler.name,
+    score: score,
+    date: new Date().toISOString()
+  };
+  
+  // 添加到排行榜
+  data.garbageGameLeaderboard.push(record);
+  
+  // 按分数降序排序
+  data.garbageGameLeaderboard.sort((a, b) => b.score - a.score);
+  
+  // 只保留前50名
+  data.garbageGameLeaderboard = data.garbageGameLeaderboard.slice(0, 50);
+  
+  // 保存数据
+  saveGlobalData(data);
+  
+  // 计算排名
+  const rank = data.garbageGameLeaderboard.findIndex(r => 
+    r.travelerId === currentTraveler.id && 
+    r.score === score && 
+    r.date === record.date
+  ) + 1;
+  
+  console.log(`垃圾分类分数已保存: ${score}分, 排名: 第${rank}名`);
+  
+  return rank;
+}
+
+// 获取垃圾分类天梯排行榜
+function getGarbageGameLeaderboard() {
+  const data = loadGlobalData();
+  return data.garbageGameLeaderboard || [];
+}
+
+// 获取旅行家垃圾分类最高分
+function getGarbageGameHighScore(travelerId) {
+  const leaderboard = getGarbageGameLeaderboard();
+  const travelerRecords = leaderboard.filter(r => r.travelerId === travelerId);
+  
+  if (travelerRecords.length === 0) return 0;
+  
+  return Math.max(...travelerRecords.map(r => r.score));
+}
+
+// 更新垃圾分类游戏统计
+function updateGarbageGameStats(correctCount) {
+  const data = loadData();
+  
+  if (!data.gameStats) {
+    data.gameStats = {
+      tapGame: { totalCorrect: 0, highScore: 0 },
+      puzzleGame: { totalPlays: 0, highScore: 0 },
+      matchGame: { totalPlays: 0, bestTime: null },
+      coloring: { totalSaved: 0 },
+      garbageGame: { totalCorrect: 0, highScore: 0 }
+    };
+  }
+  
+  if (!data.gameStats.garbageGame) {
+    data.gameStats.garbageGame = { totalCorrect: 0, highScore: 0 };
+  }
+  
+  data.gameStats.garbageGame.totalCorrect += correctCount;
+  if (correctCount > data.gameStats.garbageGame.highScore) {
+    data.gameStats.garbageGame.highScore = correctCount;
+  }
+  
+  saveData(data);
+  checkAndUnlockBadges();
+}

@@ -6,8 +6,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#FFF9E6">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>小小环球旅行家</title>
-  <link rel="manifest" href="manifest.json">
+  <!-- <link rel="manifest" href="manifest.json"> -->
   <link rel="stylesheet" href="css/style.css?v=2026032423">
   <link rel="stylesheet" href="css/traveler.css?v=20260324">
   <link rel="stylesheet" href="css/transitions.css?v=20260324">
@@ -533,6 +536,67 @@
     </div>
   </div>
   
+  <!-- ===== 垃圾分类天梯挑战弹窗 ===== -->
+  <div id="garbage-game-modal" class="garbage-game-modal">
+    <div class="garbage-game-content">
+      <div class="garbage-game-header">
+        <h2 id="garbage-game-title">🏆 垃圾分类天梯挑战</h2>
+        <div id="garbage-game-score" class="garbage-game-score">
+          <span class="score-label">得分：</span>
+          <span class="score-value">0</span>
+          <span class="score-level">第 1 题</span>
+        </div>
+      </div>
+      
+      <!-- 物品显示区域 -->
+      <div id="garbage-item-display" class="garbage-item-display">
+        <!-- 物品动态生成 -->
+      </div>
+      
+      <!-- 4个选项按钮 -->
+      <div id="garbage-options" class="garbage-options">
+        <!-- 选项动态生成 -->
+      </div>
+      
+      <!-- 游戏消息 -->
+      <div id="garbage-game-message" class="garbage-game-message"></div>
+      
+      <button id="garbage-skip-btn" class="garbage-skip-btn" onclick="GarbageGame.quit()">✕ 返回</button>
+    </div>
+    
+    <!-- 天梯挑战结果弹窗 -->
+    <div id="garbage-challenge-modal" class="garbage-challenge-modal">
+      <div class="garbage-challenge-content">
+        <div class="challenge-result-header">
+          <h2>🏆 挑战结束！</h2>
+        </div>
+        
+        <div class="challenge-result-score">
+          <div class="result-score-item">
+            <div class="score-label">答对题数</div>
+            <div id="garbage-challenge-score" class="score-value">0</div>
+          </div>
+          <div class="result-score-item">
+            <div class="score-label">排行榜名次</div>
+            <div id="garbage-challenge-rank" class="score-value rank">-</div>
+          </div>
+        </div>
+        
+        <div class="challenge-leaderboard">
+          <h3>🏆 天梯排行榜</h3>
+          <div id="garbage-leaderboard" class="garbage-leaderboard">
+            <!-- 排行榜动态生成 -->
+          </div>
+        </div>
+        
+        <div class="challenge-actions">
+          <button class="challenge-continue-btn" onclick="GarbageGame.continueChallenge()">继续挑战 🔄</button>
+          <button class="challenge-back-btn" onclick="GarbageGame.backToHome()">返回主页 ↩️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- ===== 涂色创作游戏弹窗 ===== -->
   <div id="coloring-game-modal" class="coloring-game-modal">
     <div class="coloring-game-content">
@@ -702,6 +766,10 @@
   <!-- 第三方库 -->
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   
+  <!-- 脚本 -->
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  
   <!-- 垃圾分类功能 -->
   <script src="js/garbage-data.js"></script>
   <script src="js/epub-parser.js"></script>
@@ -714,12 +782,11 @@
   <!-- 数据文件（必须在 Service Worker 注册前加载） -->
   <script src="js/data.js"></script>
 
-  <!-- 脚本 -->
-  <script src="js/storage.js"></script>
-  <script src="js/audio.js"></script>
+  <!-- 应用脚本 -->
   <script src="js/app.js"></script>
 
-  <!-- Service Worker 注册 (PWA 离线支持) -->
+  <!-- Service Worker 注册 (PWA 离线支持) - 已禁用 -->
+  <!--
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -1014,6 +1081,7 @@
       }
     });
   </script>
+  -->
 
   <!-- 添加缓存提示动画样式 -->
   <style>

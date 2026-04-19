@@ -1333,7 +1333,7 @@ const GAME_CENTER_GAMES = [
   { id: 'puzzle', name: '拼图挑战', icon: '🧩', desc: '国旗拼图', action: () => PuzzleGame.startChallenge() },
   { id: 'match', name: '翻牌配对', icon: '🃏', desc: '记忆配对', action: () => MatchGame.showDifficultySelect() },
   { id: 'link', name: '连连看', icon: '🔗', desc: '连接消除', action: () => LinkGame.showDifficultySelect() },
-  { id: 'garbage', name: '垃圾分类', icon: '🗑️', desc: '垃圾识别', action: () => window.location.href = 'garbage-game.html' },
+  { id: 'garbage', name: '垃圾分类', icon: '🗑️', desc: '垃圾识别', action: () => GarbageGame.showDifficultySelect() },
   { id: 'garbage-encyclopedia', name: '垃圾大百科', icon: '📚', desc: '垃圾分类知识', action: () => window.location.href = 'garbage-encyclopedia.html' }
 ];
 

@@ -209,6 +209,58 @@ const VoiceManager = {
         ];
         return messages[Math.floor(Math.random() * messages.length)];
       }
+    },
+    
+    // ===== 国旗点击游戏专用提示语 =====
+    // 天梯挑战开始时的提示语（10 套）
+    tapGameStart: () => {
+      const messages = [
+        '天梯挑战开始！看清楚题目，点击正确的国旗！',
+        '挑战开始！仔细看，找出正确的国旗！',
+        '准备好了吗？天梯挑战开始！加油！',
+        '国旗大挑战开始！看准了再点哦！',
+        '天梯挑战！看清楚国旗，点对得分！',
+        '挑战时间到！找出正确的国旗，冲冲冲！',
+        '天梯模式开启！仔细观察，点击正确答案！',
+        '国旗识别挑战开始！看清楚再选择！',
+        '天梯挑战！眼疾手快，找出正确国旗！',
+        '挑战开始！认真看，点对国旗得分！'
+      ];
+      return messages[Math.floor(Math.random() * messages.length)];
+    },
+    
+    // 每一题的提示语（10 套）
+    tapGameQuestion: (questionNum, countryName) => {
+      const templates = [
+        `第${questionNum}题！找出${countryName}的国旗！`,
+        `第${questionNum}题！看清楚，找出${countryName}！`,
+        `第${questionNum}题！${countryName}的国旗在哪里？`,
+        `第${questionNum}题！找出${countryName}，加油！`,
+        `第${questionNum}题！仔细看，${countryName}的国旗！`,
+        `第${questionNum}题！${countryName}的国旗是哪个？`,
+        `第${questionNum}题！找出${countryName}的国旗吧！`,
+        `第${questionNum}题！看准了，${countryName}！`,
+        `第${questionNum}题！${countryName}国旗在哪里？快找！`,
+        `第${questionNum}题！找出${countryName}，你能行！`
+      ];
+      return templates[Math.floor(Math.random() * templates.length)];
+    },
+    
+    // 护照模式开始时的提示语（10 套）
+    tapGamePassport: (countryName) => {
+      const messages = [
+        `找出${countryName}的国旗！`,
+        `看清楚，找出${countryName}！`,
+        `${countryName}的国旗在哪里？`,
+        `找出${countryName}，加油！`,
+        `仔细看，${countryName}的国旗！`,
+        `${countryName}的国旗是哪个？`,
+        `找出${countryName}的国旗吧！`,
+        `看准了，${countryName}！`,
+        `${countryName}国旗在哪里？快找！`,
+        `找出${countryName}，你能行！`
+      ];
+      return messages[Math.floor(Math.random() * messages.length)];
     }
   }
 };

@@ -3,9 +3,10 @@
 // 难度分级配置
 const TAP_DIFFICULTY_LEVELS = [
   { minQuestion: 1, maxQuestion: 5, name: '简单', options: 4, strategy: 'random' },
-  { minQuestion: 6, maxQuestion: 10, name: '中等', options: 5, strategy: 'similar-colors' },
-  { minQuestion: 11, maxQuestion: 20, name: '困难', options: 6, strategy: 'similar-style' },
-  { minQuestion: 21, maxQuestion: 999, name: '地狱', options: 7, strategy: 'similar-both' }
+  { minQuestion: 6, maxQuestion: 10, name: '中等', options: 6, strategy: 'similar-colors' },
+  { minQuestion: 11, maxQuestion: 15, name: '困难', options: 8, strategy: 'similar-style' },
+  { minQuestion: 16, maxQuestion: 20, name: '困难', options: 8, strategy: 'similar-both' },
+  { minQuestion: 21, maxQuestion: 999, name: '地狱', options: 10, strategy: 'similar-both' }
 ];
 
 // 颜色相近的国家组（用于干扰项）
@@ -110,7 +111,7 @@ const TapGame = {
     this.elements.modal.style.display = 'flex';
     
     // 播放语音
-    VoiceManager.speak(`找出${country.name.zh}的国旗！`);
+    VoiceManager.speak(VoiceManager.templates.tapGamePassport(country.name.zh));
     
     return true;
   },
@@ -153,7 +154,7 @@ const TapGame = {
     this.elements.modal.style.display = 'flex';
     
     // 播放语音
-    VoiceManager.speak('天梯挑战开始！看清楚题目，点击正确的国旗！');
+    VoiceManager.speak(VoiceManager.templates.tapGameStart());
     
     return true;
   },
@@ -191,7 +192,7 @@ const TapGame = {
     this.renderFlags();
     
     // 播放语音
-    VoiceManager.speak(`第${this.currentQuestion}题！找出${targetCountry.name.zh}的国旗！`);
+    VoiceManager.speak(VoiceManager.templates.tapGameQuestion(this.currentQuestion, targetCountry.name.zh));
   },
   
   // 获取难度等级
