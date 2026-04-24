@@ -381,7 +381,7 @@ VoiceManager.templates.continentIntro(continent)
 
 ## 🗺️ 开发路线
 
-### 📌 重要转折：从 PWA 到原生 APP
+### PWA 与原生 APP 同步开发
 
 #### 背景说明
 
@@ -389,7 +389,7 @@ VoiceManager.templates.continentIntro(continent)
 
 #### 决策结论
 
-经过评估，决定将项目从 Web/PWA 方案转换为原生 APP 方案：
+经过评估，决定将项目从 Web/PWA 方案转换为原生 APP 方案，将 Web/PWA 开发的内容同步到原生 APP 版本中：
 
 | 项目 | Web/PWA 版本 | 原生 APP 版本 |
 |------|-------------|--------------|
@@ -401,8 +401,8 @@ VoiceManager.templates.continentIntro(continent)
 
 #### 版本策略
 
-- **Web/PWA 版本**：保留为 `world-explorer-web` 目录，作为历史版本存档
-- **原生 APP 版本**：在当前目录继续开发，使用 Capacitor 框架打包
+- **Web/PWA 版本**：在 `world-explorer-web` 目录继续开发，作为主要开发场所。
+- **原生 APP 版本**：使用 Capacitor 框架打包，从 Web 版本同步资源
 
 #### 实施计划
 
@@ -411,8 +411,8 @@ VoiceManager.templates.continentIntro(continent)
 2. 安装 Node.js - 如果尚未安装
 3. 安装 Capacitor CLI - `npm install -g @capacitor/cli`
 
-**阶段二：项目转换**
-1. 创建 Web 版本备份 - 复制当前项目为 `world-explorer-web`
+**阶段二：项目同步**
+1. 同步源准备 - 复制当前项目为 `world-explorer-web`
 2. 初始化 Capacitor - 在当前项目添加 Capacitor 配置
 3. 构建 Web 资源 - 调整项目结构适配 Capacitor
 4. 添加 iOS 平台 - 生成 Xcode 项目
@@ -426,11 +426,6 @@ VoiceManager.templates.continentIntro(continent)
 1. Xcode 签名配置 - 使用免费 Apple ID
 2. 连接 iPad - 信任开发者证书
 3. 安装并测试
-
-**未来原生功能规划**
-- [ ] 推送通知 - 提醒孩子学习
-- [ ] 本地通知 - 定时提醒
-- [ ] Game Center - 排行榜同步
 
 ---
 
@@ -462,7 +457,7 @@ git add -A && git commit -m "feat: 描述"
 git push
 
 # 2. 切换到 world-explorer 项目执行同步
-cd /Users/ledesmayoung/CodeBuddy/Claw/world-explorer
+cd ../world-explorer
 ./sync-from-web.sh
 
 # 3. 打开 Xcode 构建
@@ -478,7 +473,24 @@ npx cap open ios
 
 ---
 
-### v1.3 当前版本
+## 📄 版本信息
+
+### 后续功能规划
+
+- [ ] 增加国家音频讲解（真人录音）
+- [ ] 增加家长控制面板
+- [ ] 增加城市探索模块
+- [ ] 增加著名景点介绍
+- [ ] 增加世界美食介绍
+- [ ] 增加动物世界模块
+- [ ] 推送通知 - 提醒孩子学习
+- [ ] 本地通知 - 定时提醒
+- [ ] Game Center - 排行榜同步
+
+### v1.4 当前版本
+
+
+### v1.3 已完成功能
 
 - [x] 国旗点击游戏（天梯模式）界面优化
   - 国旗图片放大至两倍（48px → 96px）
@@ -505,21 +517,6 @@ npx cap open ios
 - [x] 语音反馈增强（随机化鼓励语、连击表扬）
 - [x] 国旗连连看游戏（7级难度、急速榜单、连线特效）
 
-### v2.0 原生 APP 版本（计划中）
-
-- [ ] Capacitor 项目初始化
-- [ ] iOS 平台配置
-- [ ] 资源打包测试
-- [ ] iPad 安装验证
-
-### v2.1+ 后续功能规划
-
-- [ ] 增加国家音频讲解（真人录音）
-- [ ] 增加家长控制面板
-- [ ] 增加城市探索模块
-- [ ] 增加著名景点介绍
-- [ ] 增加世界美食介绍
-- [ ] 增加动物世界模块
 
 ## 🤝 贡献指南
 

@@ -174,10 +174,7 @@ const TapGame = {
     this.generateOptions(targetCountry.id, difficulty.options, difficulty.strategy);
     
     // 更新提示
-    this.elements.hint.innerHTML = `
-      找出 <strong>${targetCountry.name.zh}</strong> 的国旗
-      <span class="difficulty-badge">${difficulty.name}</span>
-    `;
+    this.elements.hint.innerHTML = `<strong>${targetCountry.name.zh}</strong>`;
     
     // 更新分数显示
     if (this.elements.score) {

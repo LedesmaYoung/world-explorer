@@ -232,16 +232,11 @@ const VoiceManager = {
     // 每一题的提示语（10 套）
     tapGameQuestion: (questionNum, countryName) => {
       const templates = [
-        `第${questionNum}题！找出${countryName}的国旗！`,
-        `第${questionNum}题！看清楚，找出${countryName}！`,
-        `第${questionNum}题！${countryName}的国旗在哪里？`,
-        `第${questionNum}题！找出${countryName}，加油！`,
-        `第${questionNum}题！仔细看，${countryName}的国旗！`,
-        `第${questionNum}题！${countryName}的国旗是哪个？`,
-        `第${questionNum}题！找出${countryName}的国旗吧！`,
-        `第${questionNum}题！看准了，${countryName}！`,
-        `第${questionNum}题！${countryName}国旗在哪里？快找！`,
-        `第${questionNum}题！找出${countryName}，你能行！`
+        `第${questionNum}题！${countryName}！`,
+        `第${questionNum}题！找出${countryName}！`,
+        `第${questionNum}题！${countryName}的国旗！`,
+        `第${questionNum}题！看，${countryName}！`,
+        `第${questionNum}题！${countryName}在哪里？`
       ];
       return templates[Math.floor(Math.random() * templates.length)];
     },
@@ -249,16 +244,11 @@ const VoiceManager = {
     // 护照模式开始时的提示语（10 套）
     tapGamePassport: (countryName) => {
       const messages = [
-        `找出${countryName}的国旗！`,
-        `看清楚，找出${countryName}！`,
-        `${countryName}的国旗在哪里？`,
-        `找出${countryName}，加油！`,
-        `仔细看，${countryName}的国旗！`,
-        `${countryName}的国旗是哪个？`,
-        `找出${countryName}的国旗吧！`,
-        `看准了，${countryName}！`,
-        `${countryName}国旗在哪里？快找！`,
-        `找出${countryName}，你能行！`
+        `${countryName}！`,
+        `找出${countryName}！`,
+        `${countryName}的国旗！`,
+        `看，${countryName}！`,
+        `${countryName}在哪里？`
       ];
       return messages[Math.floor(Math.random() * messages.length)];
     }

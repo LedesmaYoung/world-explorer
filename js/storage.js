@@ -55,7 +55,8 @@ const defaultGlobalData = {
   currentTravelerId: null,     // 当前登录的旅行家ID
   saves: {},                   // 各旅行家的存档数据
   tapGameLeaderboard: [],      // 国旗点击游戏天梯排行榜
-  puzzleGameLeaderboard: []    // 拼图游戏排行榜
+  puzzleGameLeaderboard: [],   // 拼图游戏排行榜
+  garbageGameLeaderboard: []   // 垃圾分类游戏天梯排行榜
 };
 
 // ==================== 基础存储操作 ====================
@@ -83,7 +84,8 @@ function loadGlobalData() {
         currentTravelerId: parsed.currentTravelerId || null,
         saves: parsed.saves || {},
         tapGameLeaderboard: parsed.tapGameLeaderboard || [],
-        puzzleGameLeaderboard: parsed.puzzleGameLeaderboard || []
+        puzzleGameLeaderboard: parsed.puzzleGameLeaderboard || [],
+        garbageGameLeaderboard: parsed.garbageGameLeaderboard || []
       };
     }
     return { ...defaultGlobalData };

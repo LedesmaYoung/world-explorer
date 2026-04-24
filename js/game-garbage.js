@@ -118,9 +118,6 @@ const GarbageGame = {
   async nextQuestion() {
     this.currentQuestion++;
     
-    // 获取难度配置
-    const difficulty = this.getDifficultyLevel(this.currentQuestion);
-    
     // 随机选择一个物品
     const allItems = this.garbageData.items;
     const randomIndex = Math.floor(Math.random() * allItems.length);
@@ -150,7 +147,6 @@ const GarbageGame = {
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <span class="garbage-challenge-icon" style="display:none;">${item.icon || '🗑️'}</span>
           <div class="garbage-challenge-name">${item.name}</div>
-          <div class="garbage-challenge-timer">⏱️ <span id="garbage-timer">${difficulty.timeLimit}</span>秒</div>
         </div>
       `;
     }
@@ -181,9 +177,6 @@ const GarbageGame = {
       });
     }
     
-    // 开始倒计时
-    this.startTimer(difficulty.timeLimit);
-    
     // 播放语音
     if (typeof VoiceManager !== 'undefined') {
       VoiceManager.speak(`第${this.currentQuestion}题！${item.name}属于什么垃圾？`);
@@ -193,11 +186,6 @@ const GarbageGame = {
   // 选择选项
   selectOption(selectedType) {
     if (!this.isPlaying) return;
-    
-    // 停止计时
-    if (this.timer) {
-      clearInterval(this.timer);
-    }
     
     const correctType = this.currentItem?.type;
     const isCorrect = selectedType === correctType;
@@ -270,71 +258,8 @@ const GarbageGame = {
     }
   },
   
-  // 获取难度等级
-  getDifficultyLevel(questionNum) {
-    return GARBAGE_CHALLENGE_LEVELS.find(
-      level => questionNum >= level.minQuestion && questionNum <= level.maxQuestion
-    ) || GARBAGE_CHALLENGE_LEVELS[4];
-  },
-  
-  // 开始倒计时
-  startTimer(seconds) {
-    this.timeLeft = seconds;
-    
-    if (this.timer) {
-      clearInterval(this.timer);
-    }
-    
-    const timerElement = document.getElementById('garbage-timer');
-    
-    this.timer = setInterval(() => {
-      this.timeLeft--;
-      if (timerElement) {
-        timerElement.textContent = this.timeLeft;
-      }
-      
-      if (this.timeLeft <= 0) {
-        clearInterval(this.timer);
-        this.timeOut();
-      }
-    }, 1000);
-  },
-  
-  // 超时处理
-  timeOut() {
-    if (!this.isPlaying) return;
-    
-    // 显示消息
-    if (this.elements.message) {
-      this.elements.message.textContent = '⏰ 时间到！';
-      this.elements.message.className = 'garbage-game-message error';
-    }
-    
-    // 显示正确答案
-    const correctType = this.currentItem?.type;
-    const buttons = this.elements.options?.querySelectorAll('.garbage-option-btn');
-    buttons?.forEach(btn => {
-      btn.disabled = true;
-      if (btn.dataset.type === correctType) {
-        btn.classList.add('correct-answer');
-      }
-    });
-    
-    if (typeof audioManager !== 'undefined') {
-      audioManager.playSound('tap');
-    }
-    
-    setTimeout(() => {
-      this.endChallenge();
-    }, 1500);
-  },
-  
   // 退出游戏
   quit() {
-    if (this.timer) {
-      clearInterval(this.timer);
-    }
-    
     this.isPlaying = false;
     
     if (this.elements.modal) {
@@ -346,10 +271,6 @@ const GarbageGame = {
   // 结束天梯挑战
   endChallenge() {
     this.isPlaying = false;
-    
-    if (this.timer) {
-      clearInterval(this.timer);
-    }
     
     // 保存分数到排行榜
     const rank = saveGarbageGameScore(this.correctCount);

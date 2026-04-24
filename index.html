@@ -190,6 +190,10 @@
           <span class="footer-icon">🎮</span>
           <span class="footer-text">游戏中心</span>
         </div>
+        <div id="leaderboard-btn" class="footer-item" onclick="openLeaderboard()">
+          <span class="footer-icon">📊</span>
+          <span class="footer-text">天梯排行</span>
+        </div>
       </footer>
     </div>
     
@@ -541,6 +545,7 @@
     <div class="garbage-game-content">
       <div class="garbage-game-header">
         <h2 id="garbage-game-title">🏆 垃圾分类天梯挑战</h2>
+        <button id="garbage-skip-btn" class="garbage-skip-btn" onclick="GarbageGame.quit()">✕ 返回</button>
         <div id="garbage-game-score" class="garbage-game-score">
           <span class="score-label">得分：</span>
           <span class="score-value">0</span>
@@ -560,8 +565,6 @@
       
       <!-- 游戏消息 -->
       <div id="garbage-game-message" class="garbage-game-message"></div>
-      
-      <button id="garbage-skip-btn" class="garbage-skip-btn" onclick="GarbageGame.quit()">✕ 返回</button>
     </div>
     
     <!-- 天梯挑战结果弹窗 -->
@@ -668,6 +671,29 @@
         <div class="empty-icon">🎨</div>
         <p>还没有作品</p>
         <p class="empty-hint">完成涂色游戏后，作品会保存在这里</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== 天梯排行榜页面 ===== -->
+  <div id="leaderboard-page" class="leaderboard-page">
+    <div class="leaderboard-container">
+      <header class="leaderboard-header">
+        <button class="back-btn" onclick="closeLeaderboard()">←</button>
+        <h1>📊 天梯排行榜</h1>
+      </header>
+      
+      <div class="leaderboard-tabs">
+        <button class="leaderboard-tab active" data-game="tap" onclick="switchLeaderboard('tap')">
+          🚩 国旗天梯
+        </button>
+        <button class="leaderboard-tab" data-game="garbage" onclick="switchLeaderboard('garbage')">
+          🗑️ 垃圾分类
+        </button>
+      </div>
+      
+      <div id="leaderboard-content" class="leaderboard-content">
+        <!-- 排行榜内容动态生成 -->
       </div>
     </div>
   </div>

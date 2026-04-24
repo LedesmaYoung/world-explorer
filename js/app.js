@@ -1449,5 +1449,89 @@ function deleteArtwork(id) {
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', initApp);
 
+// ===== 天梯排行榜功能 =====
+
+let currentLeaderboardGame = 'tap';
+
+function openLeaderboard() {
+  audioManager.playSound('tap');
+  const page = document.getElementById('leaderboard-page');
+  page.classList.add('active');
+  page.style.display = 'flex';
+  switchLeaderboard('tap');
+}
+
+function closeLeaderboard() {
+  audioManager.playSound('tap');
+  const page = document.getElementById('leaderboard-page');
+  page.classList.remove('active');
+  page.style.display = 'none';
+}
+
+function switchLeaderboard(game) {
+  currentLeaderboardGame = game;
+  
+  document.querySelectorAll('.leaderboard-tab').forEach(tab => {
+    tab.classList.toggle('active', tab.dataset.game === game);
+  });
+  
+  renderLeaderboard(game);
+}
+
+function renderLeaderboard(game) {
+  const content = document.getElementById('leaderboard-content');
+  const currentTraveler = getCurrentTraveler();
+  
+  let leaderboard = [];
+  let gameName = '';
+  let scoreUnit = '分';
+  
+  if (game === 'tap') {
+    leaderboard = getTapGameLeaderboard ? getTapGameLeaderboard() : [];
+    gameName = '国旗天梯挑战';
+    scoreUnit = '分';
+  } else if (game === 'garbage') {
+    leaderboard = getGarbageGameLeaderboard ? getGarbageGameLeaderboard() : [];
+    gameName = '垃圾分类天梯挑战';
+    scoreUnit = '题';
+  }
+  
+  if (leaderboard.length === 0) {
+    content.innerHTML = `
+      <div class="leaderboard-empty">
+        <div class="empty-icon">🏆</div>
+        <p>暂无记录</p>
+        <p class="empty-hint">完成${gameName}后，成绩会记录在这里</p>
+      </div>
+    `;
+    return;
+  }
+  
+  const top5 = leaderboard.slice(0, 5);
+  
+  content.innerHTML = `
+    <div class="leaderboard-list">
+      ${top5.map((entry, index) => {
+        const isCurrent = currentTraveler && entry.travelerId === currentTraveler.id;
+        const rankClass = index < 3 ? `rank-${index + 1}` : '';
+        const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '';
+        
+        return `
+          <div class="leaderboard-item ${isCurrent ? 'current' : ''} ${rankClass}">
+            <div class="leaderboard-rank">
+              ${medal || `<span class="rank-number">${index + 1}</span>`}
+            </div>
+            <div class="leaderboard-info">
+              <span class="leaderboard-name">${entry.travelerName}</span>
+              <span class="leaderboard-score">${entry.score} ${scoreUnit}</span>
+            </div>
+            <div class="leaderboard-date">${formatDate(entry.date)}</div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
 // ===== 调试工具 =====
 
