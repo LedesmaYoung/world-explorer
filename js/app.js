@@ -1531,6 +1531,14 @@ function renderLeaderboard(game) {
       }).join('')}
     </div>
   `;
+  
+  // 确保 leaderboard-list 正确填充父容器高度
+  const listEl = content.querySelector('.leaderboard-list');
+  if (listEl) {
+    listEl.style.height = '100%';
+    listEl.style.maxHeight = 'none';
+    listEl.style.overflowY = 'auto';
+  }
 }
 
 // ===== 调试工具 =====

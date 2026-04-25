@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 
 echo "🚀 启动小小环球旅行家..."
-echo "📱 访问地址: http://192.168.31.152:50895"
+echo "📱 访问地址: http://localhost:50895"
 echo "🛑 按 Ctrl+C 停止服务"
 echo ""
 

@@ -151,22 +151,21 @@ const GarbageGame = {
       `;
     }
     
-    // 渲染4个选项按钮
-    if (this.elements.options) {
-      const types = this.garbageData.types;
-      const typeList = [
-        { type: 'hazardous', info: types.hazardous },
-        { type: 'kitchen', info: types.kitchen },
-        { type: 'recyclable', info: types.recyclable },
-        { type: 'other', info: types.other }
-      ];
+    // 渲染4个选项按钮，固定顺序为：有害垃圾、厨余垃圾、可回收物、其他垃圾
+      if (this.elements.options) {
+        const types = this.garbageData.types;
+        const typeList = [
+          { type: 'hazardous', info: types.hazardous },
+          { type: 'kitchen', info: types.kitchen },
+          { type: 'recyclable', info: types.recyclable },
+          { type: 'other', info: types.other }
+        ];
       
-      // 随机打乱选项顺序
-      const shuffledTypes = [...typeList].sort(() => 0.5 - Math.random());
-      
-      this.elements.options.innerHTML = shuffledTypes.map(({ type, info }) => `
+      this.elements.options.innerHTML = typeList.map(({ type, info }) => `
         <button class="garbage-option-btn" data-type="${type}">
-          <div class="option-icon" style="background-color: ${info.color}">${info.icon}</div>
+          <div class="option-icon" style="background-color: ${info.color}">
+            <img src="${info.image}" alt="${info.name}" class="type-icon-image" onerror="this.style.display='none'">
+          </div>
           <div class="option-name">${info.name}</div>
         </button>
       `).join('');
